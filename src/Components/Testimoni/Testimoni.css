@@ -1,0 +1,78 @@
+.foto-testimoni {
+  width: 35% !important;
+  border-radius: 100% !important;
+  margin-top: -45px;
+  border: 2px solid white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.card-testimoni {
+  text-align: center;
+  background-color: white;
+  /* display: grid; */
+  /* place-items: center; */
+  border-radius: 10px;
+  height: 45vh;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.desk-testi {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 25px;
+}
+.top-slider {
+  display: grid;
+  place-items: center;
+  gap: 20px;
+}
+.judul-testimoni {
+  text-align: center;
+  font-size: 17px;
+  margin-top: 5px;
+  font-weight: 500;
+}
+.nama-siswa {
+  text-align: center;
+  font-size: 17px;
+  margin-top: 17px;
+}
+.top-slider-testi {
+  margin-top: 50px;
+}
+.petik-quot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #054599;
+  font-size: 25px;
+  text-align: center;
+}
+.icon-quote {
+  text-align: center;
+}
+.box-testi {
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 50px;
+}
+.title-testimoni {
+  text-align: center;
+  padding-top: 20px;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 500px) {
+  .top-slider-testi {
+    display: contents;
+  }
+  .card-testimoni {
+    height: auto;
+    padding-bottom: 20px;
+  }
+  .foto-testimoni {
+    margin-top: 15px;
+    width: 50% !important;
+  }
+}

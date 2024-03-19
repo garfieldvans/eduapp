@@ -1,0 +1,178 @@
+.container-tab {
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0 10px 10px 10px;
+}
+
+.tab {
+  padding: 10px;
+  background-color: #054599;
+  border: 0px;
+  border-radius: 10px 10px 0 0;
+  margin-top: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  cursor: pointer;
+}
+/* KOTA */
+.parent-list-kota {
+  display: flex;
+  justify-content: start;
+  /* background-color: #05469a; */
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-image: url("/src/assets/kota_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.btn-kota {
+  color: rgb(0, 0, 0);
+  padding: 8px;
+  border-radius: 50px;
+  font-family: "Montserrat", sans-serif;
+  width: 20%;
+  font-weight: 600;
+  font-size: 17px;
+  text-decoration: none;
+}
+.btn-kota:hover {
+  background-color: #f52f63;
+  color: white;
+  transition: 0.3s;
+}
+/* KELAS */
+.parent-list-kelas {
+  display: flex;
+  justify-content: start;
+  /* background-color: #05469a; */
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-image: url("/src/assets/program_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.btn-kelas {
+  color: rgb(0, 0, 0);
+  padding: 8px;
+  border-radius: 50px;
+  font-family: "Montserrat", sans-serif;
+  width: 25%;
+  font-weight: 600;
+  font-size: 17px;
+  text-decoration: none;
+}
+.btn-kelas:hover {
+  background-color: #f52f63;
+  color: white;
+  transition: 0.3s;
+}
+/* MAPEL */
+.parent-list-mapel {
+  display: flex;
+  justify-content: start;
+  /* background-color: #05469a; */
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-image: url("/src/assets/mapel_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.btn-mapel {
+  color: rgb(0, 0, 0);
+  padding: 8px;
+  border-radius: 50px;
+  font-family: "Montserrat", sans-serif;
+  width: 25%;
+  font-weight: 600;
+  font-size: 17px;
+  text-decoration: none;
+}
+.combine-icon-text {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.icon-mapel {
+  width: 30px;
+}
+.btn-mapel:hover {
+  background-color: #f52f63;
+  color: white;
+  transition: 0.3s;
+}
+.title-jangkauan-kota {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.icon-jangkauan-kota {
+  width: 50px;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 500px) {
+  .btn-kota {
+    width: 45% !important;
+  }
+  .btn-kelas {
+    width: 100%;
+  }
+  .btn-mapel {
+    width: 40%;
+  }
+  .tab {
+    margin-top: 0;
+    /* width: 33%; */
+    border-radius: 10px 10px 10px 10px;
+  }
+  .selected {
+
+  }
+  .container-all-tab {
+    display: grid;
+    margin-top: 20px;
+    gap: 10px;
+  }
+  .container-tab {
+    border-radius: 10px 10px 10px 10px;
+  }
+  .combine-icon-text {
+    display: flex;
+    align-items: center;
+  }
+  .parent-list-mapel {
+    justify-content: space-between;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .btn-kota {
+    width: 30%;
+  }
+  .parent-list-kota {
+    justify-content: space-between;
+  }
+}
+@media only screen and (max-width: 820px) {
+  .parent-list-mapel, .parent-list-kota, .parent-list-kelas {
+    justify-content: space-between;
+  }
+}

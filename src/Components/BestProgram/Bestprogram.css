@@ -1,0 +1,114 @@
+.box-best-program {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #054599;
+}
+.label-hot-program {
+  margin-bottom: -50px;
+}
+.parent-best-program {
+  display: flex;
+  gap: 20px;
+}
+.main-best-program {
+  background-color: #054599;
+  border-radius: 10px;
+  padding: 20px;
+  padding-top: 0;
+}
+.best-program-img {
+  width: 100%;
+  border-radius: 3px;
+}
+.parent-img-modeltanya-program {
+  display: flex;
+  justify-content: end;
+}
+.model-tanya-program {
+  width: 80%;
+}
+.title-best-program {
+  width: 50%;
+  font-weight: 800;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.hot-program {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+  top: 30px;
+  margin-left: -10px;
+  z-index: 999;
+  font-size: 15px;
+  margin-top: -30px;
+  background-color: #f52f63;
+  width: 170px;
+  padding: 5px;
+  color: white;
+  border-radius: 5px 15px 5px 5px;
+}
+.main-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* gap: 50px; */
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 500px) {
+  .model-tanya-program {
+    position: fixed;
+    z-index: 9999;
+    right: 25px;
+    bottom: 50px;
+    width: 30% !important;
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.212));
+  }
+  .title-best-program {
+    font-size: 20px;
+    width: 100%;
+  }
+  .hot-program {
+    display: none;
+  }
+  .box-best-program {
+    gap: 5px;
+  }
+  .main-best-program {
+    padding: 10px;
+    padding-top: 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .title-best-program {
+    font-size: 28px;
+    width: 100%;
+  }
+  .hot-program {
+    display: none;
+  }
+}
+@media only screen and (max-width: 820px) {
+  .title-best-program {
+    font-size: 28px;
+    width: 100%;
+  }
+  .hot-program {
+    display: none;
+  }
+  .box-best-program {
+    gap: 5px;
+  }
+  .best-program-img {
+    border-radius: 3px;
+  }
+  .model-tanya-program {
+    width: 90%;
+  }
+}

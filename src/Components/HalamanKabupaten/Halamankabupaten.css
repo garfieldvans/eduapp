@@ -1,0 +1,91 @@
+.container-halaman-kabupaten {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+.content-kabupaten {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8%;
+  color: white;
+}
+.isi-content-kabupaten {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.model-halaman-kabupaten {
+  width: 27%;
+}
+.title-halaman-kabupaten {
+  font-size: 30px;
+  font-weight: 800;
+}
+.child-paragraf-kabupaten {
+  margin-top: 20px;
+}
+.teks-content {
+  display: grid;
+  gap: 20px;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 500px) {
+  .container-halaman-kabupaten {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .content-kabupaten {
+    display: grid;
+  }
+  .teks-content {
+    margin-top: 65px;
+  }
+  .model-halaman-kabupaten {
+    position: fixed;
+    z-index: 9999;
+    right: 25px;
+    bottom: 50px;
+    width: 30%;
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.212));
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container-halaman-kabupaten {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  .teks-content {
+    margin-top: 50px;
+    text-align: justify;
+  }
+  .content-kabupaten {
+    gap: 25px;
+  }
+}
+@media only screen and (max-width: 820px) {
+  .container-halaman-kabupaten {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  .teks-content {
+    margin-top: 50px;
+    text-align: justify;
+  }
+  .content-kabupaten {
+    gap: 25px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .container-halaman-kabupaten {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  .teks-content {
+    margin-top: 50px;
+    text-align: justify;
+  }
+  .content-kabupaten {
+    gap: 25px;
+  }
+}

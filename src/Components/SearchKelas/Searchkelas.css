@@ -1,0 +1,437 @@
+.container-search-kelas {
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.container-card {
+  margin-top: -10%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  gap: 10px;
+}
+.img-pilihkelas {
+  border-radius: 2px;
+  width: 100%;
+}
+.title-pilihan-kelas {
+  font-size: 25px;
+  font-weight: 600;
+  color: white;
+}
+.model-kelastop {
+  width: 30%;
+}
+.title-card {
+  font-size: 16px;
+  font-weight: 600;
+}
+.desk-card {
+  text-align: center;
+  font-size: 20px;
+  width: 90%;
+}
+.btn-tags {
+  border: 1px solid rgb(255, 153, 0);
+  color: rgb(255, 153, 0);
+  background-color: white;
+  padding: 8px;
+  border-radius: 50px;
+  margin-top: 7px;
+  font-family: "Montserrat", sans-serif;
+}
+.btn-filter {
+  border: 1px solid rgb(255, 153, 0);
+  color: rgb(255, 153, 0);
+  background-color: white;
+  padding: 8px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+}
+.model-kelas {
+  width: 10%;
+}
+.text-top-kelas {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+.line-src {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.line-1 {
+  width: 20%;
+  border: 1px solid white;
+}
+.icon-hr {
+  color: white;
+}
+.parent-desk-mt {
+  /* display: flex;
+      justify-content: center;
+      align-items: center; */
+  gap: 10px;
+}
+.child-desk-mt {
+  font-weight: 300;
+}
+.desk-mt {
+  margin-top: 10px;
+}
+.star-lima {
+  width: 50%;
+}
+.parent-star {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.parent-button-kelas {
+  display: flex;
+  gap: 10px;
+}
+.btn-pilih-kelas {
+  border: 1px solid transparent;
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 153, 0);
+  padding: 3px;
+  padding-left: 7px;
+  padding-right: 7px;
+  border-radius: 50px;
+  margin-top: 7px;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+}
+.input-src {
+  width: 70%;
+  border: 1px solid transparent;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 15px;
+  outline-style: none;
+  border-radius: 100px 0 0 100px;
+  font-family: "Montserrat", sans-serif;
+  border: 5px solid white;
+  font-weight: 600;
+}
+.btn-src {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border: 1px solid transparent;
+  border-radius: 0 100px 100px 0;
+  background-color: white;
+  border: 5px solid white;
+}
+.parent-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+}
+.icon-src {
+  width: 50%;
+}
+.title-search-kelas {
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: -20px;
+  width: 30%;
+  gap: 10px;
+  margin-top: 20px;
+  font-size: 25px;
+}
+.parent-container-utama {
+  background-color: #054599;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 1px;
+  margin-top: 50px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+/* SUPER PARENT */
+.super-parent-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+/* POLRI */
+.parent-container-polri {
+  background-color: #054599;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 1px;
+  border-radius: 5px;
+  width: 50%;
+}
+.title-search-kelas-polri {
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: -20px;
+  width: 70%;
+  gap: 10px;
+  margin-top: 20px;
+  font-size: 25px;
+}
+.img-pilihkelas-polri {
+  border-radius: 2px;
+  width: 100%;
+}
+.container-card-polri {
+  margin-top: -10%;
+  display: flex;
+  justify-content: start;
+  margin-top: 40px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  gap: 10px;
+}
+/* CPNS */
+.img-pilihkelas-cpns {
+  border-radius: 2px;
+  width: 100%;
+}
+.parent-container-cpns {
+  background-color: #054599;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 1px;
+  border-radius: 5px;
+  width: 48%;
+}
+.title-search-kelas-cpns {
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: -20px;
+  width: 60%;
+  gap: 10px;
+  margin-top: 20px;
+  font-size: 25px;
+}
+/* PRIVAT */
+.parent-container-privat {
+  background-color: #054599;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 1px;
+  border-radius: 5px;
+  width: 48%;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 500px) {
+  .container-search-kelas {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  .parent-search {
+    margin-top: 70px;
+  }
+  .container-card {
+    flex-wrap: wrap;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .parent-container-utama {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .img-pilihkelas {
+    width: 100%;
+  }
+  .title-search-kelas {
+    width: 100%;
+    font-size: 20px;
+  }
+  .icon-kampus {
+    width: 18%;
+  }
+  /* POLRI */
+  .parent-container-polri {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 100%;
+  }
+  .container-card-polri {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .img-pilihkelas-polri {
+    width: 100%;
+  }
+  .title-search-kelas-polri {
+    width: 100% !important;
+    font-size: 20px;
+  }
+  .icon-kampus {
+    width: 18%;
+  }
+  /* CPNS */
+  .parent-container-cpns {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 100%;
+  }
+  .container-card-polri {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .img-pilihkelas-cpns {
+    width: 100%;
+  }
+  .icon-polri {
+    width: 18%;
+  }
+  /* CPNS */
+  .title-search-kelas-cpns {
+    width: 100% !important;
+    font-size: 20px;
+  }
+  .icon-cpns {
+    width: 18%;
+  }
+  /* PRIVAT */
+  .parent-container-privat {
+    width: 100%;
+  }
+}
+
+/* @media only screen and (max-width: 360px) {
+  .title-search-kelas {
+    font-size: 20px !important;
+  }
+} */
+
+@media only screen and (max-width: 768px) {
+  .container-search-kelas {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .parent-search {
+    margin-top: 70px;
+  }
+  .title-search-kelas {
+    width: 60%;
+    font-size: 25px;
+  }
+  .icon-kampus {
+    width: 17%;
+  }
+  .parent-container-polri {
+    width: 100%;
+  }
+  .title-search-kelas-polri {
+    font-size: 25px;
+    width: 60%;
+  }
+  .parent-container-cpns {
+    width: 100%;
+  }
+  .title-search-kelas-cpns {
+    font-size: 25px;
+    width: 60%;
+  }
+  .parent-container-privat {
+    width: 100%;
+  }
+  .img-pilihkelas-cpns {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .container-search-kelas {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .img-pilihkelas-cpns {
+    width: 100%;
+  }
+  .parent-search {
+    margin-top: 70px;
+  }
+  .title-search-kelas {
+    width: 60%;
+    font-size: 25px;
+  }
+  .icon-kampus {
+    width: 17%;
+  }
+  .parent-container-polri {
+    width: 100%;
+  }
+  .title-search-kelas-polri {
+    font-size: 25px;
+    width: 60%;
+  }
+  .parent-container-cpns {
+    width: 100%;
+  }
+  .title-search-kelas-cpns {
+    font-size: 25px;
+    width: 60%;
+  }
+  .parent-container-privat {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+    .container-search-kelas {
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+    .parent-search {
+      margin-top: 70px;
+    }
+    .title-search-kelas {
+      width: 90%;
+      font-size: 25px;
+    }
+    .icon-kampus {
+      width: 17%;
+    }
+    .parent-container-polri {
+      width: 100%;
+    }
+    .title-search-kelas-polri {
+      font-size: 25px;
+      width: 60%;
+    }
+    .parent-container-cpns {
+      width: 100%;
+    }
+    .title-search-kelas-cpns {
+      font-size: 25px;
+      width: 60%;
+    }
+    .parent-container-privat {
+      width: 100%;
+    }
+  }

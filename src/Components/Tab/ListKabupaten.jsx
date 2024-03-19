@@ -1,0 +1,111 @@
+import React, { useEffect, useMemo, useState } from "react";
+import Tabs from "./Tabs";
+import Tab from "./Tab";
+import { Link, useLocation, useParams } from "react-router-dom";
+import axios from "axios";
+
+const ListKabupaten = () => {
+  const [kabupaten, setKabupaten] = useState([]);
+  const [kelas, setKelas] = useState([]);
+  const [mapel, setMapel] = useState([]);
+  const { id } = useParams();
+
+  function useQuery() {
+    const { search } = useLocation();
+
+    return useMemo(() => new URLSearchParams(search), [search]);
+  }
+
+  const query = useQuery();
+  const axiosJWT = axios.create();
+
+  useEffect(() => {
+    fetchKabupaten(id);
+    fetchKelas();
+    fetchMapel();
+  }, []);
+
+  const fetchKabupaten = () => {
+    fetch(`http://localhost:8000/ibukotakab/${query.get("data")}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setKabupaten(data);
+        console.log(data);
+      });
+  };
+
+  const fetchKelas = () => {
+    fetch(`http://localhost:8000/kelas`)
+      .then((res) => res.json())
+      .then((data) => {
+        setKelas(data);
+        console.log(data);
+      });
+  };
+
+  const fetchMapel = () => {
+    fetch("http://localhost:8000/matapelajaran")
+      .then((res) => res.json())
+      .then((data) => {
+        setMapel(data);
+        console.log(data);
+      });
+  };
+
+  return (
+    <div className="container-all-tab">
+    <Tabs>
+      <Tab title="Jangkauan Kota">
+        <div className="parent-list-kota">
+          {kabupaten.map((item, index) => (
+            <Link
+              to={`/les-privat-di-kabupaten/${item.kota_kabupaten}?data=${
+                item.id
+              }`}
+              className="btn-kota"
+              key={index}
+            >
+              {item.kota_kabupaten}
+            </Link>
+          ))}
+        </div>
+      </Tab>
+      <Tab title="Program">
+        <div className="parent-list-kelas">
+          {kelas.map((item, index) => (
+            <Link
+              to={`kelas/${item.slug.toLowerCase()}?data=${item.id}`}
+              className="btn-kelas"
+              key={index}
+            >
+              {item.name}
+            </Link>
+          ))}
+        </div>
+      </Tab>
+      <Tab title="Pilihan Mata Pelajaran">
+        <div className="parent-list-mapel">
+          {mapel.map((item, index) => (
+            <Link
+              to={`/mata-pelajaran/${item.name.toLowerCase()}?data=${item.id}`}
+              className="btn-mapel"
+              key={index}
+            >
+              <div className="combine-icon-text">
+                <img
+                  className="icon-mapel"
+                  src={"http://localhost:8000/images/" + item.image}
+                  alt=""
+                />
+                {item.name}
+              </div>
+            </Link>
+          ))}
+        </div>
+      </Tab>
+    </Tabs>
+    </div>
+  );
+};
+
+export default ListKabupaten;

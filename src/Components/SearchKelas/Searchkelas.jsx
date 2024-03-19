@@ -1,0 +1,271 @@
+import React, { useEffect, useState } from "react";
+import "./Searchkelas.css";
+import Navbar from "../Navbar/Navbar";
+import axios from "axios";
+import searchIcon from "../../assets/search_.png";
+import iconKampus from "../../assets/KAMPUS.png";
+import iconTniPolri from "../../assets/TNI POLRI.png";
+import iconCpns from "../../assets/CPNS_ICON.png";
+import iconOsn from "../../assets/OSN.png";
+import iconPrivat from "../../assets/PRIVAT.png";
+import Footer from "../Footer/Footer";
+import { Helmet } from "react-helmet";
+
+const Searchkelas = () => {
+  const [loading, setLoading] = useState([]);
+  const [cardKelas, setCardKelas] = useState([]);
+  const [cardKelasTniPolri, setCardKelasTniPolri] = useState([]);
+  const [cardKelasCpns, setCardKelasCpns] = useState([]);
+  const [cardKelasOsn, setCardKelasOsn] = useState([]);
+  const [cardKelasPrivat, setCardKelasPrivat] = useState([]);
+  const [searchTitle, setSearchTitle] = useState("");
+
+  useEffect(() => {
+    const loadPosts = async () => {
+      setLoading(true);
+      const response = await axios.get("http://localhost:8000/pilihankelas");
+      const tniPolri = await axios.get(
+        "http://localhost:8000/pilihankelas-polri"
+      );
+      setCardKelas(response.data);
+      setCardKelasTniPolri(tniPolri.data);
+      setLoading(false);
+    };
+
+    const loadPostsPolri = async () => {
+      setLoading(true);
+      const response = await axios.get(
+        "http://localhost:8000/pilihankelas-polri"
+      );
+      setCardKelasTniPolri(response.data);
+      setLoading(false);
+    };
+
+    const loadPostsCpns = async () => {
+      setLoading(true);
+      const response = await axios.get(
+        "http://localhost:8000/pilihankelas-cpns"
+      );
+      setCardKelasCpns(response.data);
+      setLoading(false);
+    };
+
+    const loadPostsOsn = async () => {
+      setLoading(true);
+      const response = await axios.get(
+        "http://localhost:8000/pilihankelas-osn"
+      );
+      setCardKelasOsn(response.data);
+      setLoading(false);
+    };
+
+    const loadPostsPrivat = async () => {
+      setLoading(true);
+      const response = await axios.get(
+        "http://localhost:8000/pilihankelas-privat"
+      );
+      setCardKelasPrivat(response.data);
+      setLoading(false);
+    };
+
+    loadPosts();
+    loadPostsPolri();
+    loadPostsCpns();
+    loadPostsOsn();
+    loadPostsPrivat();
+  }, []);
+
+  return (
+    <React.Fragment>
+      <Navbar />
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Pilih Program Les Privat Terbaik - Edumatrix Indonesia</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
+      <div className="container-search-kelas">
+        <div className="parent-search">
+          <input
+            onChange={(e) => setSearchTitle(e.target.value)}
+            className="input-src"
+            type="search"
+            placeholder="cari kelas..."
+          />
+          <button className="btn-src">
+            <img className="icon-src" src={searchIcon} alt="" />
+          </button>
+        </div>
+        <div className="parent-container-utama">
+          <h1 className="title-search-kelas">
+            <img src={iconKampus} alt="" /> PROGRAM
+            LOLOS KAMPUS FAVORIT
+          </h1>
+          <div className="container-card">
+            {loading ? (
+              <h4>Loading ...</h4>
+            ) : (
+              cardKelas
+                .filter((value) => {
+                  if (searchTitle === "") {
+                    return value;
+                  } else if (
+                    value.name.toLowerCase().includes(searchTitle.toLowerCase())
+                  ) {
+                    return value;
+                  }
+                })
+                .map((item, index) => (
+                  <div className="card-utama">
+                    <img
+                      key={index}
+                      className="img-pilihkelas"
+                      src={"http://localhost:8000/images/" + item.image}
+                      alt="Avatar"
+                    />
+                  </div>
+                ))
+            )}
+          </div>
+        </div>
+        {/* POLRI */}
+        <div className="super-parent-container">
+          <div className="parent-container-polri">
+            <h1 className="title-search-kelas-polri">
+              <img src={iconTniPolri} alt="" /> PROGRAM LOLOS TNI POLRI &
+              KEDINASAN
+            </h1>
+            <div className="container-card-polri">
+              {loading ? (
+                <h4>Loading ...</h4>
+              ) : (
+                cardKelasTniPolri
+                  .filter((value) => {
+                    if (searchTitle === "") {
+                      return value;
+                    } else if (
+                      value.name
+                        .toLowerCase()
+                        .includes(searchTitle.toLowerCase())
+                    ) {
+                      return value;
+                    }
+                  })
+                  .map((item, index) => (
+                    <div key={index} className="card-utama">
+                      <img
+                        className="img-pilihkelas-polri"
+                        src={"http://localhost:8000/images/" + item.image}
+                        alt="Avatar"
+                      />
+                    </div>
+                  ))
+              )}
+            </div>
+          </div>
+          {/* CPNS */}
+          <div className="parent-container-cpns">
+            <h1 className="title-search-kelas-polri">
+              <img src={iconCpns} alt="" /> PROGRAM LOLOS CPNS, PPPK & BUMN
+            </h1>
+            <div className="container-card-polri">
+              {loading ? (
+                <h4>Loading ...</h4>
+              ) : (
+                cardKelasCpns
+                  .filter((value) => {
+                    if (searchTitle === "") {
+                      return value;
+                    } else if (
+                      value.name
+                        .toLowerCase()
+                        .includes(searchTitle.toLowerCase())
+                    ) {
+                      return value;
+                    }
+                  })
+                  .map((item, index) => (
+                    <div key={index} className="card-utama">
+                      <img
+                        className="img-pilihkelas-cpns"
+                        src={"http://localhost:8000/images/" + item.image}
+                        alt="Avatar"
+                      />
+                    </div>
+                  ))
+              )}
+            </div>
+          </div>
+          {/* OSN */}
+          <div className="parent-container-polri">
+            <h1 className="title-search-kelas-polri">
+              <img src={iconOsn} alt="" /> PROGRAM BELAJAR OSN SD, SMP & SMA
+            </h1>
+            <div className="container-card-polri">
+              {loading ? (
+                <h4>Loading ...</h4>
+              ) : (
+                cardKelasOsn
+                  .filter((value) => {
+                    if (searchTitle === "") {
+                      return value;
+                    } else if (
+                      value.name
+                        .toLowerCase()
+                        .includes(searchTitle.toLowerCase())
+                    ) {
+                      return value;
+                    }
+                  })
+                  .map((item, index) => (
+                    <div key={index} className="card-utama">
+                      <img
+                        className="img-pilihkelas-polri"
+                        src={"http://localhost:8000/images/" + item.image}
+                        alt="Avatar"
+                      />
+                    </div>
+                  ))
+              )}
+            </div>
+          </div>
+          {/* PRIVAT */}
+          <div className="parent-container-privat">
+            <h1 className="title-search-kelas-polri">
+              <img src={iconPrivat} alt="" /> PROGRAM PRIVAT SD, SMP & SMA
+            </h1>
+            <div className="container-card-polri">
+              {loading ? (
+                <h4>Loading ...</h4>
+              ) : (
+                cardKelasPrivat
+                  .filter((value) => {
+                    if (searchTitle === "") {
+                      return value;
+                    } else if (
+                      value.name
+                        .toLowerCase()
+                        .includes(searchTitle.toLowerCase())
+                    ) {
+                      return value;
+                    }
+                  })
+                  .map((item, index) => (
+                    <div key={index} className="card-utama">
+                      <img
+                        className="img-pilihkelas-polri"
+                        src={"http://localhost:8000/images/" + item.image}
+                        alt="Avatar"
+                      />
+                    </div>
+                  ))
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </React.Fragment>
+  );
+};
+
+export default Searchkelas;

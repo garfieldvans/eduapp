@@ -1,0 +1,123 @@
+.parent-error-page {
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+.container-error-page {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+.bg-error {
+  width: 50%;
+}
+.text-error-page {
+  color: white;
+  font-size: 35px;
+  text-align: center;
+}
+.btn-error-back {
+  background-color: #054599;
+  border: 1px solid white;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border-radius: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+.desk-error {
+  font-size: 25px;
+}
+
+/* RESPONSOVE */
+@media only screen and (max-width: 500px) {
+  .parent-error-page {
+    display: grid;
+  }
+  .bg-error {
+    width: 100%;
+  }
+  .container-error-page {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .text-error-page {
+    font-size: 25px;
+  }
+  .btn-error-back {
+    width: 50%;
+    margin-top: 10px;
+  }
+  .desk-error {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .text-error-page {
+    font-size: 15px;
+    width: 100%;
+    text-align: left;
+  }
+  .desk-error {
+    font-size: 17px;
+    width: 100%;
+  }
+  .parent-error-page {
+    gap: 30px;
+  }
+  .container-error-page {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .btn-error-back {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .text-error-page {
+    font-size: 15px;
+    width: 100%;
+    text-align: left;
+  }
+  .desk-error {
+    font-size: 17px;
+    width: 100%;
+  }
+  .parent-error-page {
+    gap: 30px;
+  }
+  .container-error-page {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .btn-error-back {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .text-error-page {
+    font-size: 15px;
+    width: 100%;
+    text-align: left;
+  }
+  .desk-error {
+    font-size: 17px;
+    width: 100%;
+  }
+  .parent-error-page {
+    gap: 30px;
+  }
+  .container-error-page {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .btn-error-back {
+    margin-top: 10px;
+  }
+}

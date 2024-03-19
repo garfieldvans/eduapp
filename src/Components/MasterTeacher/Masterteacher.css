@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.slider {
+  margin: 0 20px;
+  overflow: "hidden";
+  padding: 2rem 0;
+}
+
+.slider img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.react-multi-carousel-list {
+  padding: 0rem 0 5px 0;
+}
+
+.custom-dot-list-style button {
+  border: none;
+  background: rgb(255, 68, 68);
+}
+.react-multi-carousel-dot.react-multi-carousel-dot--active button {
+  background: rgb(255, 68, 68) !important;
+}
+
+.card-master-teacher {
+  background-color: white;
+  border-radius: 8px;
+  height: 48vh;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.content-tutor {
+  padding: 10px;
+}
+.foto-tutor {
+  border-radius: 100% !important;
+  width: 15% !important;
+}
+.background-tutor {
+  border-radius: 8px 8px 0 0 !important;
+}
+.judul-tutor {
+  font-size: 16px;
+}
+.child-content-tutor {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+.ratting-tutor {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.star-5 {
+  width: 50% !important;
+}
+.univ-tutor {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.desk-tutor {
+  font-size: 15px;
+  font-weight: 500;
+}
+.parent-slider-tutor {
+  background-image: url("/src/assets/mt_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #054599;
+  margin-top: 40px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.title-tutor {
+  text-align: center;
+  padding-top: 20px;
+  color: white;
+  font-weight: 800;
+}
+/* RESPONSIVE */
+@media only screen and (max-width: 500px) {
+  .title-tutor {
+    font-size: 25px;
+  }
+  .parent-slider-tutor {
+    margin-top: 18px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .card-master-teacher {
+    height: auto;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .card-master-teacher {
+    height: auto;
+    padding-bottom: 20px;
+  }
+}
