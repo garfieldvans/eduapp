@@ -23,7 +23,22 @@ const responsive = {
     slidesToSlide: 1, // optional, default to 1.
   },
   mobile: {
-    breakpoint: { max: 767, min: 464 },
+    breakpoint: { max: 896, min: 414 },
+    items: 1,
+    slidesToSlide: 1, // optional, default to 1.
+  },
+  mobile: {
+    breakpoint: { max: 667, min: 375 },
+    items: 1,
+    slidesToSlide: 1, // optional, default to 1.
+  },
+  mobile: {
+    breakpoint: { max: 740, min: 360 },
+    items: 1,
+    slidesToSlide: 1, // optional, default to 1.
+  },
+  mobile: {
+    breakpoint: { max: 882, min: 344 },
     items: 1,
     slidesToSlide: 1, // optional, default to 1.
   },

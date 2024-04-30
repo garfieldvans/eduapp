@@ -31,7 +31,7 @@
   align-items: center;
   background-color: #ffffff;
   padding: 1rem;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
   max-width: 100%;
   border-bottom: 2px solid white;
   cursor: pointer;
@@ -54,10 +54,10 @@
 .answer {
   background-color: #ffffff;
   padding: 1rem;
-  border-radius: 10px;
+  border-radius: 0 0 10px 10px;
   max-width: 100%;
   display: none;
-  margin-top: 10px;
+  margin-top: 3px;
   line-height: 22px;
 }
 

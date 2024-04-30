@@ -1,61 +1,70 @@
 /* FLOAT WA */
 .box-float-main {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 999;
-    /* background-color: #00b9da; */
-    background-color: #054599;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    padding-left: 0;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  position: fixed;
+  bottom: 5%;
+  left: 45%;
+  width: 100%;
+  z-index: 9999;
+  /* background-color: #00b9da; */
+  /* background-color: #054599; */
+  padding: 10px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding-left: 0;
+}
+.btn-float-tlp {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  background-color: #9b0029;
+  border: 1px solid transparent;
+  color: white;
+  padding: 15px;
+  /* padding-left: 6px; */
+  border-radius: 100px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 8px 8px;
+}
+.parent-icon-tlp {
+  background-color: #9b0029;
+  padding: 6px;
+  /* padding-right: 15px;
+    padding-left: 15px; */
+  border-radius: 100px;
+  width: 100px;
+  cursor: pointer;
+}
+.btn-float-wa {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  background-color: #00b33c;
+  border: 1px solid transparent;
+  color: white;
+  padding: 15px;
+  /* padding-left: 6px; */
+  border-radius: 100px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 8px 8px;
+}
+.parent-icon-wa {
+  background-color: #00b33c;
+  padding: 6px;
+  /* padding-right: 16px;
+    padding-left: 16px; */
+  border-radius: 100px;
+  width: 100px;
+
+  cursor: pointer;
+}
+.main-parent-wa {
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 500px) {
+  .box-float-main {
+    left: 35%;
+    bottom: 10%;
   }
-  .btn-float-tlp {
-    font-family: "Poppins", sans-serif;
-    font-size: 15px;
-    background-color: #f53367;
-    border: 1px solid transparent;
-    color: white;
-    padding: 15px;
-    padding-left: 6px;
-    border-radius: 100px;
-    cursor: pointer;
-  }
-  .parent-icon-tlp {
-    background-color: #9b0029;
-    padding: 12px;
-    padding-right: 15px;
-    padding-left: 15px;
-    border-radius: 100px;
-    width: 100px;
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  }
-  .btn-float-wa {
-    font-family: "Poppins", sans-serif;
-    font-size: 15px;
-    background-color: #00b33c;
-    border: 1px solid transparent;
-    color: white;
-    padding: 15px;
-    padding-left: 6px;
-    border-radius: 100px;
-    cursor: pointer;
-  }
-  .parent-icon-wa {
-    background-color: #00852c;
-    padding: 12px;
-    padding-right: 16px;
-    padding-left: 16px;
-    border-radius: 100px;
-    width: 100px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    cursor: pointer;
-  }
-  .main-parent-wa {
-    cursor: pointer;
-  }
+}

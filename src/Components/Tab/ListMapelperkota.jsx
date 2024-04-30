@@ -54,19 +54,6 @@ const ListMapelperkota = () => {
   return (
     <div className="container-all-tab">
       <Tabs>
-        <Tab title="JANGKAUAN KOTA">
-          <div className="parent-list-kota">
-            {mapelperkota.map((item, index) => (
-              <Link
-                to={`/mapel-perkota/${item.namaKota}?data=${item.mapelId}`}
-                className="btn-kota"
-                key={index}
-              >
-                {item.namaKota}
-              </Link>
-            ))}
-          </div>
-        </Tab>
         <Tab title="PROGRAM">
           <div className="parent-list-kelas">
             {kelas.map((item, index) => (
@@ -76,19 +63,31 @@ const ListMapelperkota = () => {
                 }`}
                 className="btn-kelas"
                 key={index}
+                // onClick={() => {
+                //   window.location.href = `/les-privat/${item.slug.toLowerCase()}-terbaik?data=${
+                //     item.id
+                //   }`;
+                // }}
               >
                 {item.name}
               </Link>
             ))}
           </div>
         </Tab>
-        <Tab title="PILIHAN MATA PELAJARAN">
+        <Tab title="MAPEL">
           <div className="parent-list-mapel">
             {mapel.map((item, index) => (
               <Link
-                to={`/mata-pelajaran/${item.name.toLowerCase()}?data=${item.id}`}
+                to={`/mata-pelajaran/${item.name.toLowerCase()}?data=${
+                  item.id
+                }`}
                 className="btn-mapel"
                 key={index}
+                // onClick={() => {
+                //   window.location.href = `/mata-pelajaran/${item.name.toLowerCase()}?data=${
+                //     item.id
+                //   }`;
+                // }}
               >
                 <div className="combine-icon-text">
                   <img
@@ -98,6 +97,22 @@ const ListMapelperkota = () => {
                   />
                   {item.name}
                 </div>
+              </Link>
+            ))}
+          </div>
+        </Tab>
+        <Tab title="WILAYAH">
+          <div className="parent-list-kota">
+            {mapelperkota.map((item, index) => (
+              <Link
+                to={`/mapel-perkota/${item.namaKota}?data=${item.mapelId}`}
+                className="btn-kota"
+                key={index}
+                // onClick={() => {
+                //   window.location.href = `/mapel-perkota/${item.namaKota}?data=${item.mapelId}`;
+                // }}
+              >
+                {item.namaKota}
               </Link>
             ))}
           </div>

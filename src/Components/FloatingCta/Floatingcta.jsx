@@ -7,26 +7,24 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 const Floatingcta = () => {
   return (
     <div className="box-float-main">
-      <a href="tel:+6285600422188">
+      <a href="https://edulink-indonesia.com/lead/edm/call">
         <div className="main-parent-call">
           <button className="btn-float-tlp">
             <span className="parent-icon-tlp">
               <FontAwesomeIcon icon={faPhone} />
-            </span>{" "}
-            TELEPON
+            </span>
           </button>
         </div>
       </a>
       <div className="main-parent-wa">
         <a
           className="parent-btn-wa"
-          href="https://wa.me/6281216365729?text=Halo%20Kak%20Nia%2C%20Saya%20ingin%20bertanya%20mengenai%20Bimbel%20di%20Edumatrix%20Indonesia%20Terima%20kasih."
+          href="https://edulink-indonesia.com/lead/edm/chat"
         >
           <button className="btn-float-wa">
             <span className="parent-icon-wa">
               <FontAwesomeIcon icon={faWhatsapp} />
-            </span>{" "}
-            WHATSAPP
+            </span>
           </button>
         </a>
       </div>

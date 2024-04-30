@@ -14,6 +14,9 @@ import Faq from "../Faq/Faq";
 import Testimoni from "../Testimoni/Testimoni";
 import Asalsekolah from "../AsalSekolah/Asalsekolah";
 import { Helmet } from "react-helmet";
+import Floatingcta from "../FloatingCta/Floatingcta";
+import Bottombar from "../BottomBar/Bottombar";
+import rumahAdat from "../../assets/rumah_adat.png";
 
 const Halamanprogram = () => {
   const { id } = useParams();
@@ -72,9 +75,12 @@ const Halamanprogram = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>
-          Bimbel Privat {`${program.name}`} Terbaik - Edumatrix Indonesia
+          Les Privat {`${program.name}`} #1 Terbaik - Edumatrix Indonesia
         </title>
-        <link rel="canonical" href="http://mysite.com/example" />
+        <link
+          rel="canonical"
+          href=""
+        />
       </Helmet>
       <Navbar />
       <div className="container-halaman-program">
@@ -96,12 +102,16 @@ const Halamanprogram = () => {
               </p>
             </div>
           </div>
+          <a className="parent-img-modeltanya-program" href="">
+            <img className="rumah-adat" src={rumahAdat} alt="" />
+          </a>
+
           <a
             className="parent-img-modeltanya-program"
             href="https://wa.me/+6281216365729?text=Halo%20Kak%20Nia%20Saya%20ingin%20tanya%20les%20privat%20untuk%20Kelas%20:%0aMapel%20:%20%0aKurikulum%20:%20%0aWilayah%20:"
           >
             <img
-              className="model-tanya-program"
+              className="model-program-kota"
               src={modelTanyaProgram}
               alt=""
             />
@@ -124,6 +134,8 @@ const Halamanprogram = () => {
         </div>
       </div>
       <Footer />
+      <Bottombar />
+      <Floatingcta />
     </React.Fragment>
   );
 };

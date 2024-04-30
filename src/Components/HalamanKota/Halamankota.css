@@ -1,13 +1,16 @@
 .container-halaman-kota {
   padding-left: 15%;
   padding-right: 15%;
+  padding-top: 8%;
 }
 .content-kota {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 8%;
   color: white;
+  background-color: #054599;
+  padding: 20px;
+  border-radius: 10px;
 }
 .isi-content-kota {
   display: flex;
@@ -16,6 +19,10 @@
 }
 .model-halaman-kota {
   width: 27%;
+}
+.model-program-kota {
+  display: none;
+  width: 80%;
 }
 .title-halaman-kota {
   font-size: 30px;
@@ -28,6 +35,9 @@
   display: grid;
   gap: 20px;
 }
+.rumah-adat {
+  width: 100%;
+}
 
 /* RESPONSIVE */
 @media only screen and (max-width: 500px) {
@@ -37,6 +47,10 @@
   }
   .content-kota {
     display: grid;
+    padding-bottom: 0;
+  }
+  .rumah-adat {
+    margin-bottom: -50px;
   }
   .teks-content {
     margin-top: 65px;
@@ -47,6 +61,15 @@
     right: 25px;
     bottom: 50px;
     width: 30%;
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.212));
+  }
+  .model-program-kota {
+    display: flex;
+    position: fixed;
+    z-index: 9991;
+    right: 10px;
+    bottom: 28%;
+    width: 30% !important;
     filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.212));
   }
 }

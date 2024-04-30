@@ -6,6 +6,7 @@ import { useLocation, useParams } from "react-router-dom";
 import axios from "axios";
 import Navbar from "../Navbar/Navbar";
 import modelTanyaProgram from "../../assets/tanya_program.png";
+import rumahAdat from "../../assets/rumah_adat.png";
 import Masterteacher from "../MasterTeacher/Masterteacher";
 import Footer from "../Footer/Footer";
 import Keunggulan from "../Keunggulan/Keunggulan";
@@ -13,6 +14,8 @@ import Faq from "../Faq/Faq";
 import Testimoni from "../Testimoni/Testimoni";
 import Asalsekolah from "../AsalSekolah/Asalsekolah";
 import { Helmet } from "react-helmet";
+import Floatingcta from "../FloatingCta/Floatingcta";
+import Bottombar from "../BottomBar/Bottombar";
 
 const Halamankabupaten = () => {
   const { id } = useParams();
@@ -40,14 +43,31 @@ const Halamankabupaten = () => {
     };
     console.log(id);
     getKabupaten(id);
+    fetchKabupaten()
   }, [id, query]);
+
+  const fetchKabupaten = () => {
+    fetch(`http://localhost:8000/ibukotakab/${query.get("data")}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setKabupaten(data);
+        console.log(data);
+      });
+  };
 
   return (
     <React.Fragment>
       <Helmet>
-        <meta charSet="utf-8" />
-        <title>Bimbel Privat Terbaik di {`${id}`} - Edumatrix Indonesia</title>
-        <link rel="canonical" href="http://mysite.com/example" />
+        <meta
+          charSet="utf-8"
+          name="description"
+          content="Jasa Les Privat terbaik dengan sistem belajar mengajar yang berkualitas  #1 - Edumatrix Indonesia"
+        />
+        <title>Les Privat Terbaik di {`${id}`} #1 - Edumatrix Indonesia</title>
+        <link
+          rel="canonical"
+          href=""
+        />
       </Helmet>
       <Navbar />
       <div className="container-halaman-kabupaten">
@@ -69,12 +89,16 @@ const Halamankabupaten = () => {
               </p>
             </div>
           </div>
+          <a className="parent-img-modeltanya-program" href="">
+            <img className="rumah-adat" src={rumahAdat} alt="" />
+          </a>
+
           <a
             className="parent-img-modeltanya-program"
             href="https://wa.me/+6281216365729?text=Halo%20Kak%20Nia%20Saya%20ingin%20tanya%20les%20privat%20untuk%20Kelas%20:%0aMapel%20:%20%0aKurikulum%20:%20%0aWilayah%20:"
           >
             <img
-              className="model-tanya-program"
+              className="model-program-kota"
               src={modelTanyaProgram}
               alt=""
             />
@@ -89,6 +113,8 @@ const Halamankabupaten = () => {
         <Asalsekolah />
       </div>
       <Footer />
+      <Bottombar />
+      <Floatingcta />
     </React.Fragment>
   );
 };

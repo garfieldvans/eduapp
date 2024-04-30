@@ -1,0 +1,140 @@
+.bg-about {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container-aboutus {
+  /* padding-left: 15%;
+  padding-right: 15%; */
+  padding-top: 10%;
+  background-image: url("/src/assets/aboutus/bg_jumbotron_about_us.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.parent-box-about {
+  display: flex;
+  justify-content: center;
+  /* background-image: url("/src/assets/aboutus/bg_jumbotron_about_us.png");
+  background-repeat: no-repeat;
+  background-size: 50%; */
+  width: 100%;
+  color: white;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+.model-about {
+  width: 28%;
+}
+.title-about {
+  font-size: 80px;
+  font-weight: 900;
+  color: white;
+  width: 40%;
+  line-height: 90%;
+}
+.desk-about {
+  width: 50%;
+  margin-top: -7%;
+  margin-left: 14%;
+  font-size: 19px;
+  text-align: justify;
+}
+.btn-about {
+  background-color: #f33a6b;
+  padding: 12px;
+  border: 1px solid transparent;
+  margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: white;
+  border-radius: 100px;
+  width: 40%;
+  cursor: pointer;
+}
+.bg-isi-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/src/assets/aboutus/BG_methode.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-left: 15%;
+  padding-right: 15%;
+  width: 100%;
+  gap: 50px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.colase-about {
+  width: 50%;
+}
+.title-content {
+  font-size: 80px;
+  font-weight: 900;
+  color: #0c2569;
+}
+.paragraf-about {
+  color: #0c2569;
+  font-size: 19px;
+  text-align: justify;
+}
+.parent-moto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+.image-moto {
+  width: 20%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 500px) {
+  .parent-box-about {
+    display: grid;
+    place-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .title-about {
+    width: 100%;
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+  .desk-about {
+    width: 100%;
+    margin-top: 0;
+    margin-left: 0;
+    font-size: 15px;
+    text-align: left;
+  }
+  .model-about {
+    width: 50%;
+  }
+  .btn-about {
+    width: 100%;
+  }
+  .bg-isi-about {
+    display: grid;
+    padding-left: 5%;
+    padding-right: 5%;
+    gap: 10px;
+  }
+  .title-content {
+    font-size: 20px;
+  }
+  .paragraf-about {
+    font-size: 15px;
+  }
+  .colase-about {
+    width: 100%;
+  }
+  .image-moto {
+    width: 40%;
+  }
+}

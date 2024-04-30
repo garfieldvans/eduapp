@@ -14,18 +14,24 @@ import Asalsekolah from "../Components/AsalSekolah/Asalsekolah";
 import { Helmet } from "react-helmet";
 import PreLoader from "../Components/Preloader/PreLoader";
 import Floatingcta from "../Components/FloatingCta/Floatingcta";
+import Bottombar from "../Components/BottomBar/Bottombar";
 
 const Homepage = () => {
   return (
     <React.Fragment>
       <Helmet>
-        <meta charSet="utf-8" />
+        <meta
+          charSet="utf-8"
+          name="description"
+          content="Les Privat & Supercamp Masuk PTN Terbaik #1 Indonesia - Edumatrix Indonesia"
+        />
         <title>
-          Bimbel Privat & Supercamp Terbaik #1 Indonesia - Edumatrix Indonesia
+          Les Privat & Supercamp Masuk PTN Terbaik #1 Indonesia - Edumatrix
+          Indonesia
         </title>
-        <link rel="canonical" href="http://mysite.com/example" />
+        <link rel="canonical" href="" />
       </Helmet>
-      <PreLoader />
+      {/* <PreLoader /> */}
       <Navbar />
       <div className="container-all">
         <Slidertop />
@@ -38,8 +44,9 @@ const Homepage = () => {
         <Faq />
         <Asalsekolah />
       </div>
-      <Floatingcta />
       <Footer />
+      <Bottombar />
+      <Floatingcta />
     </React.Fragment>
   );
 };

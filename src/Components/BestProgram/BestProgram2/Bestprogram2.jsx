@@ -30,11 +30,13 @@ const Bestprogram2 = () => {
             <div className="box-best-program-2">
               {program_2.map((item, index) => (
                 <div className="card-halaman-kota" key={index}>
+                  <a href="https://edulink-indonesia.com/lead/edm/chat">
                   <img
                     className="best-program-img-2"
                     src={"http://localhost:8000/images/" + item.image}
                     alt=""
                   />
+                  </a>
                 </div>
               ))}
             </div>

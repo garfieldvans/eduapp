@@ -2,7 +2,7 @@ import React from "react";
 import "./Footer.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFire } from "@fortawesome/free-solid-svg-icons";
-import logo_edm from "../../assets/logo_edm.png"
+import logo_edm from "../../assets/logo_edm.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -36,13 +36,18 @@ const Footer = () => {
               <h2 className="bawah-menu-name">Edumatrix Indonesia</h2>
               <ul id="menu-get-started" className="bawah-menu-list">
                 <li className="menu-item menu-item-type-post_type menu-item-object-product">
-                  <a className="link-footer" href="#">Ruko Permai Monjali</a>
+                  <a className="link-footer" href="#">
+                    Ruko Permai Monjali
+                  </a>
                   <p className="p-address">
                     Jalan Monjali No 3, Kutu Dukuh, Sinduadi, Mlati, Sleman,
                     Yogyakarta 55241
                   </p>
                   <div className="all-sosmed">
-                    <a className="sosmed-bawah" href="https://www.instagram.com/edumatrixindonesia/">
+                    <a
+                      className="sosmed-bawah"
+                      href="https://www.instagram.com/edumatrixindonesia/"
+                    >
                       <img
                         className="img-sosmed"
                         src="https://cdn-web-2.ruangguru.com/landing-pages/assets/hs/1%20Homepage%20RG/Optimize%20V2/ic-ig.svg?convert=webp"
@@ -56,14 +61,20 @@ const Footer = () => {
                         alt=""
                       />
                     </a> */}
-                    <a className="sosmed-bawah" href="https://www.youtube.com/channel/UCK6hN90FKuBsYS2_-sCQaFw">
+                    <a
+                      className="sosmed-bawah"
+                      href="https://www.youtube.com/channel/UCK6hN90FKuBsYS2_-sCQaFw"
+                    >
                       <img
                         className="img-sosmed"
                         src="https://cdn-web-2.ruangguru.com/landing-pages/assets/hs/1%20Homepage%20RG/Optimize%20V2/ic-youtube.svg?convert=webp"
                         alt=""
                       />
                     </a>
-                    <a className="sosmed-bawah" href="https://www.tiktok.com/@edumatrixindonesia?is_from_webapp=1&sender_device=pc">
+                    <a
+                      className="sosmed-bawah"
+                      href="https://www.tiktok.com/@edumatrixindonesia?is_from_webapp=1&sender_device=pc"
+                    >
                       <img
                         className="img-sosmed"
                         src="https://cdn-web-2.ruangguru.com/landing-pages/assets/hs/1%20Homepage%20RG/Optimize%20V2/tiktok-ic-white-40.svg?convert=webp"
@@ -79,15 +90,21 @@ const Footer = () => {
             <div className="bawah-menu">
               <h2 className="bawah-menu-name"> Konsultasi Program</h2>
               <ul id="menu-company" className="bawah-menu-list">
+                {/* <li className="menu-item menu-item-type-post_type menu-item-object-page">
+                  <a className="link-footer">0857-1221-7876 (Kak Una)</a>
+                </li>
+                <li className="menu-item menu-item-type-post_type menu-item-object-page">
+                  <a className="link-footer">0856-0042-2188 (Kak Sari)</a>
+                </li> */}
                 <li className="menu-item menu-item-type-post_type menu-item-object-page">
                   <a className="link-footer">0821-7414-4728 (Kak Iva)</a>
                 </li>
                 <li className="menu-item menu-item-type-taxonomy menu-item-object-category">
                   <a className="link-footer">0812-1636-5729 (Kak Nia)</a>
                 </li>
-                <li className="menu-item menu-item-type-post_type menu-item-object-page">
+                {/* <li className="menu-item menu-item-type-post_type menu-item-object-page">
                   <a className="link-footer">0812-1552-3902 (Kak Eka)</a>
-                </li>
+                </li> */}
               </ul>
             </div>
             <div className="bawah-menu">
@@ -107,20 +124,37 @@ const Footer = () => {
               <h2 className="bawah-menu-name">other websites</h2>
               <ul id="menu-quick-links" className="bawah-menu-list">
                 <li className="menu-item menu-item-type-custom menu-item-object-custom">
-                  <a target="_blank" rel="noopener noreferrer" className="link-footer" href="https://edumatrix-indonesia.com">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-footer"
+                    href="https://edumatrix-indonesia.com"
+                  >
                     EDUMATRIX-INDONESIA.COM
                   </a>
                 </li>
                 <li className="menu-item menu-item-type-custom menu-item-object-custom">
-                  <a target="_blank" rel="noopener noreferrer" className="link-footer" href="https://bimbelsnbt.com">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-footer"
+                    href="https://bimbelsnbt.com"
+                  >
                     BIMBELSNBT.COM
                   </a>
                 </li>
                 <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a className="link-footer" href="https://masterclass.co.id">MASTERCLASS.CO.ID</a>
+                  <a className="link-footer" href="https://masterclass.co.id">
+                    MASTERCLASS.CO.ID
+                  </a>
                 </li>
                 <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a className="link-footer" href="https://bimbel-kedokteran.co.id">BIMBEL-KEDOKTERAN.CO.ID</a>
+                  <a
+                    className="link-footer"
+                    href="https://bimbel-kedokteran.co.id"
+                  >
+                    BIMBEL-KEDOKTERAN.CO.ID
+                  </a>
                 </li>
               </ul>
             </div>
@@ -134,11 +168,11 @@ const Footer = () => {
               </p>
               <a
                 className="bawah-call-to-action-button button"
-                href="tel:085600422188"
+                href="https://edulink-indonesia.com/lead/edm/call"
                 target="_self"
               >
                 {" "}
-                Hubungi Kami{" "}
+                <strong>Hubungi Kami</strong>
               </a>
             </div>
             {/* <div className="bawah-call-to-action">

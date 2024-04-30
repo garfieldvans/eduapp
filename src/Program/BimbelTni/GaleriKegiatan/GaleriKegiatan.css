@@ -1,0 +1,73 @@
+.parent-box-galeri-kegiatan {
+  margin-top: 50px;
+}
+.parent-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.title-kegiatan {
+  color: white;
+  /* display: flex;
+  align-items: center; */
+  font-size: 30px;
+  gap: 10px;
+  text-align: center;
+}
+.icon-kegiatan {
+  width: 60px;
+}
+.parent-card-kegiatan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+.kegiatan-img {
+  width: 24%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.kegiatan-img:hover {
+  transform: scale(0.9);
+  cursor: pointer;
+  border-radius: 5px;
+}
+.video-kegiatan {
+  border: 1px solid transparent;
+  width: 1920px;
+  height: 750px;
+  border-radius: 10px;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 500px) {
+  .kegiatan-img {
+    width: 40%;
+  }
+  .title-kegiatan {
+    justify-content: center;
+    font-size: 20px;
+  }
+  .icon-kegiatan {
+    width: 35px;
+  }
+  .parent-box-galeri-kegiatan {
+    margin-top: 20px;
+  }
+  .parent-card-kegiatan {
+    margin-top: 10px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .kegiatan-img {
+    width: 45%;
+  }
+  .title-kegiatan {
+    justify-content: center;
+  }
+}

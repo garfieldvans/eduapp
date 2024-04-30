@@ -1,13 +1,16 @@
 .container-halaman-program {
   padding-left: 15%;
   padding-right: 15%;
+  padding-top: 8%;
 }
 .content-program {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 8%;
   color: white;
+  background-color: #054599;
+  padding: 20px;
+  border-radius: 10px;
 }
 .isi-content-program {
   display: flex;
@@ -35,10 +38,10 @@
     margin-bottom: 40px;
 }
 .discount-promo {
-    width: 80%;
+    width: 100%;
     margin-top: 50px;
     text-align: center;
-    border-radius: 20px;
+    border-radius: 6px;
 }
 
 /* RESPONSIVE */

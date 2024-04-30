@@ -64,9 +64,9 @@
 @media only screen and (max-width: 500px) {
   .model-tanya-program {
     position: fixed;
-    z-index: 9999;
-    right: 25px;
-    bottom: 50px;
+    z-index: 9991;
+    right: 10px;
+    bottom: 29%;
     width: 30% !important;
     filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.212));
   }
@@ -96,7 +96,7 @@
 }
 @media only screen and (max-width: 820px) {
   .title-best-program {
-    font-size: 28px;
+    font-size: 20px;
     width: 100%;
   }
   .hot-program {

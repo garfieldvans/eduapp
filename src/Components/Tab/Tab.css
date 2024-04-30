@@ -5,13 +5,13 @@
 }
 
 .tab {
-  padding: 10px;
+  /* padding: 10px; */
   background-color: #054599;
-  border: 0px;
+  border: 10px solid transparent;
   border-radius: 10px 10px 0 0;
   margin-top: 50px;
   font-family: "Montserrat", sans-serif;
-  font-size: 17px;
+  font-size: 15px;
   color: white;
   font-weight: 600;
   cursor: pointer;
@@ -28,7 +28,7 @@
   justify-content: start;
   /* background-color: #05469a; */
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 3px;
   margin-top: 20px;
   padding: 20px;
   border-radius: 10px;
@@ -38,12 +38,12 @@
 }
 .btn-kota {
   color: rgb(0, 0, 0);
-  padding: 8px;
+  padding: 5px;
   border-radius: 50px;
   font-family: "Montserrat", sans-serif;
   width: 20%;
-  font-weight: 600;
-  font-size: 17px;
+  font-weight: 500;
+  font-size: 16px;
   text-decoration: none;
 }
 .btn-kota:hover {
@@ -67,12 +67,12 @@
 }
 .btn-kelas {
   color: rgb(0, 0, 0);
-  padding: 8px;
+  padding: 5px;
   border-radius: 50px;
   font-family: "Montserrat", sans-serif;
   width: 25%;
-  font-weight: 600;
-  font-size: 17px;
+  font-weight: 500;
+  font-size: 16px;
   text-decoration: none;
 }
 .btn-kelas:hover {
@@ -86,7 +86,7 @@
   justify-content: start;
   /* background-color: #05469a; */
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 3px;
   margin-top: 20px;
   padding: 20px;
   border-radius: 10px;
@@ -96,12 +96,12 @@
 }
 .btn-mapel {
   color: rgb(0, 0, 0);
-  padding: 8px;
+  padding: 6px;
   border-radius: 50px;
   font-family: "Montserrat", sans-serif;
   width: 25%;
-  font-weight: 600;
-  font-size: 17px;
+  font-weight: 500;
+  font-size: 16px;
   text-decoration: none;
 }
 .combine-icon-text {
@@ -127,6 +127,9 @@
 .icon-jangkauan-kota {
   width: 50px;
 }
+.icon-city {
+  width: 30px;
+}
 
 /* RESPONSIVE */
 @media only screen and (max-width: 500px) {
@@ -140,20 +143,19 @@
     width: 40%;
   }
   .tab {
-    margin-top: 0;
+    margin-top: 10px;
     /* width: 33%; */
-    border-radius: 10px 10px 10px 10px;
   }
   .selected {
 
   }
   .container-all-tab {
-    display: grid;
+    /* display: grid; */
     margin-top: 20px;
     gap: 10px;
   }
   .container-tab {
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 0 0 10px 10px;
   }
   .combine-icon-text {
     display: flex;

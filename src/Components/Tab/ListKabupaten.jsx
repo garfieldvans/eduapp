@@ -54,56 +54,69 @@ const ListKabupaten = () => {
 
   return (
     <div className="container-all-tab">
-    <Tabs>
-      <Tab title="Jangkauan Kota">
-        <div className="parent-list-kota">
-          {kabupaten.map((item, index) => (
-            <Link
-              to={`/les-privat-di-kabupaten/${item.kota_kabupaten}?data=${
-                item.id
-              }`}
-              className="btn-kota"
-              key={index}
-            >
-              {item.kota_kabupaten}
-            </Link>
-          ))}
-        </div>
-      </Tab>
-      <Tab title="Program">
-        <div className="parent-list-kelas">
-          {kelas.map((item, index) => (
-            <Link
-              to={`kelas/${item.slug.toLowerCase()}?data=${item.id}`}
-              className="btn-kelas"
-              key={index}
-            >
-              {item.name}
-            </Link>
-          ))}
-        </div>
-      </Tab>
-      <Tab title="Pilihan Mata Pelajaran">
-        <div className="parent-list-mapel">
-          {mapel.map((item, index) => (
-            <Link
-              to={`/mata-pelajaran/${item.name.toLowerCase()}?data=${item.id}`}
-              className="btn-mapel"
-              key={index}
-            >
-              <div className="combine-icon-text">
-                <img
-                  className="icon-mapel"
-                  src={"http://localhost:8000/images/" + item.image}
-                  alt=""
-                />
+      <Tabs>
+        <Tab title="PROGRAM">
+          <div className="parent-list-kelas">
+            {kelas.map((item, index) => (
+              <Link
+                to={`/les-privat/${item.slug.toLowerCase()}?data=${item.id}`}
+                className="btn-kelas"
+                key={index}
+                // onClick={() => {
+                //   window.location.href = `/les-privat/${item.slug.toLowerCase()}?data=${
+                //     item.id
+                //   }`;
+                // }}
+              >
                 {item.name}
-              </div>
-            </Link>
-          ))}
-        </div>
-      </Tab>
-    </Tabs>
+              </Link>
+            ))}
+          </div>
+        </Tab>
+        <Tab title="MAPEL">
+          <div className="parent-list-mapel">
+            {mapel.map((item, index) => (
+              <Link
+                to={`/mata-pelajaran/${item.name.toLowerCase()}?data=${
+                  item.id
+                }`}
+                className="btn-mapel"
+                key={index}
+                // onClick={() => {
+                //   window.location.href = `/mata-pelajaran/${item.name.toLowerCase()}?data=${
+                //     item.id
+                //   }`;
+                // }}
+              >
+                <div className="combine-icon-text">
+                  <img
+                    className="icon-mapel"
+                    src={"http://localhost:8000/images/" + item.image}
+                    alt=""
+                  />
+                  {item.name}
+                </div>
+              </Link>
+            ))}
+          </div>
+        </Tab>
+        <Tab title="WILAYAH">
+          <div className="parent-list-kota">
+            {kabupaten.map((item, index) => (
+              <Link
+                to={`/les-privat-di-kabupaten/${item.kota_kabupaten}?data=${item.id}`}
+                className="btn-kota"
+                key={index}
+                // onClick={() => {
+                //   window.location.href = `/les-privat-di-kabupaten/${item.kota_kabupaten}?data=${item.id}`;
+                // }}
+              >
+                {item.kota_kabupaten}
+              </Link>
+            ))}
+          </div>
+        </Tab>
+      </Tabs>
     </div>
   );
 };

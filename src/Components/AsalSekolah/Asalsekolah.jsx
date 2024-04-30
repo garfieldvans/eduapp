@@ -20,14 +20,6 @@ const Asalsekolah = () => {
             </div>
           </div>
         </div>
-        {/* --- */}
-        {/* <div className="parent-card-asalsekolah">
-          <div className="marquee2">
-            <div className="track2">
-              <div className="content"></div>
-            </div>
-          </div>
-        </div> */}
       </div>
     </div>
   );

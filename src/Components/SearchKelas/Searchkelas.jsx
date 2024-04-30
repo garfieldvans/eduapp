@@ -10,6 +10,11 @@ import iconOsn from "../../assets/OSN.png";
 import iconPrivat from "../../assets/PRIVAT.png";
 import Footer from "../Footer/Footer";
 import { Helmet } from "react-helmet";
+import Floatingcta from "../FloatingCta/Floatingcta";
+import Bottombar from "../BottomBar/Bottombar";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import tanyaProgram from "../../assets/tanya_program.png";
 
 const Searchkelas = () => {
   const [loading, setLoading] = useState([]);
@@ -79,9 +84,13 @@ const Searchkelas = () => {
     <React.Fragment>
       <Navbar />
       <Helmet>
-        <meta charSet="utf-8" />
+        <meta
+          charSet="utf-8"
+          name="description"
+          content="Pilih Program Les Privat Terbaik - Edumatrix Indonesia"
+        />
         <title>Pilih Program Les Privat Terbaik - Edumatrix Indonesia</title>
-        <link rel="canonical" href="http://mysite.com/example" />
+        <link rel="canonical" href="/pilihan-program" />
       </Helmet>
       <div className="container-search-kelas">
         <div className="parent-search">
@@ -89,16 +98,15 @@ const Searchkelas = () => {
             onChange={(e) => setSearchTitle(e.target.value)}
             className="input-src"
             type="search"
-            placeholder="cari kelas..."
+            placeholder="cari program atau kelas..."
           />
           <button className="btn-src">
-            <img className="icon-src" src={searchIcon} alt="" />
+            <FontAwesomeIcon className="icon-src" icon={faSearch} />
           </button>
         </div>
         <div className="parent-container-utama">
           <h1 className="title-search-kelas">
-            <img src={iconKampus} alt="" /> PROGRAM
-            LOLOS KAMPUS FAVORIT
+            <img src={iconKampus} alt="" /> PROGRAM LOLOS KAMPUS FAVORIT
           </h1>
           <div className="container-card">
             {loading ? (
@@ -116,12 +124,14 @@ const Searchkelas = () => {
                 })
                 .map((item, index) => (
                   <div className="card-utama">
-                    <img
-                      key={index}
-                      className="img-pilihkelas"
-                      src={"http://localhost:8000/images/" + item.image}
-                      alt="Avatar"
-                    />
+                    <a href="https://edulink-indonesia.com/lead/edm/chat">
+                      <img
+                        key={index}
+                        className="img-pilihkelas"
+                        src={"http://localhost:8000/images/" + item.image}
+                        alt="Avatar"
+                      />
+                    </a>
                   </div>
                 ))
             )}
@@ -152,11 +162,13 @@ const Searchkelas = () => {
                   })
                   .map((item, index) => (
                     <div key={index} className="card-utama">
-                      <img
-                        className="img-pilihkelas-polri"
-                        src={"http://localhost:8000/images/" + item.image}
-                        alt="Avatar"
-                      />
+                      <a href="https://edulink-indonesia.com/lead/edm/chat">
+                        <img
+                          className="img-pilihkelas-polri"
+                          src={"http://localhost:8000/images/" + item.image}
+                          alt="Avatar"
+                        />
+                      </a>
                     </div>
                   ))
               )}
@@ -185,11 +197,13 @@ const Searchkelas = () => {
                   })
                   .map((item, index) => (
                     <div key={index} className="card-utama">
-                      <img
-                        className="img-pilihkelas-cpns"
-                        src={"http://localhost:8000/images/" + item.image}
-                        alt="Avatar"
-                      />
+                      <a href="https://edulink-indonesia.com/lead/edm/chat">
+                        <img
+                          className="img-pilihkelas-cpns"
+                          src={"http://localhost:8000/images/" + item.image}
+                          alt="Avatar"
+                        />
+                      </a>
                     </div>
                   ))
               )}
@@ -218,11 +232,13 @@ const Searchkelas = () => {
                   })
                   .map((item, index) => (
                     <div key={index} className="card-utama">
-                      <img
-                        className="img-pilihkelas-polri"
-                        src={"http://localhost:8000/images/" + item.image}
-                        alt="Avatar"
-                      />
+                      <a href="https://edulink-indonesia.com/lead/edm/chat">
+                        <img
+                          className="img-pilihkelas-polri"
+                          src={"http://localhost:8000/images/" + item.image}
+                          alt="Avatar"
+                        />
+                      </a>
                     </div>
                   ))
               )}
@@ -251,11 +267,13 @@ const Searchkelas = () => {
                   })
                   .map((item, index) => (
                     <div key={index} className="card-utama">
-                      <img
-                        className="img-pilihkelas-polri"
-                        src={"http://localhost:8000/images/" + item.image}
-                        alt="Avatar"
-                      />
+                      <a href="https://edulink-indonesia.com/lead/edm/chat">
+                        <img
+                          className="img-pilihkelas-polri"
+                          src={"http://localhost:8000/images/" + item.image}
+                          alt="Avatar"
+                        />
+                      </a>
                     </div>
                   ))
               )}
@@ -263,6 +281,14 @@ const Searchkelas = () => {
           </div>
         </div>
       </div>
+      <a
+        className="parent-img-modeltanya-program"
+        href="https://wa.me/+6281216365729?text=Halo%20Kak%20Nia%20Saya%20ingin%20tanya%20les%20privat%20untuk%20Kelas%20:%0aMapel%20:%20%0aKurikulum%20:%20%0aWilayah%20:"
+      >
+        <img className="model-program-kota" src={tanyaProgram} alt="" />
+      </a>
+      <Bottombar />
+      <Floatingcta />
       <Footer />
     </React.Fragment>
   );

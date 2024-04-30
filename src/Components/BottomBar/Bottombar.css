@@ -1,0 +1,104 @@
+@import "https://fonts.googleapis.com/css?family=Roboto+Condensed";
+
+/* html,
+body {
+  height: 100%;
+  margin: 0px;
+  font-family: "Roboto Condensed";
+} */
+
+.wrapper {
+  min-height: 100%;
+  position: relative;
+  padding-top: 24px;
+  text-align: center;
+  color: black;
+  display: none;
+}
+.text-bottombar {
+  color: black;
+  font-weight: 600;
+}
+
+#bottom-bar {
+  width: 100%;
+  background-color: #ffffff;
+  color: black;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  z-index: 9999;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-radius: 20px 20px 0 0;
+}
+
+.bottom-bar-element {
+  width: 25%;
+  display: inline-block;
+  float: left;
+  text-align: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.icon-home-bottombar {
+  width: 5%;
+}
+
+.dropdown-bottombar {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: rgb(0, 0, 0);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+.dropbtn-bottom {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: rgb(0, 0, 0);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* .bottom-bar-element:hover {
+  color: white !important;
+}
+
+#bottom-bar:hover .bottom-bar-element {
+  color: #78909c;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+} */
+
+/* RESPONSIVE */
+@media screen and (max-width: 500px) {
+  .wrapper {
+    display: flex;
+  }
+  .text-bottombar {
+    font-size: 13px;
+  }
+  .icon-home-bottombar {
+    width: 20%;
+  }
+  .icon-home-bottombar-about{
+  width: 27%;
+  }
+}

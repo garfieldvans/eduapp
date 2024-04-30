@@ -27,12 +27,12 @@ const Keunggulan = () => {
         </h1>
         <div className="parent-card-keunggulan">
           {keunggulan.map((item, index) => (
-              <img
+            <img
               key={index}
-                className="keunggulan-img"
-                src={"http://localhost:8000/images/" + item.image}
-                alt=""
-              />
+              className="keunggulan-img"
+              src={"http://localhost:8000/images/" + item.image}
+              alt=""
+            />
           ))}
         </div>
       </div>

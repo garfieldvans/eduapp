@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCity } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import jangkauanKota from "../../assets/kota.png";
+import city from "../../assets/city.png";
 
 const Listkota = () => {
   const [kota, setKota] = useState([]);
@@ -48,41 +49,40 @@ const Listkota = () => {
   return (
     <div className="container-all-tab">
       <Tabs>
-        <Tab title="JANGKAUAN KOTA">
-          <div className="parent-list-kota">
-            {kota.map((item, index) => (
-              <Link
-                to={`/les-privat-di/kota/${item.kota.toLowerCase()}?data=${
-                  item.id
-                }`}
-                className="btn-kota"
-                key={index}
-              >
-                {item.kota}
-              </Link>
-            ))}
-          </div>
-        </Tab>
         <Tab title="PROGRAM">
           <div className="parent-list-kelas">
             {program.map((item, index) => (
               <Link
-                to={`/les-privat/${item.slug.toLowerCase()}-terbaik?data=${item.id}`}
+                to={`/les-privat/${item.slug.toLowerCase()}-terbaik?data=${
+                  item.id
+                }`}
                 className="btn-kelas"
                 key={index}
+                // onClick={() => {
+                //   window.location.href = `/les-privat/${item.slug.toLowerCase()}-terbaik?data=${
+                //     item.id
+                //   }`;
+                // }}
               >
                 {item.name}
               </Link>
             ))}
           </div>
         </Tab>
-        <Tab title="PILIHAN MATA PELAJARAN">
+        <Tab title="MAPEL">
           <div className="parent-list-mapel">
             {mapel.map((item, index) => (
               <Link
-                to={`/mata-pelajaran/${item.name.toLowerCase()}?data=${item.id}`}
+                to={`/mata-pelajaran/${item.name.toLowerCase()}?data=${
+                  item.id
+                }`}
                 className="btn-mapel"
                 key={index}
+                // onClick={() => {
+                //   window.location.href = `/mata-pelajaran/${item.name.toLowerCase()}?data=${
+                //     item.id
+                //   }`;
+                // }}
               >
                 <div className="combine-icon-text">
                   <img
@@ -92,6 +92,26 @@ const Listkota = () => {
                   />
                   {item.name}
                 </div>
+              </Link>
+            ))}
+          </div>
+        </Tab>
+        <Tab title="WILAYAH">
+          <div className="parent-list-kota">
+            {kota.map((item, index) => (
+              <Link
+                to={`/les-privat-di-kota/${item.kota.toLowerCase()}?data=${
+                  item.id
+                }`}
+                className="btn-kota"
+                key={index}
+                // onClick={() => {
+                //   window.location.href = `/les-privat-di/kota/${item.kota.toLowerCase()}?data=${
+                //     item.id
+                //   }`;
+                // }}
+              >
+                {item.kota}
               </Link>
             ))}
           </div>

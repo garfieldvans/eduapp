@@ -10,7 +10,7 @@ const Slidertop = () => {
 
   useEffect(() => {
     fetchsliderHeader();
-    fetchsliderHeader_2()
+    fetchsliderHeader_2();
   }, []);
 
   const fetchsliderHeader = () => {
@@ -51,10 +51,14 @@ const Slidertop = () => {
             return (
               <div className="top-slider">
                 <div className="slider" key={index}>
-                  <img
-                    src={"http://localhost:8000/images/" + item.image}
-                    alt=""
-                  />
+                  <a href="https://edulink-indonesia.com/lead/edm/chat">
+                    <img
+                      src={
+                        "http://localhost:8000/images/" + item.image
+                      }
+                      alt=""
+                    />
+                  </a>
                 </div>
               </div>
             );
@@ -68,10 +72,14 @@ const Slidertop = () => {
             return (
               <div className="top-slider">
                 <div className="slider" key={index}>
-                  <img
-                    src={"http://localhost:8000/images/" + item.image}
-                    alt=""
-                  />
+                  <a href="https://edulink-indonesia.com/lead/edm/chat">
+                    <img
+                      src={
+                        "http://localhost:8000/images/" + item.image
+                      }
+                      alt=""
+                    />
+                  </a>
                 </div>
               </div>
             );

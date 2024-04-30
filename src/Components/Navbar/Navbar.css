@@ -24,12 +24,16 @@ body {
 }
 
 .navbar {
+  /* background-image: url("/src/assets/border_atas.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; */
   position: fixed;
   width: 100%;
   background: #054599;
   color: #ffffff;
   z-index: 9999;
   padding: 5px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
 }
 .icon-navbar {
   display: none;
@@ -47,10 +51,27 @@ body {
   font-weight: 600 !important;
   cursor: pointer;
 }
+.menu-nav:hover {
+  text-decoration: underline;
+}
 .menu-nav-daftar {
   background-color: #f33a6b;
-  border-radius: 100px;
+  border: 1px solid white;
+  border-radius: 5px;
   padding: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  transition: all 0.5s;
+}
+.menu-nav-daftar:hover {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  transition: all 0.5s;
 }
 .menu-items {
   order: 2;
@@ -75,7 +96,7 @@ body {
 }
 
 .logo {
-  width: 15%;
+  width: 13%;
   cursor: pointer;
 }
 
@@ -87,7 +108,7 @@ body {
 .dropdown {
   background-color: rgb(255, 255, 255);
   padding: 0;
-  position: fixed; /*WITH RESPECT TO PARENT*/
+  position: fixed;
   display: none;
   border-radius: 5px;
   top: 50px;
@@ -258,5 +279,12 @@ body {
 @media only screen and (max-width: 1024px) {
   .logo {
     width: 25%;
+  }
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 500px) {
+  .navbar {
+    display: none;
   }
 }

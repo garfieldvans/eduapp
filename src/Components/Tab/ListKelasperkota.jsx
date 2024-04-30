@@ -33,7 +33,7 @@ const Listkelasperkota = () => {
       .then((res) => res.json())
       .then((data) => {
         setKelasPerKota(data);
-        console.log("data kelasperkota",data);
+        console.log("data kelasperkota", data);
       });
   };
 
@@ -58,41 +58,40 @@ const Listkelasperkota = () => {
   return (
     <div className="container-all-tab">
       <Tabs>
-        <Tab title="JANGKAUAN KOTA">
-          <div className="parent-list-kota">
-            {kelasperkota.map((item, index) => (
-              <Link
-                to={`/kelas-perkota/${item.namaKota}?data=${
-                  item.kelasId
-                }`}
-                className="btn-kota"
-                key={index}
-              >
-                {item.namaKota}
-              </Link>
-            ))}
-          </div>
-        </Tab>
         <Tab title="PROGRAM">
           <div className="parent-list-kelas">
             {kelas.map((item, index) => (
               <Link
-                to={`/les-privat/${item.slug.toLowerCase()}-terbaik?data=${item.id}`}
+                to={`/les-privat/${item.slug.toLowerCase()}-terbaik?data=${
+                  item.id
+                }`}
                 className="btn-kelas"
                 key={index}
+                // onClick={() => {
+                //   window.location.href = `/les-privat/${item.slug.toLowerCase()}-terbaik?data=${
+                //     item.id
+                //   }`;
+                // }}
               >
                 {item.name}
               </Link>
             ))}
           </div>
         </Tab>
-        <Tab title="PILIHAN MATA PELAJARAN">
+        <Tab title="MAPEL">
           <div className="parent-list-mapel">
             {mapel.map((item, index) => (
               <Link
-                to={`/mata-pelajaran/${item.name.toLowerCase()}?data=${item.id}`}
+                to={`/mata-pelajaran/${item.name.toLowerCase()}?data=${
+                  item.id
+                }`}
                 className="btn-mapel"
                 key={index}
+                // onClick={() => {
+                //   window.location.href = `/mata-pelajaran/${item.name.toLowerCase()}?data=${
+                //     item.id
+                //   }`;
+                // }}
               >
                 <div className="combine-icon-text">
                   <img
@@ -102,6 +101,22 @@ const Listkelasperkota = () => {
                   />
                   {item.name}
                 </div>
+              </Link>
+            ))}
+          </div>
+        </Tab>
+        <Tab title="WILAYAH">
+          <div className="parent-list-kota">
+            {kelasperkota.map((item, index) => (
+              <Link
+                to={`/kelas-perkota/${item.namaKota}?data=${item.kelasId}`}
+                className="btn-kota"
+                key={index}
+                // onClick={() => {
+                //   window.location.href = `/kelas-perkota/${item.namaKota}?data=${item.kelasId}`;
+                // }}
+              >
+                {item.namaKota}
               </Link>
             ))}
           </div>

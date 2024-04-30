@@ -112,27 +112,25 @@
 .input-src {
   width: 70%;
   border: 1px solid transparent;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding: 15px;
   padding-left: 15px;
   outline-style: none;
   border-radius: 100px 0 0 100px;
   font-family: "Montserrat", sans-serif;
-  border: 5px solid white;
+  /* border: 5px solid white; */
   font-weight: 600;
 }
 .btn-src {
-  display: flex;
-  justify-content: right;
-  align-items: center;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 3px;
-  padding-bottom: 3px;
   border: 1px solid transparent;
+  padding: 15px;
+  outline-style: none;
   border-radius: 0 100px 100px 0;
-  background-color: white;
-  border: 5px solid white;
+  font-family: "Montserrat", sans-serif;
+  /* border: 5px solid white; */
+  font-weight: 600;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-weight: 600;
 }
 .parent-search {
   display: flex;
@@ -142,7 +140,7 @@
   margin-top: 50px;
 }
 .icon-src {
-  width: 50%;
+  font-size: 15px;
 }
 .title-search-kelas {
   display: flex;
@@ -408,7 +406,7 @@
       padding-right: 5%;
     }
     .parent-search {
-      margin-top: 70px;
+      margin-top: 40px;
     }
     .title-search-kelas {
       width: 90%;

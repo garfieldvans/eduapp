@@ -3,7 +3,8 @@ import Navbar from "../Navbar/Navbar";
 import "./Halamankota.css";
 import { useLocation, useParams } from "react-router-dom";
 import axios from "axios";
-import modelTanyaProgram from "../../assets/tanya_program.png";
+import rumahAdat from "../../assets/rumah_adat.png";
+import tanyaProgram from "../../assets/tanya_program.png";
 import Bestprogram2 from "../BestProgram/BestProgram2/Bestprogram2";
 import Voucer from "../Voucer/Voucer";
 import ListKabupaten from "../Tab/ListKabupaten";
@@ -14,6 +15,8 @@ import Faq from "../Faq/Faq";
 import Testimoni from "../Testimoni/Testimoni";
 import Asalsekolah from "../AsalSekolah/Asalsekolah";
 import { Helmet } from "react-helmet";
+import Floatingcta from "../FloatingCta/Floatingcta";
+import Bottombar from "../BottomBar/Bottombar";
 
 const Halamankota = () => {
   const { id } = useParams();
@@ -47,8 +50,10 @@ const Halamankota = () => {
     <React.Fragment>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Bimbel Privat Terbaik di {`${kota.kota}`} - Edumatrix Indonesia</title>
-        <link rel="canonical" href="http://mysite.com/example" />
+        <title>
+          Les Privat Terbaik di {`${kota.kota}`} #1 - Edumatrix Indonesia
+        </title>
+        <link rel="canonical" href="" />
       </Helmet>
       <Navbar />
       <div className="container-halaman-kota">
@@ -57,6 +62,7 @@ const Halamankota = () => {
             <h2 className="title-halaman-kota">
               Les Privat Terbaik di {kota.kota}
             </h2>
+
             <div className="paragraf-kota">
               <p>
                 Jasa Les Privat di Kota {kota.kota} untuk TK, SD, SMP, SMA,
@@ -70,15 +76,15 @@ const Halamankota = () => {
               </p>
             </div>
           </div>
+          <a className="parent-img-modeltanya-program" href="">
+            <img className="rumah-adat" src={rumahAdat} alt="" />
+          </a>
+
           <a
             className="parent-img-modeltanya-program"
             href="https://wa.me/+6281216365729?text=Halo%20Kak%20Nia%20Saya%20ingin%20tanya%20les%20privat%20untuk%20Kelas%20:%0aMapel%20:%20%0aKurikulum%20:%20%0aWilayah%20:"
           >
-            <img
-              className="model-tanya-program"
-              src={modelTanyaProgram}
-              alt=""
-            />
+            <img className="model-program-kota" src={tanyaProgram} alt="" />
           </a>
         </div>
         <Bestprogram2 />
@@ -91,6 +97,8 @@ const Halamankota = () => {
         <Asalsekolah />
       </div>
       <Footer />
+      <Bottombar />
+      <Floatingcta />
     </React.Fragment>
   );
 };

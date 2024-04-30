@@ -31,17 +31,24 @@ const Bestprogram = () => {
             <div className="box-best-program">
               {program.map((item, index) => (
                 <div className="card-best-program" key={index}>
-                  <img
-                    className="best-program-img"
-                    src={"http://localhost:8000/images/" + item.image}
-                    alt=""
-                  />
+                  <a href="https://edulink-indonesia.com/lead/edm/chat">
+                    <img
+                      className="best-program-img"
+                      src={
+                        "http://localhost:8000/images/" + item.image
+                      }
+                      alt=""
+                    />
+                  </a>
                 </div>
               ))}
             </div>
           </div>
         </div>
-        <a className="parent-img-modeltanya-program" href="https://wa.me/+6281216365729?text=Halo%20Kak%20Nia%20Saya%20ingin%20tanya%20les%20privat%20untuk%20Kelas%20:%0aMapel%20:%20%0aKurikulum%20:%20%0aWilayah%20:">
+        <a
+          className="parent-img-modeltanya-program"
+          href="https://wa.me/+6281216365729?text=Halo%20Kak%20Nia%20Saya%20ingin%20tanya%20les%20privat%20untuk%20Kelas%20:%0aMapel%20:%20%0aKurikulum%20:%20%0aWilayah%20:"
+        >
           <img className="model-tanya-program" src={modelTanyaProgram} alt="" />
         </a>
       </div>

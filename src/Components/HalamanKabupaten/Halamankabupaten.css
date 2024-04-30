@@ -1,13 +1,16 @@
 .container-halaman-kabupaten {
   padding-left: 15%;
   padding-right: 15%;
+  padding-top: 8%;
 }
 .content-kabupaten {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 8%;
+  padding: 20px;
   color: white;
+  background-color: #054599;
+  border-radius: 10px;
 }
 .isi-content-kabupaten {
   display: flex;

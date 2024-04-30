@@ -9,16 +9,20 @@ import {
   faStar,
 } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
-import iconSupercamp from "../../assets/supercamp.png"
-import iconLiveClass from "../../assets/live_class.png"
-import iconTrainingCamp from "../../assets/training_camp.png"
+import iconSupercamp from "../../assets/supercamp.png";
+import iconLiveClass from "../../assets/live_class.png";
+import iconTrainingCamp from "../../assets/training_camp.png";
 
 const Navbar = () => {
   const navigate = useNavigate();
 
   const goToKelas = () => {
-    navigate("/pilihan-kelas");
+    navigate("/pilihan-program");
   };
+
+  const goToAbout = () => {
+    navigate("/tentang-kami")
+  }
 
   const goToHome = () => {
     navigate("/");
@@ -41,7 +45,7 @@ const Navbar = () => {
                 <FontAwesomeIcon className="icon-navbar" icon={faSignIn} /> Home
               </a>
             </li>
-            <li class="services">
+            {/* <li class="services">
               <a className="menu-nav">
                 Program
                 <FontAwesomeIcon
@@ -51,35 +55,54 @@ const Navbar = () => {
               </a>
               <ul className="dropdown">
                 <li>
-                  <a className="child-dropdown" href="/les-privat/snbt-terbaik?data=19">
+                  <a
+                    className="child-dropdown"
+                    href="https://edumatrix-indonesia.com/camp-edumatrix"
+                  >
                     <img className="icon-dropdown" src={iconSupercamp} alt="" />
                     Supercamp/Karantina - Sukses Masuk PTN 2024
                   </a>
                 </li>
                 <li>
-                  <a className="child-dropdown" href="/les-privat/akmil-terbaik?data=2">
-                  <img className="icon-dropdown" src={iconLiveClass} alt="" />
+                  <a
+                    className="child-dropdown"
+                    href="https://edumatrix-indonesia.com/"
+                  >
+                    <img className="icon-dropdown" src={iconLiveClass} alt="" />
                     Live Class - Sukses Masuk PTN 2024
                   </a>
                 </li>
                 <li>
-                  <a className="child-dropdown" href="/les-privat/akpol-terbaik?data=3">
-                  <img className="icon-dropdown" src={iconTrainingCamp} alt="" />
+                  <a
+                    className="child-dropdown"
+                    href="https://edumatrix-indonesia.com/bimbel-tni-polri-dan-sekolah-kedinasan-terbaru-2024/"
+                  >
+                    <img
+                      className="icon-dropdown"
+                      src={iconTrainingCamp}
+                      alt=""
+                    />
                     Training Camp - Sukses Masuk TNI/POLRI & Sekolah Kedinasan
                   </a>
                 </li>
               </ul>
+            </li> */}
+            <li>
+              <a onClick={() => goToAbout()} className="menu-nav">
+                <FontAwesomeIcon className="icon-navbar" icon={faSchool} />{" "}
+                Tentang Kami
+              </a>
             </li>
             <li>
               <a onClick={() => goToKelas()} className="menu-nav">
                 <FontAwesomeIcon className="icon-navbar" icon={faSchool} />{" "}
-                Kelas
+                Program
               </a>
             </li>
             <li>
               <a
                 className="menu-nav-daftar"
-                href="https://web.whatsapp.com/send?phone=6281216365729&text=Halo%20Kak%20Nia%20Saya%20ingin%20daftar%20les%20privat%20untuk%20Kelas%20:%0aMapel%20:%20%0aKurikulum%20:%20%0aWilayah:"
+                href="https://edulink-indonesia.com/lead/edm/chat"
               >
                 <FontAwesomeIcon className="icon-navbar" icon={faSignIn} />{" "}
                 Daftar
@@ -87,7 +110,7 @@ const Navbar = () => {
             </li>
           </ul>
           <img
-            onClick={() => goToKelas()}
+            onClick={() => goToHome()}
             alt="logo edm"
             className="logo"
             src="https://edumatrix-education.vercel.app/static/media/logo_edm.d190f8a81fb23ea9ea9b.png"
