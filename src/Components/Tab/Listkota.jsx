@@ -20,7 +20,7 @@ const Listkota = () => {
   }, []);
 
   const fetchKota = () => {
-    fetch("http://localhost:8000/kota")
+    fetch("https://api.edulink-indonesia.com/kota")
       .then((res) => res.json())
       .then((data) => {
         setKota(data);
@@ -29,7 +29,7 @@ const Listkota = () => {
   };
 
   const fetchKelas = () => {
-    fetch(`http://localhost:8000/kelas`)
+    fetch(`https://api.edulink-indonesia.com/kelas`)
       .then((res) => res.json())
       .then((data) => {
         setProgram(data);
@@ -38,13 +38,13 @@ const Listkota = () => {
   };
 
   const fetchMapel = () => {
-    fetch("http://localhost:8000/matapelajaran")
+    fetch("https://api.edulink-indonesia.com/matapelajaran")
       .then((res) => res.json())
       .then((data) => {
         setMapel(data);
         console.log(data);
       });
-  };
+  }; 
 
   return (
     <div className="container-all-tab">
@@ -87,7 +87,7 @@ const Listkota = () => {
                 <div className="combine-icon-text">
                   <img
                     className="icon-mapel"
-                    src={"http://localhost:8000/images/" + item.image}
+                    src={"https://api.edulink-indonesia.com/images/" + item.image}
                     alt=""
                   />
                   {item.name}

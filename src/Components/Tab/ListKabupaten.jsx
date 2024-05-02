@@ -26,7 +26,7 @@ const ListKabupaten = () => {
   }, []);
 
   const fetchKabupaten = () => {
-    fetch(`http://localhost:8000/ibukotakab/${query.get("data")}`)
+    fetch(`https://api.edulink-indonesia.com/ibukotakab/${query.get("data")}`)
       .then((res) => res.json())
       .then((data) => {
         setKabupaten(data);
@@ -35,7 +35,7 @@ const ListKabupaten = () => {
   };
 
   const fetchKelas = () => {
-    fetch(`http://localhost:8000/kelas`)
+    fetch(`https://api.edulink-indonesia.com/kelas`)
       .then((res) => res.json())
       .then((data) => {
         setKelas(data);
@@ -44,7 +44,7 @@ const ListKabupaten = () => {
   };
 
   const fetchMapel = () => {
-    fetch("http://localhost:8000/matapelajaran")
+    fetch("https://api.edulink-indonesia.com/matapelajaran")
       .then((res) => res.json())
       .then((data) => {
         setMapel(data);
@@ -91,7 +91,7 @@ const ListKabupaten = () => {
                 <div className="combine-icon-text">
                   <img
                     className="icon-mapel"
-                    src={"http://localhost:8000/images/" + item.image}
+                    src={"https://api.edulink-indonesia.com/images/" + item.image}
                     alt=""
                   />
                   {item.name}

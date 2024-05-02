@@ -33,7 +33,7 @@ const Halamankota = () => {
   useEffect(() => {
     const getKota = async () => {
       const response = await axiosJWT.get(
-        `http://localhost:8000/kota/${query.get("data")}`,
+        `https://api.edulink-indonesia.com/kota/${query.get("data")}`,
         {
           headers: {
             Authorization: `Bearer`,

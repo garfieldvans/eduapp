@@ -13,6 +13,7 @@ import BestprogramSnbt from "../../Components/BestProgram/BestProgramSnbt/BestPr
 import ListUtbkSnbt from "../../Components/Tab/TabUtbkSnbt/ListUtbkSnbt";
 import Listkota from "../../Components/Tab/Listkota";
 import Faqtni from "../../Components/Faq/FaqTni/FaqTni";
+import Asalsekolah from "../../Components/AsalSekolah/Asalsekolah";
 
 const BimbelSnbt = () => {
   return (
@@ -39,6 +40,7 @@ const BimbelSnbt = () => {
         <Keunggulan />
         <Testimoni />
         <Faqtni />
+        <Asalsekolah />
       </div>
       <Footer />
       <Bottombar />

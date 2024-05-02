@@ -13,7 +13,7 @@ const Faq = () => {
 
   useEffect(() => {
     const fetchFaq = () => {
-      fetch("http://localhost:8000/faq")
+      fetch("https://api.edulink-indonesia.com/faq")
         .then((res) => res.json())
         .then((data) => {
           setFaqData(data);
@@ -34,7 +34,7 @@ const Faq = () => {
   return (
     <React.Fragment>
       <div className="faq-accordion">
-      <h1 className="text-faq">Paling Sering Ditanyakan</h1>
+      <h1 className="text-faq">FREQUENTLY ASKED QUESTIONS</h1>
       <div className="garis-faq">
         <hr className="child-garis-faq" />
         <span className="icon-faq">

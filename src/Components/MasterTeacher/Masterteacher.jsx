@@ -64,7 +64,7 @@ const Masterteacher = () => {
   }, [id]);
 
   const fetchGuru = () => {
-    fetch(`http://localhost:8000/guru?&tags=${tags}`)
+    fetch(`https://api.edulink-indonesia.com/guru?&tags=${tags}`)
       .then((res) => res.json())
       .then((data) => {
         setGuru(data);
@@ -73,7 +73,7 @@ const Masterteacher = () => {
   };
 
   const fetchTags = () => {
-    fetch(`http://localhost:8000/tags`)
+    fetch(`https://api.edulink-indonesia.com/tags`)
       .then((res) => res.json())
       .then((data) => {
         setTags(data);
@@ -82,7 +82,7 @@ const Masterteacher = () => {
   };
 
   const handleTags = (tags) => {
-    fetch(`http://localhost:8000/guru?limit=10&tags=${tags}`)
+    fetch(`https://api.edulink-indonesia.com/guru?limit=10&tags=${tags}`)
       .then((res) => res.json())
       .then((data) => {
         setGuru(data);
@@ -110,7 +110,7 @@ const Masterteacher = () => {
                 <div className="card-master-teacher">
                   <img
                     className="background-tutor"
-                    src={"http://localhost:8000/images/" + item.image2}
+                    src={"https://api.edulink-indonesia.com/images/" + item.image2}
                     alt="asdasd"
                   />
                   <div className="content-tutor">
@@ -118,7 +118,7 @@ const Masterteacher = () => {
                     <div className="child-content-tutor">
                       <img
                         className="foto-tutor"
-                        src={"http://localhost:8000/images/" + item.image}
+                        src={"https://api.edulink-indonesia.com/images/" + item.image}
                         alt=""
                       />
                       <div>

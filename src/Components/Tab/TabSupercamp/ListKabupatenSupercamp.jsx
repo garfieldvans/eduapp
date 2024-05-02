@@ -24,7 +24,7 @@ const ListKabupatenSupercamp = () => {
   }, []);
 
   const fetchKabupaten = () => {
-    fetch(`http://localhost:8000/ibukotakab/${query.get("data")}`)
+    fetch(`https://api.edulink-indonesia.com/ibukotakab/${query.get("data")}`)
       .then((res) => res.json())
       .then((data) => {
         setKabupaten(data);

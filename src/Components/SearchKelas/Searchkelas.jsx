@@ -28,9 +28,9 @@ const Searchkelas = () => {
   useEffect(() => {
     const loadPosts = async () => {
       setLoading(true);
-      const response = await axios.get("http://localhost:8000/pilihankelas");
+      const response = await axios.get("https://api.edulink-indonesia.com/pilihankelas");
       const tniPolri = await axios.get(
-        "http://localhost:8000/pilihankelas-polri"
+        "https://api.edulink-indonesia.com/pilihankelas-polri"
       );
       setCardKelas(response.data);
       setCardKelasTniPolri(tniPolri.data);
@@ -40,7 +40,7 @@ const Searchkelas = () => {
     const loadPostsPolri = async () => {
       setLoading(true);
       const response = await axios.get(
-        "http://localhost:8000/pilihankelas-polri"
+        "https://api.edulink-indonesia.com/pilihankelas-polri"
       );
       setCardKelasTniPolri(response.data);
       setLoading(false);
@@ -49,7 +49,7 @@ const Searchkelas = () => {
     const loadPostsCpns = async () => {
       setLoading(true);
       const response = await axios.get(
-        "http://localhost:8000/pilihankelas-cpns"
+        "https://api.edulink-indonesia.com/pilihankelas-cpns"
       );
       setCardKelasCpns(response.data);
       setLoading(false);
@@ -58,7 +58,7 @@ const Searchkelas = () => {
     const loadPostsOsn = async () => {
       setLoading(true);
       const response = await axios.get(
-        "http://localhost:8000/pilihankelas-osn"
+        "https://api.edulink-indonesia.com/pilihankelas-osn"
       );
       setCardKelasOsn(response.data);
       setLoading(false);
@@ -67,7 +67,7 @@ const Searchkelas = () => {
     const loadPostsPrivat = async () => {
       setLoading(true);
       const response = await axios.get(
-        "http://localhost:8000/pilihankelas-privat"
+        "https://api.edulink-indonesia.com/pilihankelas-privat"
       );
       setCardKelasPrivat(response.data);
       setLoading(false);
@@ -128,7 +128,7 @@ const Searchkelas = () => {
                       <img
                         key={index}
                         className="img-pilihkelas"
-                        src={"http://localhost:8000/images/" + item.image}
+                        src={"https://api.edulink-indonesia.com/images/" + item.image}
                         alt="Avatar"
                       />
                     </a>
@@ -165,7 +165,7 @@ const Searchkelas = () => {
                       <a href="https://edulink-indonesia.com/lead/edm/chat">
                         <img
                           className="img-pilihkelas-polri"
-                          src={"http://localhost:8000/images/" + item.image}
+                          src={"https://api.edulink-indonesia.com/images/" + item.image}
                           alt="Avatar"
                         />
                       </a>
@@ -200,7 +200,7 @@ const Searchkelas = () => {
                       <a href="https://edulink-indonesia.com/lead/edm/chat">
                         <img
                           className="img-pilihkelas-cpns"
-                          src={"http://localhost:8000/images/" + item.image}
+                          src={"https://api.edulink-indonesia.com/images/" + item.image}
                           alt="Avatar"
                         />
                       </a>
@@ -235,7 +235,7 @@ const Searchkelas = () => {
                       <a href="https://edulink-indonesia.com/lead/edm/chat">
                         <img
                           className="img-pilihkelas-polri"
-                          src={"http://localhost:8000/images/" + item.image}
+                          src={"https://api.edulink-indonesia.com/images/" + item.image}
                           alt="Avatar"
                         />
                       </a>
@@ -270,7 +270,7 @@ const Searchkelas = () => {
                       <a href="https://edulink-indonesia.com/lead/edm/chat">
                         <img
                           className="img-pilihkelas-polri"
-                          src={"http://localhost:8000/images/" + item.image}
+                          src={"https://api.edulink-indonesia.com/images/" + item.image}
                           alt="Avatar"
                         />
                       </a>

@@ -47,6 +47,7 @@
 .title-asal-sekolah {
     color: white;
     text-align: center;
+    font-size: 27px;
 }
 
 @keyframes marquee {

@@ -25,16 +25,38 @@ const ListMapelperkota = () => {
   }, []);
 
   const fetchMapelperKota = () => {
-    fetch(`http://localhost:8000/mapelwilayah/${query.get("data")}`)
+    fetch(`https://api.edulink-indonesia.com/mapelwilayah/${query.get("data")}`)
       .then((res) => res.json())
       .then((data) => {
         setMapelPerKota(data);
         console.log("data kelasperkota", data);
       });
+
+    // let text = "";
+    // fetch(`https://api.edulink-indonesia.com/mapelwilayah/${query.get("data")}`)
+    //   .then(function (response) {
+    //     return response.json();
+    //   })
+    //   .then(function (value) {
+    //     value.forEach((value) => {
+    //       text += `
+    //       <Link
+    //         to={'/mapel/${value.namaMapel.toLowerCase()}/kota/${
+    //           value.namaKota
+    //         }?data=${value.mapelId}'}
+    //         className="btn-kota"
+    //         key={index}
+    //       >
+    //         ${value.namaKota}
+    //       </Link>
+    //       `
+    //       document.getElementById('button-kota');
+    //     });
+    //   });
   };
 
   const fetchKelas = () => {
-    fetch(`http://localhost:8000/kelas`)
+    fetch(`https://api.edulink-indonesia.com/kelas`)
       .then((res) => res.json())
       .then((data) => {
         setKelas(data);
@@ -43,7 +65,7 @@ const ListMapelperkota = () => {
   };
 
   const fetchMapel = () => {
-    fetch("http://localhost:8000/matapelajaran")
+    fetch("https://api.edulink-indonesia.com/matapelajaran")
       .then((res) => res.json())
       .then((data) => {
         setMapel(data);
@@ -92,7 +114,7 @@ const ListMapelperkota = () => {
                 <div className="combine-icon-text">
                   <img
                     className="icon-mapel"
-                    src={"http://localhost:8000/images/" + item.image}
+                    src={"https://api.edulink-indonesia.com/images/" + item.image}
                     alt=""
                   />
                   {item.name}
@@ -102,10 +124,10 @@ const ListMapelperkota = () => {
           </div>
         </Tab>
         <Tab title="WILAYAH">
-          <div className="parent-list-kota">
+          <div id="button-kota" className="parent-list-kota">
             {mapelperkota.map((item, index) => (
               <Link
-                to={`/mapel-perkota/${item.namaKota}?data=${item.mapelId}`}
+                to={`/mapel/${item.namaMapel.toLowerCase()}/kota/${item.namaKota}?data=${item.mapelId}`}
                 className="btn-kota"
                 key={index}
                 // onClick={() => {

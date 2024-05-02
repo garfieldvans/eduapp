@@ -48,7 +48,7 @@ body {
 
 .menu-nav {
   color: white;
-  font-weight: 600 !important;
+  font-weight: 500 !important;
   cursor: pointer;
 }
 .menu-nav:hover {
@@ -57,11 +57,11 @@ body {
 .menu-nav-daftar {
   background-color: #f33a6b;
   border: 1px solid white;
-  border-radius: 5px;
+  border-radius: 50px;
   padding: 10px;
   padding-left: 50px;
   padding-right: 50px;
-  transition: all 0.5s;
+  transition: 0.5s;
 }
 .menu-nav-daftar:hover {
   background-color: transparent;
@@ -71,7 +71,7 @@ body {
   padding: 10px;
   padding-left: 50px;
   padding-right: 50px;
-  transition: all 0.5s;
+  transition: 0.5s;
 }
 .menu-items {
   order: 2;

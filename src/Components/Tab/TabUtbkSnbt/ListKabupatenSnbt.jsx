@@ -25,7 +25,7 @@ const ListKabupatenSnbt = () => {
   }, []);
 
   const fetchKabupaten = () => {
-    fetch(`http://localhost:8000/ibukotakab/${query.get("data")}`)
+    fetch(`https://api.edulink-indonesia.com/ibukotakab/${query.get("data")}`)
       .then((res) => res.json())
       .then((data) => {
         setKabupaten(data);
@@ -34,7 +34,7 @@ const ListKabupatenSnbt = () => {
   };
 
   const fetchKelas = () => {
-    fetch(`http://localhost:8000/kelassnbt`)
+    fetch(`https://api.edulink-indonesia.com/kelassnbt`)
       .then((res) => res.json())
       .then((data) => {
         setKelas(data);

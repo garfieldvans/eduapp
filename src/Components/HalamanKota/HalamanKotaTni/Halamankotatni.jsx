@@ -34,7 +34,7 @@ const Halamankotatni = () => {
   useEffect(() => {
     const getKotatni = async () => {
       const response = await axiosJWT.get(
-        `http://localhost:8000/kotatni/${query.get("data")}`,
+        `https://api.edulink-indonesia.com/kotatni/${query.get("data")}`,
         {
           headers: {
             Authorization: `Bearer`,

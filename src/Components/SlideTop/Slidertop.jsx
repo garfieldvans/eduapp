@@ -14,7 +14,7 @@ const Slidertop = () => {
   }, []);
 
   const fetchsliderHeader = () => {
-    fetch("http://localhost:8000/sliderheader")
+    fetch("https://api.edulink-indonesia.com/sliderheader")
       .then((res) => res.json())
       .then((data) => {
         setSliderHeader(data);
@@ -23,7 +23,7 @@ const Slidertop = () => {
   };
 
   const fetchsliderHeader_2 = () => {
-    fetch("http://localhost:8000/sliderheader2")
+    fetch("https://api.edulink-indonesia.com/sliderheader2")
       .then((res) => res.json())
       .then((data) => {
         setSliderHeader_2(data);
@@ -54,7 +54,7 @@ const Slidertop = () => {
                   <a href="https://edulink-indonesia.com/lead/edm/chat">
                     <img
                       src={
-                        "http://localhost:8000/images/" + item.image
+                        "https://api.edulink-indonesia.com/images/" + item.image
                       }
                       alt=""
                     />
@@ -75,7 +75,7 @@ const Slidertop = () => {
                   <a href="https://edulink-indonesia.com/lead/edm/chat">
                     <img
                       src={
-                        "http://localhost:8000/images/" + item.image
+                        "https://api.edulink-indonesia.com/images/" + item.image
                       }
                       alt=""
                     />

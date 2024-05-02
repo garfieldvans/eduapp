@@ -18,7 +18,7 @@ const Listkotatni = () => {
   }, []);
 
   const fetchKotatni = () => {
-    fetch("http://localhost:8000/kotatni")
+    fetch("https://api.edulink-indonesia.com/kotatni")
       .then((res) => res.json())
       .then((data) => {
         setKotatni(data);
@@ -27,7 +27,7 @@ const Listkotatni = () => {
   };
 
   const fetchKelas = () => {
-    fetch(`http://localhost:8000/kelastni`)
+    fetch(`https://api.edulink-indonesia.com/kelastni`)
       .then((res) => res.json())
       .then((data) => {
         setKelas(data);
@@ -76,7 +76,7 @@ const Listkotatni = () => {
                 <div className="combine-icon-text">
                   <img
                     className="icon-mapel"
-                    src={"http://localhost:8000/images/" + item.image}
+                    src={"https://api.edulink-indonesia.com/images/" + item.image}
                     alt=""
                   />
                   {item.name}

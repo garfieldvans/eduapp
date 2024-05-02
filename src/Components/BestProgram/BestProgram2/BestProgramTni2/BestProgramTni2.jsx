@@ -9,7 +9,7 @@ const BestprogramTni2 = () => {
   }, []);
 
   const fetchProgram_2 = () => {
-    fetch("http://localhost:8000/bestprogramtni2")
+    fetch("https://api.edulink-indonesia.com/bestprogramtni2")
       .then((res) => res.json())
       .then((data) => {
         setProgram_2(data);
@@ -21,7 +21,7 @@ const BestprogramTni2 = () => {
       <div className="main-box-2">
         <div className="main-best-program-2">
           <h1 className="title-best-program-2">
-            SPECIAL CLASS TARUNA EDUMATRIX
+            SPECIAL CLASS <br /> TARUNA EDUMATRIX
           </h1>
           <h3 className="hot-program-2">
             <img className="icon-hot-program-2" src={hotProgram} alt="" /> HOTS
@@ -34,7 +34,7 @@ const BestprogramTni2 = () => {
                   <a href="https://edulink-indonesia.com/lead/edm/chat">
                     <img
                       className="best-program-img-2"
-                      src={"http://localhost:8000/images/" + item.image}
+                      src={"https://api.edulink-indonesia.com/images/" + item.image}
                       alt=""
                     />
                   </a>

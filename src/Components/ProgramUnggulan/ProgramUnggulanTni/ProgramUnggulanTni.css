@@ -1,0 +1,59 @@
+.title-program {
+  text-align: center;
+}
+.container-program-unggulan-tni {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  gap: 30px;
+  margin-top: 35px;
+  background-color: #054599;
+  padding: 20px;
+  border-radius: 10px;
+}
+.card-program-unggulan {
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  padding-top: 25px;
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.card-program-unggulan:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.garis-pembatas {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #05459942;
+  border-radius: 50px;
+}
+.icon-program-tni {
+  color: rgb(0, 170, 57);
+}
+.btn-program-unggulan-tni {
+  background-color: #f33a6b;
+  border: 1px solid transparent;
+  color: white;
+  width: 100%;
+  margin-top: 15px;
+  padding: 13px;
+  border-radius: 6px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+.title-fitur {
+  margin-bottom: 10px;
+}
+.isi-fitur-program {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  gap: 10px;
+  font-size: 15px;
+}

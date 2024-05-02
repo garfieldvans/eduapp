@@ -15,6 +15,7 @@ import Listkota from "../../Components/Tab/Listkota";
 import Faqtni from "../../Components/Faq/FaqTni/FaqTni";
 import SliderSupercamp from "../../Components/SlideTop/SliderSupercamp/SliderSupercamp";
 import ListKotaSupercamp from "../../Components/Tab/TabSupercamp/ListKotaSupercamp";
+import Asalsekolah from "../../Components/AsalSekolah/Asalsekolah";
 
 const BimbelSupercamp = () => {
   return (
@@ -42,6 +43,7 @@ const BimbelSupercamp = () => {
         <Keunggulan />
         <Testimoni />
         <Faqtni />
+        <Asalsekolah />
       </div>
       <Footer />
       <Bottombar />

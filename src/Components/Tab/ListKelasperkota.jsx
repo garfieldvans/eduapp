@@ -29,16 +29,16 @@ const Listkelasperkota = () => {
   }, []);
 
   const fetchKelasperKota = () => {
-    fetch(`http://localhost:8000/kelasperkota/${query.get("data")}`)
+    fetch(`https://api.edulink-indonesia.com/kelasperkota/${query.get("data")}`)
       .then((res) => res.json())
       .then((data) => {
         setKelasPerKota(data);
         console.log("data kelasperkota", data);
-      });
+      }); 
   };
 
   const fetchKelas = () => {
-    fetch(`http://localhost:8000/kelas`)
+    fetch(`https://api.edulink-indonesia.com/kelas`)
       .then((res) => res.json())
       .then((data) => {
         setKelas(data);
@@ -47,13 +47,15 @@ const Listkelasperkota = () => {
   };
 
   const fetchMapel = () => {
-    fetch("http://localhost:8000/matapelajaran")
+    fetch("https://api.edulink-indonesia.com/matapelajaran")
       .then((res) => res.json())
       .then((data) => {
         setMapel(data);
         console.log(data);
       });
   };
+
+  
 
   return (
     <div className="container-all-tab">
@@ -96,7 +98,7 @@ const Listkelasperkota = () => {
                 <div className="combine-icon-text">
                   <img
                     className="icon-mapel"
-                    src={"http://localhost:8000/images/" + item.image}
+                    src={"https://api.edulink-indonesia.com/images/" + item.image}
                     alt=""
                   />
                   {item.name}
@@ -109,7 +111,7 @@ const Listkelasperkota = () => {
           <div className="parent-list-kota">
             {kelasperkota.map((item, index) => (
               <Link
-                to={`/kelas-perkota/${item.namaKota}?data=${item.kelasId}`}
+                to={`/program/${item.kelasId}/kota/${item.namaKota}?data=${item.kelasId}`}
                 className="btn-kota"
                 key={index}
                 // onClick={() => {

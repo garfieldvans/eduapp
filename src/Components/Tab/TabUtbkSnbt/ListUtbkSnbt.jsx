@@ -18,7 +18,7 @@ const ListUtbkSnbt = () => {
   }, []);
 
   const fetchKotaSnbt = () => {
-    fetch("http://localhost:8000/kota")
+    fetch("https://api.edulink-indonesia.com/kota")
       .then((res) => res.json())
       .then((data) => {
         setKotaSnbt(data);
@@ -27,7 +27,7 @@ const ListUtbkSnbt = () => {
   };
 
   const fetchKelasSnbt = () => {
-    fetch(`http://localhost:8000/kelassnbt`)
+    fetch(`https://api.edulink-indonesia.com/kelassnbt`)
       .then((res) => res.json())
       .then((data) => {
         setKelasSnbt(data);

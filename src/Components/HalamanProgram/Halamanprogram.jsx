@@ -35,7 +35,7 @@ const Halamanprogram = () => {
   useEffect(() => {
     const getProgram = async () => {
       const response = await axiosJWT.get(
-        `http://localhost:8000/kelas/${query.get("data")}`,
+        `https://api.edulink-indonesia.com/kelas/${query.get("data")}`,
         {
           headers: {
             Authorization: `Bearer`,
@@ -46,7 +46,7 @@ const Halamanprogram = () => {
     };
     const getPromo = async () => {
       const response = await axiosJWT.get(
-        `http://localhost:8000/kelas/${query.get("data")}`,
+        `https://api.edulink-indonesia.com/kelas/${query.get("data")}`,
         {
           headers: {
             Authorization: `Bearer`,
@@ -62,7 +62,7 @@ const Halamanprogram = () => {
   }, [id, query]);
 
   const fetchKelasperKota = () => {
-    fetch(`http://localhost:8000/kelasperkota/${query.get("data")}`)
+    fetch(`https://api.edulink-indonesia.com/kelasperkota/${query.get("data")}`)
       .then((res) => res.json())
       .then((data) => {
         setKelasPerKota(data);
@@ -128,7 +128,7 @@ const Halamanprogram = () => {
         <div className="parent-promo">
           <img
             className="discount-promo"
-            src={"http://localhost:8000/images/" + promo.image}
+            src={"https://api.edulink-indonesia.com/images/" + promo.image}
             alt=""
           />
         </div>

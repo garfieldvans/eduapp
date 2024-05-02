@@ -21,8 +21,8 @@ const Navbar = () => {
   };
 
   const goToAbout = () => {
-    navigate("/tentang-kami")
-  }
+    navigate("/tentang-kami");
+  };
 
   const goToHome = () => {
     navigate("/");

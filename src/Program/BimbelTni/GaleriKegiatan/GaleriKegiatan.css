@@ -30,12 +30,12 @@
 .kegiatan-img {
   width: 24%;
   cursor: pointer;
-  transition: 0.2s;
+  /* transition: 0.2s; */
 }
 .kegiatan-img:hover {
-  transform: scale(0.9);
+  /* transform: scale(0.9); */
   cursor: pointer;
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 .video-kegiatan {
   border: 1px solid transparent;

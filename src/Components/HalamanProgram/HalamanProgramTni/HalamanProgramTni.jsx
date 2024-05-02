@@ -16,6 +16,7 @@ import Faq from "../../Faq/Faq";
 import Asalsekolah from "../../AsalSekolah/Asalsekolah";
 import Navbar from "../../Navbar/Navbar";
 import ListkelasperkotaTni from "../../Tab/Tabtni/ListKelasperkotaTni";
+import BestprogramTni2 from "../../BestProgram/BestProgram2/BestProgramTni2/BestProgramTni2";
 
 const Halamanprogramtni = () => {
   const { id } = useParams();
@@ -34,7 +35,7 @@ const Halamanprogramtni = () => {
   useEffect(() => {
     const getProgram = async () => {
       const response = await axiosJWT.get(
-        `http://localhost:8000/kelastni/${query.get("data")}`,
+        `https://api.edulink-indonesia.com/kelastni/${query.get("data")}`,
         {
           headers: {
             Authorization: `Bearer`,
@@ -45,7 +46,7 @@ const Halamanprogramtni = () => {
     };
     const getPromo = async () => {
       const response = await axiosJWT.get(
-        `http://localhost:8000/kelas/${query.get("data")}`,
+        `https://api.edulink-indonesia.com/kelas/${query.get("data")}`,
         {
           headers: {
             Authorization: `Bearer`,
@@ -61,7 +62,7 @@ const Halamanprogramtni = () => {
   }, [id, query]);
 
   const fetchKelasperKota = () => {
-    fetch(`http://localhost:8000/kelasperkota/${query.get("data")}`)
+    fetch(`https://api.edulink-indonesia.com/kelasperkota/${query.get("data")}`)
       .then((res) => res.json())
       .then((data) => {
         setKelasPerKota(data);
@@ -116,7 +117,7 @@ const Halamanprogramtni = () => {
             />
           </a>
         </div>
-        <Bestprogram2 />
+        <BestprogramTni2 />
         <Voucer />
         <Masterteacher />
         <ListkelasperkotaTni />
@@ -127,7 +128,7 @@ const Halamanprogramtni = () => {
         <div className="parent-promo">
           <img
             className="discount-promo"
-            src={"http://localhost:8000/images/" + promo.image}
+            src={"https://api.edulink-indonesia.com/images/" + promo.image}
             alt=""
           />
         </div>

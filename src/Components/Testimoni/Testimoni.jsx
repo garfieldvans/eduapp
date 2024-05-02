@@ -48,7 +48,7 @@ const Testimoni = () => {
   }, []);
 
   const fetchTestimoni = () => {
-    fetch("http://localhost:8000/testimoni")
+    fetch("https://api.edulink-indonesia.com/testimoni")
       .then((res) => res.json())
       .then((data) => {
         setTestimoni(data);
@@ -72,7 +72,7 @@ const Testimoni = () => {
     <React.Fragment>
       <div className="box-testi">
         <div className="slider-top-testi">
-          <h1 className="title-testimoni">Testimonial</h1>
+          <h1 className="title-testimoni">TESTIMONI SISWA</h1>
           <Carousel
             responsive={responsive}
             autoPlay={true}
@@ -89,7 +89,7 @@ const Testimoni = () => {
                     <div className="card-testimoni">
                       <img
                         className="foto-testimoni"
-                        src={"http://localhost:8000/images/" + item.image}
+                        src={"https://api.edulink-indonesia.com/images/" + item.image}
                         alt=""
                       />
                       <h1 className="nama-siswa">{item.name_siswa}</h1>
@@ -155,7 +155,7 @@ export default Testimoni;
 //   }, []);
 
 //   const fetchTestimoni = () => {
-//     fetch("http://localhost:8000/testimoni")
+//     fetch("https://api.edulink-indonesia.com/testimoni")
 //       .then((res) => res.json())
 //       .then((data) => {
 //         setTestimoni(data);
@@ -196,7 +196,7 @@ export default Testimoni;
 //                     <div className="card-testimoni">
 //                       <img
 //                         className="foto-testimoni"
-//                         src={"http://localhost:8000/images/" + item.image}
+//                         src={"https://api.edulink-indonesia.com/images/" + item.image}
 //                         alt=""
 //                       />
 //                       <h1 className="nama-siswa">{item.name_siswa}</h1>

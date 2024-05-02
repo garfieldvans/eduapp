@@ -10,7 +10,7 @@ const Keunggulan = () => {
   }, []);
 
   const fetchKeunggulan = () => {
-    fetch("http://localhost:8000/keunggulan")
+    fetch("https://api.edulink-indonesia.com/keunggulan")
       .then((res) => res.json())
       .then((data) => {
         setKeunggulan(data);
@@ -23,14 +23,14 @@ const Keunggulan = () => {
       <div className="parent-box-keunggulan">
         <h1 className="title-keunggulan">
           <img className="icon-keunggulan" src={keunggulanIcon} alt="" />
-          Keunggulan
+          KEUNGGULAN
         </h1>
         <div className="parent-card-keunggulan">
           {keunggulan.map((item, index) => (
             <img
               key={index}
               className="keunggulan-img"
-              src={"http://localhost:8000/images/" + item.image}
+              src={"https://api.edulink-indonesia.com/images/" + item.image}
               alt=""
             />
           ))}

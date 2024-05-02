@@ -10,7 +10,7 @@ const Bestprogram2 = () => {
   }, []);
 
   const fetchProgram_2 = () => {
-    fetch("http://localhost:8000/bestprogram2")
+    fetch("https://api.edulink-indonesia.com/bestprogram2")
       .then((res) => res.json())
       .then((data) => {
         setProgram_2(data);
@@ -33,7 +33,7 @@ const Bestprogram2 = () => {
                   <a href="https://edulink-indonesia.com/lead/edm/chat">
                   <img
                     className="best-program-img-2"
-                    src={"http://localhost:8000/images/" + item.image}
+                    src={"https://api.edulink-indonesia.com/images/" + item.image}
                     alt=""
                   />
                   </a>

@@ -31,7 +31,7 @@ const Halamanmapel = () => {
   useEffect(() => {
     const getMapel = async () => {
       const response = await axiosJWT.get(
-        `http://localhost:8000/matapelajaran/${query.get("data")}`,
+        `https://api.edulink-indonesia.com/matapelajaran/${query.get("data")}`,
         {
           headers: {
             Authorization: `Bearer`,

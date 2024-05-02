@@ -13,7 +13,7 @@ const ListKotaSupercamp = () => {
   }, []);
 
   const fetchKotaSnbt = () => {
-    fetch("http://localhost:8000/kota")
+    fetch("https://api.edulink-indonesia.com/kota")
       .then((res) => res.json())
       .then((data) => {
         setKotaSnbt(data);

@@ -9,7 +9,7 @@ const GaleriKegiatan = () => {
   }, []);
 
   const fetchKeunggulan = () => {
-    fetch("http://localhost:8000/galerikegiatantni")
+    fetch("https://api.edulink-indonesia.com/galerikegiatantni")
       .then((res) => res.json())
       .then((data) => {
         setGaleriKegiatan(data);
@@ -26,7 +26,7 @@ const GaleriKegiatan = () => {
             <img
               key={index}
               className="kegiatan-img"
-              src={"http://localhost:8000/images/" + item.image}
+              src={"https://api.edulink-indonesia.com/images/" + item.image}
               alt=""
             />
           ))}

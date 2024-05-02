@@ -32,7 +32,7 @@ const HalamankabupatenSupercamp = () => {
   useEffect(() => {
     const getKabupaten = async () => {
       const response = await axiosJWT.get(
-        `http://localhost:8000/ibukotakab/${query.get("data")}`,
+        `https://api.edulink-indonesia.com/ibukotakab/${query.get("data")}`,
         {
           headers: {
             Authorization: `Bearer`,
@@ -47,7 +47,7 @@ const HalamankabupatenSupercamp = () => {
   }, [id, query]);
 
   const fetchKabupaten = () => {
-    fetch(`http://localhost:8000/ibukotakab/${query.get("data")}`)
+    fetch(`https://api.edulink-indonesia.com/ibukotakab/${query.get("data")}`)
       .then((res) => res.json())
       .then((data) => {
         setKabupaten(data);
@@ -64,7 +64,7 @@ const HalamankabupatenSupercamp = () => {
           content="Bimbel Privat terbaik dengan sistem belajar mengajar yang berkualitas  #1 - Edumatrix Indonesia"
         />
         <title>
-          Bimbel Supercamp SNBT Persiapan Masuk PTN di {`${id}`} #1 - Edumatrix Indonesia
+          Bimbel Supercamp SNBT Persiapan Masuk PTN di Kabupaten {`${id}`} #1 - Edumatrix Indonesia
         </title>
         <link rel="canonical" href="" />
       </Helmet>
@@ -73,7 +73,7 @@ const HalamankabupatenSupercamp = () => {
         <div className="content-kabupaten">
           <div className="teks-content">
             <h2 className="title-halaman-kabupaten">
-              Bimbel Supercamp SNBT Persiapan Masuk PTN di {id} - Edumatrix Indonesia
+              Bimbel Supercamp SNBT Persiapan Masuk PTN di Kabupaten {id} - Edumatrix Indonesia
             </h2>
             <div className="paragraf-kabupaten">
               <p>

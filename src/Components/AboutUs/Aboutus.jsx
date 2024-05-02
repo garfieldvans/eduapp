@@ -21,7 +21,7 @@ const Aboutus = () => {
   // }, []);
 
   // const fetchAboutUs = () => {
-  //   fetch("http://localhost:8000/aboutus")
+  //   fetch("https://api.edulink-indonesia.com/aboutus")
   //     .then((res) => res.json())
   //     .then((data) => {
   //       setAboutUs(data);
@@ -79,7 +79,7 @@ const Aboutus = () => {
           <img
             key={index}
             className="image-moto"
-            src={"http://localhost:8000/images/" + item.image}
+            src={"https://api.edulink-indonesia.com/images/" + item.image}
             alt=""
           />
         ))}

@@ -12,8 +12,8 @@ import GaleriKegiatan from "./GaleriKegiatan/GaleriKegiatan";
 import Listkotatni from "../../Components/Tab/Tabtni/ListKotatni";
 import Bottombar from "../../Components/BottomBar/Bottombar";
 import Floatingcta from "../../Components/FloatingCta/Floatingcta";
-import ProgramTrainingCamp from "../../Components/ProgramTrainingCamp/ProgramTrainingCamp";
 import Faqtni from "../../Components/Faq/FaqTni/FaqTni";
+import ProgramUnggulanTni from "../../Components/ProgramUnggulan/ProgramUnggulanTni/ProgramUnggulanTni";
 
 const BimbelTni = () => {
   return (
@@ -25,7 +25,8 @@ const BimbelTni = () => {
           content="Bimbel Privat & Trainingcamp Masuk TNI - Polri dan Sekolah Kedinasan #1 - Edumatrix Indonesia"
         />
         <title>
-          Bimbel TNI - Polri dan Sekolah Kedinasan Terbaru #1 - Edumatrix Indonesia
+          Bimbel TNI - Polri dan Sekolah Kedinasan Terbaru #1 - Edumatrix
+          Indonesia
         </title>
         <link rel="canonical" href="" />
       </Helmet>
@@ -33,11 +34,11 @@ const BimbelTni = () => {
       <div className="container-all">
         <Slidertni />
         <BestprogramTni />
-        {/* <ProgramTrainingCamp /> */}
         <Voucer />
         <Masterteacher />
         <Listkotatni />
         <Keunggulan />
+        <ProgramUnggulanTni />
         <GaleriKegiatan />
         <Testimoni />
         <Faqtni />

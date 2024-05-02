@@ -22,6 +22,16 @@ import HalamankabupatenSnbt from "./Components/HalamanKabupaten/HalamanKabupaten
 import BimbelSupercamp from "./Program/BimbelSupercamp/BimbelSupercamp";
 import HalamankotaSupercamp from "./Components/HalamanKota/HalamanKotaSupercamp/HalamanKotaSupercamp";
 import HalamankabupatenSupercamp from "./Components/HalamanKabupaten/HalamanKabupatenSupercamp/HalamanKabupatenSupercamp";
+import BimbelLpdp from "./Program/BimbelLpdp/BimbelLpdp";
+import HalamankotaLpdp from "./Components/HalamanKota/HalamanKotaLpdp/HalamanKotaLpdp";
+import HalamankabupatenLpdp from "./Components/HalamanKabupaten/HalamanKabupatenLpdp/HalamanKabupatenLpdp";
+import BimbelPrivat from "./Program/BimbelPrivat/BimbelPrivat";
+import HalamankotaPrivat from "./Components/HalamanKota/HalamanKotaPrivat/HalamanKotaPrivat";
+import HalamankabupatenPrivat from "./Components/HalamanKabupaten/HalamanKabupatenPrivat/HalamanKabupatenPrivat";
+import BimbelCpns from "./Program/BimbelCpns/BimbelCpns";
+import HalamankotaCpns from "./Components/HalamanKota/HalamanKotaCpns/HalamanKotaCpns";
+import HalamankabupatenCpns from "./Components/HalamanKabupaten/HalamanKabupatenCpns/HalamanKabupatenCpns";
+import BimbelBumn from "./Program/BimbelBumn/BimbelBumn";
 
 function App() {
   return (
@@ -35,11 +45,11 @@ function App() {
         {/* Go to program By ID */}
         <Route path="/les-privat/:id-terbaik" element={<Halamanprogram />}></Route>
         {/* Go to program per Kota By ID */}
-        <Route path="/kelas-perkota/:id" element={<HalamanProgramperkota />}></Route>
+        <Route path="/program/:id/kota/:id" element={<HalamanProgramperkota />}></Route>
         {/* Go to Mapel By ID */}
         <Route path="/mata-pelajaran/:id" element={<Halamanmapel />}></Route>
         {/* Go to Mapel per kota By ID */}
-        <Route path="/mapel-perkota/:id" element={<HalamanMapelperkota />}></Route>
+        <Route path="/mapel/:id/kota/:id" element={<HalamanMapelperkota />}></Route>
         {/* Go to Errorpage */}
         <Route path="*" element={<Errorpage />}></Route>
         {/* Go to Search Kelas */}
@@ -72,6 +82,29 @@ function App() {
         <Route path="/bimbel-supercamp-edumatrix-di/:id" element={<HalamankotaSupercamp />}></Route>
         {/* Go to Kabupaten SUPERCAMP By ID */}
         <Route path="/bimbel-supercamp-di-kabupaten/:id" element={<HalamankabupatenSupercamp />}></Route>
+
+        {/* LPDP */}
+        <Route path="/bimbel-persiapan-seleksi-lpdp" element={<BimbelLpdp />}></Route>
+        {/* Go to City LPDP By ID */}
+        <Route path="/bimbel-lpdp-terbaik-di/:id" element={<HalamankotaLpdp />}></Route>
+        {/* Go to Kabupaten LPDP By ID */}
+        <Route path="/bimbel-lpdp-di-kabupaten/:id" element={<HalamankabupatenLpdp />}></Route>
+
+        {/* PRIVAT */}
+        <Route path="/bimbel-privat-tk-sd-smp-sma-mahasiswa" element={<BimbelPrivat />}></Route>
+        {/* Go to City PRIVAT By ID */}
+        <Route path="/bimbel-privat-tk-sd-smp-sma-terbaik-di/:id" element={<HalamankotaPrivat />}></Route>
+        {/* Go to Kabupaten PRIVAT By ID */}
+        <Route path="/bimbel-privat-tk-sd-smp-sma-terbaik-di-kabupaten/:id" element={<HalamankabupatenPrivat />}></Route>
+
+        {/* CPNS */}
+        <Route path="/bimbel-cpns-dan-pppk" element={<BimbelCpns />}></Route>
+        {/* Go to City CPNS By ID */}
+        <Route path="/bimbel-cpns-pppk-terbaik-di/:id" element={<HalamankotaCpns />}></Route>
+        {/* Go to Kabupaten CPNS By ID */}
+        <Route path="/bimbel-cpns-pppk-terbaik-di-kabupaten/:id" element={<HalamankabupatenCpns />}></Route>
+        {/* BUMN */}
+        <Route path="/bimbel-seleksi-bumn" element={<BimbelBumn />}></Route>
       </Routes>
     </BrowserRouter>
   );

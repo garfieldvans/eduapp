@@ -33,7 +33,7 @@ const HalamanProgramperkota = () => {
   useEffect(() => {
     const getKota = async () => {
       const response = await axiosJWT.get(
-        `http://localhost:8000/kota/${query.get("data")}`,
+        `https://api.edulink-indonesia.com/kota/${query.get("data")}`,
         {
           headers: {
             Authorization: `Bearer`,
@@ -45,7 +45,7 @@ const HalamanProgramperkota = () => {
 
     const getProgram = async () => {
       const response = await axiosJWT.get(
-        `http://localhost:8000/kelas/${query.get("data")}`,
+        `https://api.edulink-indonesia.com/kelas/${query.get("data")}`,
         {
           headers: {
             Authorization: `Bearer`,
