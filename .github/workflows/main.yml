@@ -14,4 +14,4 @@ jobs:
         server: ftp.leskedokteran.com
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
-        server-dir: /production.app.edumatrix-indonesia.com/
+        server-dir: /app.edumatrix-indonesia.com/
