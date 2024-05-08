@@ -22,7 +22,6 @@ const ListUtbkSnbt = () => {
       .then((res) => res.json())
       .then((data) => {
         setKotaSnbt(data);
-        console.log(data);
       });
   };
 
@@ -31,7 +30,6 @@ const ListUtbkSnbt = () => {
       .then((res) => res.json())
       .then((data) => {
         setKelasSnbt(data);
-        console.log(data);
       });
   };
 
@@ -40,16 +38,14 @@ const ListUtbkSnbt = () => {
       <div className="parent-list-kota">
         {kotaSnbt.map((item, index) => (
           <Link
-            to={`/bimbel-snbt-terbaik-di/${item.kota.toLowerCase()}?data=${
-              item.id
-            }`}
+            // to={`/bimbel-snbt-terbaik-di/${item.kota.toLowerCase()}?data=${
+            //   item.id
+            // }`}
             className="btn-kota"
             key={index}
-            // onClick={() => {
-            //   window.location.href = `/les-privat-di/kota/${item.kota.toLowerCase()}?data=${
-            //     item.id
-            //   }`;
-            // }}
+            onClick={() => {
+              window.location.href = `/bimbel-snbt-terbaik-di/${item.slug}`;
+            }}
           >
             {item.kota}
           </Link>

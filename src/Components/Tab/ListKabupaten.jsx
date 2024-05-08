@@ -26,11 +26,10 @@ const ListKabupaten = () => {
   }, []);
 
   const fetchKabupaten = () => {
-    fetch(`https://api.edulink-indonesia.com/ibukotakab/${query.get("data")}`)
+    fetch(`https://api.edulink-indonesia.com/ibukotakab/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setKabupaten(data);
-        console.log(data);
       });
   };
 
@@ -39,7 +38,6 @@ const ListKabupaten = () => {
       .then((res) => res.json())
       .then((data) => {
         setKelas(data);
-        console.log(data);
       });
   };
 
@@ -48,7 +46,6 @@ const ListKabupaten = () => {
       .then((res) => res.json())
       .then((data) => {
         setMapel(data);
-        console.log(data);
       });
   };
 
@@ -59,14 +56,12 @@ const ListKabupaten = () => {
           <div className="parent-list-kelas">
             {kelas.map((item, index) => (
               <Link
-                to={`/les-privat/${item.slug.toLowerCase()}?data=${item.id}`}
+                // to={`/les-privat/${item.slug.toLowerCase()}?data=${item.id}`}
                 className="btn-kelas"
                 key={index}
-                // onClick={() => {
-                //   window.location.href = `/les-privat/${item.slug.toLowerCase()}?data=${
-                //     item.id
-                //   }`;
-                // }}
+                onClick={() => {
+                  window.location.href = `/les-privat/program/${item.slug}`;
+                }}
               >
                 {item.name}
               </Link>
@@ -77,16 +72,14 @@ const ListKabupaten = () => {
           <div className="parent-list-mapel">
             {mapel.map((item, index) => (
               <Link
-                to={`/mata-pelajaran/${item.name.toLowerCase()}?data=${
-                  item.id
-                }`}
+                // to={`/mata-pelajaran/${item.name.toLowerCase()}?data=${
+                //   item.id
+                // }`}
                 className="btn-mapel"
                 key={index}
-                // onClick={() => {
-                //   window.location.href = `/mata-pelajaran/${item.name.toLowerCase()}?data=${
-                //     item.id
-                //   }`;
-                // }}
+                onClick={() => {
+                  window.location.href = `/les-privat/mata-pelajaran/${item.slug}`;
+                }}
               >
                 <div className="combine-icon-text">
                   <img
@@ -104,12 +97,12 @@ const ListKabupaten = () => {
           <div className="parent-list-kota">
             {kabupaten.map((item, index) => (
               <Link
-                to={`/les-privat-di-kabupaten/${item.kota_kabupaten}?data=${item.id}`}
+                // to={`/les-privat-di-kabupaten/${item.kota_kabupaten}?data=${item.id}`}
                 className="btn-kota"
                 key={index}
-                // onClick={() => {
-                //   window.location.href = `/les-privat-di-kabupaten/${item.kota_kabupaten}?data=${item.id}`;
-                // }}
+                onClick={() => {
+                  window.location.href = `/les-privat-di/${item.slug}`;
+                }}
               >
                 {item.kota_kabupaten}
               </Link>

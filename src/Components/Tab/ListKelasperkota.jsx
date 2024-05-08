@@ -4,7 +4,7 @@ import Tab from "./Tab";
 import "./Tab.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCity } from "@fortawesome/free-solid-svg-icons";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import jangkauanKota from "../../assets/kota.png";
 import axios from "axios";
 
@@ -12,6 +12,7 @@ const Listkelasperkota = () => {
   const [kelasperkota, setKelasPerKota] = useState([]);
   const [kelas, setKelas] = useState([]);
   const [mapel, setMapel] = useState([]);
+  const { id } = useParams();
 
   function useQuery() {
     const { search } = useLocation();
@@ -29,12 +30,12 @@ const Listkelasperkota = () => {
   }, []);
 
   const fetchKelasperKota = () => {
-    fetch(`https://api.edulink-indonesia.com/kelasperkota/${query.get("data")}`)
+    fetch(`https://api.edulink-indonesia.com/kelasperkota/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setKelasPerKota(data);
-        console.log("data kelasperkota", data);
-      }); 
+        ("data kelasperkota", data);
+      });
   };
 
   const fetchKelas = () => {
@@ -42,7 +43,6 @@ const Listkelasperkota = () => {
       .then((res) => res.json())
       .then((data) => {
         setKelas(data);
-        console.log(data);
       });
   };
 
@@ -51,11 +51,8 @@ const Listkelasperkota = () => {
       .then((res) => res.json())
       .then((data) => {
         setMapel(data);
-        console.log(data);
       });
   };
-
-  
 
   return (
     <div className="container-all-tab">
@@ -64,16 +61,14 @@ const Listkelasperkota = () => {
           <div className="parent-list-kelas">
             {kelas.map((item, index) => (
               <Link
-                to={`/les-privat/${item.slug.toLowerCase()}-terbaik?data=${
-                  item.id
-                }`}
+                // to={`/les-privat/${item.slug.toLowerCase()}-terbaik?data=${
+                //   item.id
+                // }`}
                 className="btn-kelas"
                 key={index}
-                // onClick={() => {
-                //   window.location.href = `/les-privat/${item.slug.toLowerCase()}-terbaik?data=${
-                //     item.id
-                //   }`;
-                // }}
+                onClick={() => {
+                  window.location.href = `/les-privat/program/${item.slug}`;
+                }}
               >
                 {item.name}
               </Link>
@@ -84,16 +79,14 @@ const Listkelasperkota = () => {
           <div className="parent-list-mapel">
             {mapel.map((item, index) => (
               <Link
-                to={`/mata-pelajaran/${item.name.toLowerCase()}?data=${
-                  item.id
-                }`}
+                // to={`/mata-pelajaran/${item.name.toLowerCase()}?data=${
+                //   item.id
+                // }`}
                 className="btn-mapel"
                 key={index}
-                // onClick={() => {
-                //   window.location.href = `/mata-pelajaran/${item.name.toLowerCase()}?data=${
-                //     item.id
-                //   }`;
-                // }}
+                onClick={() => {
+                  window.location.href = `/les-privat/mata-pelajaran/${item.slug}`;
+                }}
               >
                 <div className="combine-icon-text">
                   <img
@@ -111,12 +104,12 @@ const Listkelasperkota = () => {
           <div className="parent-list-kota">
             {kelasperkota.map((item, index) => (
               <Link
-                to={`/program/${item.kelasId}/kota/${item.namaKota}?data=${item.kelasId}`}
+                // to={`/program/${item.kelasId}/kota/${item.namaKota}?data=${item.kelasId}`}
                 className="btn-kota"
                 key={index}
-                // onClick={() => {
-                //   window.location.href = `/kelas-perkota/${item.namaKota}?data=${item.kelasId}`;
-                // }}
+                onClick={() => {
+                  window.location.href = `/les-privat/program/${item.slugKelas}/kota/${item.slugKota}`;
+                }}
               >
                 {item.namaKota}
               </Link>

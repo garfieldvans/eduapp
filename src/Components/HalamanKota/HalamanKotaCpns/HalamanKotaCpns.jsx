@@ -21,6 +21,7 @@ import ListKabupatenSnbt from "../../Tab/TabUtbkSnbt/ListKabupatenSnbt";
 import BestprogramSnbt2 from "../../BestProgram/BestProgram2/BestProgramSnbt2/BestProgramSnbt2";
 import ListKabupatenLpdp from "../../Tab/TabLpdp/ListKabupatenLpdp";
 import ListKabupatenCpns from "../../Tab/TabCpns/ListKabupatenCpns";
+import Faqtni from "../../Faq/FaqTni/FaqTni";
 
 const HalamankotaCpns = () => {
   const { id } = useParams();
@@ -37,7 +38,7 @@ const HalamankotaCpns = () => {
   useEffect(() => {
     const getKota = async () => {
       const response = await axiosJWT.get(
-        `https://api.edulink-indonesia.com/kota/${query.get("data")}`,
+        `https://api.edulink-indonesia.com/kota/${id}`,
         {
           headers: {
             Authorization: `Bearer`,
@@ -46,7 +47,7 @@ const HalamankotaCpns = () => {
       );
       setKotacpns(response.data);
     };
-    console.log(id);
+    (id);
     getKota(id);
   }, [id, query]);
 
@@ -56,7 +57,7 @@ const HalamankotaCpns = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>
-          Bimbel Persiapan Seleksi CPNS & PPPK terbaik di {`${kotacpns.kota}`}{" "}
+          Bimbel Persiapan Seleksi CPNS & PPPK Terbaik di {`${kotacpns.kota}`}{" "}
           #1 - Edumatrix Indonesia
         </title>
         <link rel="canonical" href="" />
@@ -66,7 +67,7 @@ const HalamankotaCpns = () => {
         <div className="content-kota">
           <div className="teks-content">
             <h2 className="title-halaman-kota">
-              Bimbel Persiapan Seleksi CPNS & PPPK terbaik di {kotacpns.kota}
+              Bimbel Persiapan Seleksi CPNS & PPPK Terbaik di {kotacpns.kota}
             </h2>
 
             <div className="paragraf-kota">
@@ -98,7 +99,7 @@ const HalamankotaCpns = () => {
         <ListKabupatenCpns />
         <Keunggulan />
         <Testimoni />
-        <Faq />
+        <Faqtni />
         <Asalsekolah />
       </div>
       <Footer />

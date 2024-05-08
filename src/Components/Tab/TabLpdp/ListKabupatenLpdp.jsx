@@ -4,7 +4,7 @@ import Tab from "../Tab";
 import { Link, useLocation, useParams } from "react-router-dom";
 import axios from "axios";
 
-const ListKabupatenPrivat = () => {
+const ListKabupatenLpdp = () => {
   const [kabupaten, setKabupaten] = useState([]);
   const [kelas, setKelas] = useState([]);
   const [mapel, setMapel] = useState([]);
@@ -24,11 +24,10 @@ const ListKabupatenPrivat = () => {
   }, []);
 
   const fetchKabupaten = () => {
-    fetch(`https://api.edulink-indonesia.com/ibukotakab/${query.get("data")}`)
+    fetch(`https://api.edulink-indonesia.com/ibukotakab/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setKabupaten(data);
-        console.log(data);
       });
   };
 
@@ -37,12 +36,12 @@ const ListKabupatenPrivat = () => {
       <div className="parent-list-kota">
         {kabupaten.map((item, index) => (
           <Link
-            to={`/bimbel-lpdp-di-kabupaten/${item.kota_kabupaten}?data=${item.id}`}
+            // to={`/bimbel-lpdp-di-kabupaten/${item.kota_kabupaten}?data=${item.id}`}
             className="btn-kota"
             key={index}
-            // onClick={() => {
-            //   window.location.href = `/les-privat-di-kabupaten/${item.kota_kabupaten}?data=${item.id}`;
-            // }}
+            onClick={() => {
+              window.location.href = `/bimbel-persiapan-seleksi-lpdp/kabupaten/${item.slug}`;
+            }}
           >
             {item.kota_kabupaten}
           </Link>
@@ -52,4 +51,4 @@ const ListKabupatenPrivat = () => {
   );
 };
 
-export default ListKabupatenPrivat;
+export default ListKabupatenLpdp;

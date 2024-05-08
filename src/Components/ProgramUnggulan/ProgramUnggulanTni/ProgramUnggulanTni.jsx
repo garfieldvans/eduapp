@@ -118,6 +118,10 @@ const ProgramUnggulanTni = () => {
           </p>
           <p className="isi-fitur-program">
             <FontAwesomeIcon className="icon-program-tni" icon={faCheck} />{" "}
+            Sistem Belajar Privat & Group
+          </p>
+          <p className="isi-fitur-program">
+            <FontAwesomeIcon className="icon-program-tni" icon={faCheck} />{" "}
             Latihan Binsik Intensif
           </p>
           <p className="isi-fitur-program">
@@ -271,6 +275,10 @@ const ProgramUnggulanTni = () => {
           </p>
         </div>
       </div>
+
+      {/* SLIDER */}
+
+
     </React.Fragment>
   );
 };

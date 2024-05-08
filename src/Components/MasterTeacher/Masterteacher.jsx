@@ -68,7 +68,6 @@ const Masterteacher = () => {
       .then((res) => res.json())
       .then((data) => {
         setGuru(data);
-        console.log("data guru", data);
       });
   };
 
@@ -77,7 +76,6 @@ const Masterteacher = () => {
       .then((res) => res.json())
       .then((data) => {
         setTags(data);
-        console.log(data);
       });
   };
 
@@ -86,7 +84,7 @@ const Masterteacher = () => {
       .then((res) => res.json())
       .then((data) => {
         setGuru(data);
-        console.log(data);
+        (data);
       });
   };
 

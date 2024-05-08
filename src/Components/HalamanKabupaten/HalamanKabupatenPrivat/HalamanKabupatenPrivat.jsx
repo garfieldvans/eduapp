@@ -16,6 +16,7 @@ import Faq from "../../Faq/Faq";
 import Asalsekolah from "../../AsalSekolah/Asalsekolah";
 import Navbar from "../../Navbar/Navbar";
 import BestprogramSnbt2 from "../../BestProgram/BestProgram2/BestProgramSnbt2/BestProgramSnbt2";
+import Faqtni from "../../Faq/FaqTni/FaqTni";
 
 const HalamankabupatenPrivat = () => {
   const { id } = useParams();
@@ -32,7 +33,7 @@ const HalamankabupatenPrivat = () => {
   useEffect(() => {
     const getKabupaten = async () => {
       const response = await axiosJWT.get(
-        `https://api.edulink-indonesia.com/ibukotakab/${query.get("data")}`,
+        `https://api.edulink-indonesia.com/ibukotakabupaten/${id}`,
         {
           headers: {
             Authorization: `Bearer`,
@@ -41,19 +42,9 @@ const HalamankabupatenPrivat = () => {
       );
       setKabupaten(response.data);
     };
-    console.log(id);
+    (id);
     getKabupaten(id);
-    fetchKabupaten();
   }, [id, query]);
-
-  const fetchKabupaten = () => {
-    fetch(`https://api.edulink-indonesia.com/ibukotakab/${query.get("data")}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setKabupaten(data);
-        console.log(data);
-      });
-  };
 
   return (
     <React.Fragment>
@@ -64,7 +55,7 @@ const HalamankabupatenPrivat = () => {
           content="Bimbel Privat terbaik dengan sistem belajar mengajar yang berkualitas  #1 - Edumatrix Indonesia"
         />
         <title>
-          Bimbel Privat TK - SD - SMP - SMA & Mahasiswa di Kabupaten {`${id}`} #1 -
+          Bimbel Privat TK - SD - SMP - SMA & Mahasiswa di Kabupaten {`${kabupaten.kota_kabupaten}`} #1 -
           Edumatrix Indonesia
         </title>
         <link rel="canonical" href="" />
@@ -74,12 +65,12 @@ const HalamankabupatenPrivat = () => {
         <div className="content-kabupaten">
           <div className="teks-content">
             <h2 className="title-halaman-kabupaten">
-              Bimbel Privat TK - SD - SMP - SMA & Mahasiswa di Kabupaten {id} - Edumatrix
+              Bimbel Privat TK - SD - SMP - SMA & Mahasiswa di Kabupaten {kabupaten.kota_kabupaten} - Edumatrix
               Indonesia
             </h2>
             <div className="paragraf-kabupaten">
               <p>
-                Jasa Les Privat di Kabupaten {id} untuk TK, SD, SMP, SMA &
+                Jasa Les Privat di Kabupaten {kabupaten.kota_kabupaten} untuk TK, SD, SMP, SMA &
                 Mahasiswa
               </p>
               <p className="child-paragraf-kabupaten">
@@ -109,7 +100,7 @@ const HalamankabupatenPrivat = () => {
         <Masterteacher />
         <Keunggulan />
         <Testimoni />
-        <Faq />
+        <Faqtni />
         <Asalsekolah />
       </div>
       <Footer />

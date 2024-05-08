@@ -32,7 +32,7 @@ const Halamankabupaten = () => {
   useEffect(() => {
     const getKabupaten = async () => {
       const response = await axiosJWT.get(
-        `https://api.edulink-indonesia.com/ibukotakab/${query.get("data")}`,
+        `https://api.edulink-indonesia.com/ibukotakabupaten/${id}`,
         {
           headers: {
             Authorization: `Bearer`,
@@ -41,46 +41,36 @@ const Halamankabupaten = () => {
       );
       setKabupaten(response.data);
     };
-    console.log(id);
     getKabupaten(id);
-    fetchKabupaten()
+    console.log(kabupaten);
   }, [id, query]);
-
-  const fetchKabupaten = () => {
-    fetch(`https://api.edulink-indonesia.com/ibukotakab/${query.get("data")}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setKabupaten(data);
-        console.log(data);
-      });
-  };
 
   return (
     <React.Fragment>
       <Helmet>
         <meta
           charSet="utf-8"
-          name="description"
+          name="robots"
           content="Jasa Les Privat terbaik dengan sistem belajar mengajar yang berkualitas  #1 - Edumatrix Indonesia"
         />
-        <title>Les Privat Terbaik di {`${id}`} #1 - Edumatrix Indonesia</title>
-        <link
-          rel="canonical"
-          href=""
-        />
+        <title>
+          Les Privat Terbaik di {`${kabupaten.kota_kabupaten}`} #1 - Edumatrix
+          Indonesia
+        </title>
+        <link rel="canonical" href="" />
       </Helmet>
       <Navbar />
       <div className="container-halaman-kabupaten">
         <div className="content-kabupaten">
           <div className="teks-content">
             <h2 className="title-halaman-kabupaten">
-              Les Privat Terbaik di {id}
+              Les Privat Terbaik di {kabupaten.kota_kabupaten}
             </h2>
             <div className="paragraf-kabupaten">
               <p>
-                Jasa Les Privat di Kabupaten {id} untuk TK, SD, SMP, SMA,
-                UN/AKM, OSN, CPNS, LPDP, PPDS, SIMAK UI, SNBT, AKPOL, AKMIL,
-                Kedinasan, Mahasiswa dan Karyawan.{" "}
+                Jasa Les Privat di {} untuk TK, SD, SMP, SMA, UN/AKM, OSN, CPNS,
+                LPDP, PPDS, SIMAK UI, SNBT, AKPOL, AKMIL, Kedinasan, Mahasiswa
+                dan Karyawan.{" "}
               </p>
               <p className="child-paragraf-kabupaten">
                 Dapatkan layanan Les Privat kapan pun dan dimana pun dengan

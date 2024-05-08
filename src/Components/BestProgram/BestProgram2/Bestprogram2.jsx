@@ -14,7 +14,7 @@ const Bestprogram2 = () => {
       .then((res) => res.json())
       .then((data) => {
         setProgram_2(data);
-        console.log(data);
+        (data);
       });
   };
   return (

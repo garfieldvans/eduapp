@@ -17,7 +17,7 @@ const Faq = () => {
         .then((res) => res.json())
         .then((data) => {
           setFaqData(data);
-          console.log(data);
+          (data);
         });
     };
     fetchFaq();

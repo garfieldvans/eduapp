@@ -22,7 +22,6 @@ const Listkotatni = () => {
       .then((res) => res.json())
       .then((data) => {
         setKotatni(data);
-        console.log(data);
       });
   };
 
@@ -31,81 +30,29 @@ const Listkotatni = () => {
       .then((res) => res.json())
       .then((data) => {
         setKelas(data);
-        console.log(data);
       });
   };
 
   return (
     <div className="container-all-tab">
-      <Tabs>
-        <Tab title="PROGRAM">
-          <div className="parent-list-kelas">
-            {kelas.map((item, index) => (
-              <Link
-                to={`/bimbel/${item.slug.toLowerCase()}-terbaik?data=${
-                  item.id
-                }`}
-                className="btn-kelas"
-                key={index}
-                // onClick={() => {
-                //   window.location.href = `/les-privat/${item.slug.toLowerCase()}-terbaik?data=${
-                //     item.id
-                //   }`;
-                // }}
-              >
-                {item.kelastni}
-              </Link>
-            ))}
-          </div>
-        </Tab>
-        {/* <Tab title="MAPEL">
-          <div className="parent-list-mapel">
-            {mapel.map((item, index) => (
-              <Link
-                to={`/mata-pelajaran/${item.name.toLowerCase()}?data=${
-                  item.id
-                }`}
-                className="btn-mapel"
-                key={index}
-                // onClick={() => {
-                //   window.location.href = `/mata-pelajaran/${item.name.toLowerCase()}?data=${
-                //     item.id
-                //   }`;
-                // }}
-              >
-                <div className="combine-icon-text">
-                  <img
-                    className="icon-mapel"
-                    src={"https://api.edulink-indonesia.com/images/" + item.image}
-                    alt=""
-                  />
-                  {item.name}
-                </div>
-              </Link>
-            ))}
-          </div>
-        </Tab> */}
         <Tab title="WILAYAH">
           <div className="parent-list-kota">
             {kotaTni.map((item, index) => (
               <Link
-                to={`/bimbel-tni-polri-di/${item.kotatni.toLowerCase()}?data=${
-                  item.id
-                }`}
+                // to={`/bimbel-tni-polri-di/${item.kotatni.toLowerCase()}?data=${
+                //   item.id
+                // }`}
                 className="btn-kota"
                 key={index}
-                // onClick={() => {
-                //   window.location.href = `/les-privat-di/kota/${item.kota.toLowerCase()}?data=${
-                //     item.id
-                //   }`;
-                // }}
+                onClick={() => {
+                  window.location.href = `/bimbel-tni-polri-dan-sekolah-kedinasan-di/${item.slug}`;
+                }}
               >
                 {item.kotatni}
               </Link>
             ))}
           </div>
         </Tab>
-      </Tabs>
     </div>
   );
 };

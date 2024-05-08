@@ -17,16 +17,14 @@ const SliderCpns = () => {
       .then((res) => res.json())
       .then((data) => {
         setSliderHeader(data);
-        console.log(data);
       });
   };
 
   const fetchsliderHeader_2 = () => {
-    fetch("https://api.edulink-indonesia.com/sliderheadercpns2")
+    fetch("https://api.edulink-indonesia.com/sliderheadercpns")
       .then((res) => res.json())
       .then((data) => {
         setSliderHeader_2(data);
-        console.log(data);
       });
   };
 

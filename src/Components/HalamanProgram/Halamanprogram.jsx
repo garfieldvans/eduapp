@@ -17,6 +17,7 @@ import { Helmet } from "react-helmet";
 import Floatingcta from "../FloatingCta/Floatingcta";
 import Bottombar from "../BottomBar/Bottombar";
 import rumahAdat from "../../assets/rumah_adat.png";
+import Faqtni from "../Faq/FaqTni/FaqTni";
 
 const Halamanprogram = () => {
   const { id } = useParams();
@@ -35,7 +36,7 @@ const Halamanprogram = () => {
   useEffect(() => {
     const getProgram = async () => {
       const response = await axiosJWT.get(
-        `https://api.edulink-indonesia.com/kelas/${query.get("data")}`,
+        `https://api.edulink-indonesia.com/kelas/${id}`,
         {
           headers: {
             Authorization: `Bearer`,
@@ -55,7 +56,8 @@ const Halamanprogram = () => {
       );
       setPromo(response.data);
     };
-    console.log(id);
+    id;
+    console.log("id", id);
     getProgram(id);
     getPromo(id);
     fetchKelasperKota();
@@ -66,21 +68,17 @@ const Halamanprogram = () => {
       .then((res) => res.json())
       .then((data) => {
         setKelasPerKota(data);
-        console.log("data kelasperkota", data);
       });
   };
 
   return (
     <React.Fragment>
       <Helmet>
-        <meta charSet="utf-8" />
+        <meta charSet="utf-8" name="robots" content="noindex" />
         <title>
           Les Privat {`${program.name}`} #1 Terbaik - Edumatrix Indonesia
         </title>
-        <link
-          rel="canonical"
-          href=""
-        />
+        <link rel="canonical" href="" />
       </Helmet>
       <Navbar />
       <div className="container-halaman-program">
@@ -123,12 +121,12 @@ const Halamanprogram = () => {
         <Listkelasperkota />
         <Keunggulan />
         <Testimoni />
-        <Faq />
+        <Faqtni />
         <Asalsekolah />
         <div className="parent-promo">
           <img
             className="discount-promo"
-            src={"https://api.edulink-indonesia.com/images/" + promo.image}
+            src={"https://api.edulink-indonesia.com/images/" + promo?.image}
             alt=""
           />
         </div>

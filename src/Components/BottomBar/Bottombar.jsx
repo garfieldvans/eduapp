@@ -12,7 +12,7 @@ const Bottombar = () => {
   const navigate = useNavigate();
 
   const goToKelas = () => {
-    navigate("/pilihan-program");
+    navigate("/pilihan-kelas");
   };
 
   const goToAbout = () => {
@@ -35,7 +35,7 @@ const Bottombar = () => {
           <div onClick={() => goToKelas()} className="bottom-bar-element">
             <img className="icon-home-bottombar" src={iconKelas} alt="" />
             <br />
-            <span className="text-bottombar">Program</span>
+            <span className="text-bottombar">Kelas</span>
           </div>
           <div onClick={() => goToAbout()} className="bottom-bar-element">
             <img className="icon-home-bottombar-about" src={iconAbout} alt="" />

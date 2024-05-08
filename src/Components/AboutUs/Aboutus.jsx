@@ -25,7 +25,7 @@ const Aboutus = () => {
   //     .then((res) => res.json())
   //     .then((data) => {
   //       setAboutUs(data);
-  //       console.log(data);
+  //       (data);
   //     });
   // };
   return (

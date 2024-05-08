@@ -52,7 +52,6 @@ const Testimoni = () => {
       .then((res) => res.json())
       .then((data) => {
         setTestimoni(data);
-        console.log(data);
       });
   };
 
@@ -159,7 +158,7 @@ export default Testimoni;
 //       .then((res) => res.json())
 //       .then((data) => {
 //         setTestimoni(data);
-//         console.log(data);
+//         (data);
 //       });
 //   };
 

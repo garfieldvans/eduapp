@@ -8,18 +8,18 @@ import Voucer from "../Voucer/Voucer";
 import Masterteacher from "../MasterTeacher/Masterteacher";
 import Footer from "../Footer/Footer";
 import Keunggulan from "../Keunggulan/Keunggulan";
-import Faq from "../Faq/Faq";
 import Asalsekolah from "../AsalSekolah/Asalsekolah";
 import Testimoni from "../Testimoni/Testimoni";
 import { Helmet } from "react-helmet";
 import Floatingcta from "../FloatingCta/Floatingcta";
 import Bottombar from "../BottomBar/Bottombar";
 import rumahAdat from "../../assets/rumah_adat.png";
+import Faqtni from "../Faq/FaqTni/FaqTni";
 
 const HalamanProgramperkota = () => {
   const [kota, setKota] = useState([]);
   const [program, setProgram] = useState([]);
-  const { id } = useParams();
+  const { id, programid } = useParams();
 
   function useQuery() {
     const { search } = useLocation();
@@ -33,7 +33,7 @@ const HalamanProgramperkota = () => {
   useEffect(() => {
     const getKota = async () => {
       const response = await axiosJWT.get(
-        `https://api.edulink-indonesia.com/kota/${query.get("data")}`,
+        `https://api.edulink-indonesia.com/kota/${id}`,
         {
           headers: {
             Authorization: `Bearer`,
@@ -45,7 +45,7 @@ const HalamanProgramperkota = () => {
 
     const getProgram = async () => {
       const response = await axiosJWT.get(
-        `https://api.edulink-indonesia.com/kelas/${query.get("data")}`,
+        `https://api.edulink-indonesia.com/kelas/${programid}`,
         {
           headers: {
             Authorization: `Bearer`,
@@ -54,22 +54,15 @@ const HalamanProgramperkota = () => {
       );
       setProgram(response.data);
     };
-
-    console.log(id);
     getKota(id);
     getProgram(id);
-    // fetchKabupaten(id);
-    // fetchKota();
-    // fetchKelas();
-    // fetchMapel();
-    // fetchKelasperKota();
   }, [id, query]);
   return (
     <React.Fragment>
       <Helmet>
-        <meta charSet="utf-8" />
+        <meta charSet="utf-8" name="robots" content="noindex"/>
         <title>
-          Les Privat {`${program.name}`} #1 Terbaik di {id} - Edumatrix
+          Les Privat {`${program.name}`} #1 Terbaik di {`${kota.kota}`} - Edumatrix
           Indonesia
         </title>
         <link
@@ -82,7 +75,7 @@ const HalamanProgramperkota = () => {
         <div className="content-program">
           <div className="teks-content">
             <h2 className="title-halaman-program">
-              Les Privat {program.name} Terbaik di {id} - Edumatrix Indonesia
+              Les Privat {program.name} Terbaik di {kota.kota} - Edumatrix Indonesia
             </h2>
             <div className="paragraf-program">
               <p>
@@ -117,7 +110,7 @@ const HalamanProgramperkota = () => {
         <Masterteacher />
         <Keunggulan />
         <Testimoni />
-        <Faq />
+        <Faqtni />
         <Asalsekolah />
       </div>
       <Footer />

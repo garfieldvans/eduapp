@@ -17,7 +17,6 @@ const ListKotaCpns = () => {
       .then((res) => res.json())
       .then((data) => {
         setKotaCpns(data);
-        console.log(data);
       });
   };
 
@@ -26,16 +25,11 @@ const ListKotaCpns = () => {
       <div className="parent-list-kota">
         {kotaCpns.map((item, index) => (
           <Link
-            to={`/bimbel-cpns-pppk-terbaik-di/${item.kota.toLowerCase()}?data=${
-              item.id
-            }`}
             className="btn-kota"
             key={index}
-            // onClick={() => {
-            //   window.location.href = `/les-privat-di/kota/${item.kota.toLowerCase()}?data=${
-            //     item.id
-            //   }`;
-            // }}
+            onClick={() => {
+              window.location.href = `/bimbel-cpns-dan-pppk-di/${item.slug}`;
+            }}
           >
             {item.kota}
           </Link>

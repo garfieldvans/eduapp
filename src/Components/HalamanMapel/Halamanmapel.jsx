@@ -31,7 +31,7 @@ const Halamanmapel = () => {
   useEffect(() => {
     const getMapel = async () => {
       const response = await axiosJWT.get(
-        `https://api.edulink-indonesia.com/matapelajaran/${query.get("data")}`,
+        `https://api.edulink-indonesia.com/matapelajaran/${id}`,
         {
           headers: {
             Authorization: `Bearer`,
@@ -40,14 +40,14 @@ const Halamanmapel = () => {
       );
       setMapel(response.data);
     };
-    console.log(id);
+    ("datamapel 2", id);
     getMapel(id);
   }, [id, query]);
 
   return (
     <React.Fragment>
       <Helmet>
-        <meta charSet="utf-8" />
+        <meta charSet="utf-8" name="robots" content="noindex"/>
         <title>
           Les Privat {`${mapel.name}`} Terbaik #1 - Edumatrix Indonesia
         </title>

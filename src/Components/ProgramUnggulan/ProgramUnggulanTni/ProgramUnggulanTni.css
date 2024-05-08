@@ -12,6 +12,9 @@
   border-radius: 10px;
 }
 .card-program-unggulan {
+  background-image: url("/src/assets/wave_program_tni.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: white;
   border-radius: 8px;
   padding: 15px;
@@ -56,4 +59,12 @@
   font-weight: 600;
   gap: 10px;
   font-size: 15px;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 500px) {
+  .container-program-unggulan-tni {
+      display: grid;
+      place-items: center;
+  }
 }

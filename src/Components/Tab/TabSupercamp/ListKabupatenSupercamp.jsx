@@ -24,11 +24,10 @@ const ListKabupatenSupercamp = () => {
   }, []);
 
   const fetchKabupaten = () => {
-    fetch(`https://api.edulink-indonesia.com/ibukotakab/${query.get("data")}`)
+    fetch(`https://api.edulink-indonesia.com/ibukotakab/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setKabupaten(data);
-        console.log(data);
       });
   };
 
@@ -37,12 +36,12 @@ const ListKabupatenSupercamp = () => {
       <div className="parent-list-kota">
         {kabupaten.map((item, index) => (
           <Link
-            to={`/bimbel-supercamp-di-kabupaten/${item.kota_kabupaten}?data=${item.id}`}
+            // to={`/bimbel-supercamp-di-kabupaten/${item.kota_kabupaten}?data=${item.id}`}
             className="btn-kota"
             key={index}
-            // onClick={() => {
-            //   window.location.href = `/les-privat-di-kabupaten/${item.kota_kabupaten}?data=${item.id}`;
-            // }}
+            onClick={() => {
+              window.location.href = `/bimbel-supercamp-edumatrix/kabupaten/${item.slug}`;
+            }}
           >
             {item.kota_kabupaten}
           </Link>

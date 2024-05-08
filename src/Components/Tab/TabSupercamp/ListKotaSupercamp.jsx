@@ -17,7 +17,6 @@ const ListKotaSupercamp = () => {
       .then((res) => res.json())
       .then((data) => {
         setKotaSnbt(data);
-        console.log(data);
       });
   };
 
@@ -26,16 +25,11 @@ const ListKotaSupercamp = () => {
       <div className="parent-list-kota">
         {kotaSnbt.map((item, index) => (
           <Link
-            to={`/bimbel-supercamp-edumatrix-di/${item.kota.toLowerCase()}?data=${
-              item.id
-            }`}
             className="btn-kota"
             key={index}
-            // onClick={() => {
-            //   window.location.href = `/les-privat-di/kota/${item.kota.toLowerCase()}?data=${
-            //     item.id
-            //   }`;
-            // }}
+            onClick={() => {
+              window.location.href = `/bimbel-supercamp-edumatrix-di/${item.slug}`;
+            }}
           >
             {item.kota}
           </Link>

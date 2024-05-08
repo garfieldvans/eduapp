@@ -17,7 +17,6 @@ const Slidertni = () => {
       .then((res) => res.json())
       .then((data) => {
         setSliderHeader(data);
-        console.log(data);
       });
   };
 
@@ -26,7 +25,6 @@ const Slidertni = () => {
       .then((res) => res.json())
       .then((data) => {
         setSliderHeader_2(data);
-        console.log(data);
       });
   };
 

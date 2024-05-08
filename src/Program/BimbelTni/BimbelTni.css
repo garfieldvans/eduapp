@@ -1,1 +1,11 @@
+.parent-roadmap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.image-roadmap {
+    width: 100%;
+    border-radius: 10px;
+}
 

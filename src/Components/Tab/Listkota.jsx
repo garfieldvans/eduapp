@@ -24,7 +24,6 @@ const Listkota = () => {
       .then((res) => res.json())
       .then((data) => {
         setKota(data);
-        console.log(data);
       });
   };
 
@@ -33,7 +32,6 @@ const Listkota = () => {
       .then((res) => res.json())
       .then((data) => {
         setProgram(data);
-        console.log(data);
       });
   };
 
@@ -42,9 +40,8 @@ const Listkota = () => {
       .then((res) => res.json())
       .then((data) => {
         setMapel(data);
-        console.log(data);
       });
-  }; 
+  };
 
   return (
     <div className="container-all-tab">
@@ -53,16 +50,14 @@ const Listkota = () => {
           <div className="parent-list-kelas">
             {program.map((item, index) => (
               <Link
-                to={`/les-privat/${item.slug.toLowerCase()}-terbaik?data=${
-                  item.id
-                }`}
+                // to={`/les-privat/${item.slug.toLowerCase()}-terbaik?data=${
+                //   item.id
+                // }`}
                 className="btn-kelas"
                 key={index}
-                // onClick={() => {
-                //   window.location.href = `/les-privat/${item.slug.toLowerCase()}-terbaik?data=${
-                //     item.id
-                //   }`;
-                // }}
+                onClick={() => {
+                  window.location.href = `/les-privat/program/${item.slug}`;
+                }}
               >
                 {item.name}
               </Link>
@@ -73,16 +68,14 @@ const Listkota = () => {
           <div className="parent-list-mapel">
             {mapel.map((item, index) => (
               <Link
-                to={`/mata-pelajaran/${item.name.toLowerCase()}?data=${
-                  item.id
-                }`}
+                // to={`/mata-pelajaran/${item.name.toLowerCase()}?data=${
+                //   item.id
+                // }`}
                 className="btn-mapel"
                 key={index}
-                // onClick={() => {
-                //   window.location.href = `/mata-pelajaran/${item.name.toLowerCase()}?data=${
-                //     item.id
-                //   }`;
-                // }}
+                onClick={() => {
+                  window.location.href = `/les-privat/mata-pelajaran/${item.slug}`;
+                }}
               >
                 <div className="combine-icon-text">
                   <img
@@ -100,16 +93,14 @@ const Listkota = () => {
           <div className="parent-list-kota">
             {kota.map((item, index) => (
               <Link
-                to={`/les-privat-di-kota/${item.kota.toLowerCase()}?data=${
-                  item.id
-                }`}
+                // to={`/les-privat-di-kota/${item.kota.toLowerCase()}?data=${
+                //   item.id
+                // }`}
                 className="btn-kota"
                 key={index}
-                // onClick={() => {
-                //   window.location.href = `/les-privat-di/kota/${item.kota.toLowerCase()}?data=${
-                //     item.id
-                //   }`;
-                // }}
+                onClick={() => {
+                  window.location.href = `/les-privat-di-kota/${item.slug}`;
+                }}
               >
                 {item.kota}
               </Link>

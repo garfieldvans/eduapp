@@ -32,6 +32,20 @@ import BimbelCpns from "./Program/BimbelCpns/BimbelCpns";
 import HalamankotaCpns from "./Components/HalamanKota/HalamanKotaCpns/HalamanKotaCpns";
 import HalamankabupatenCpns from "./Components/HalamanKabupaten/HalamanKabupatenCpns/HalamanKabupatenCpns";
 import BimbelBumn from "./Program/BimbelBumn/BimbelBumn";
+import HalamankotaBumn from "./Components/HalamanKota/HalamanKotaBumn/HalamanKotaBumn";
+import BimbelIgcse from "./Program/BimbelIgcse/BimbelIgcse";
+import HalamankotaIgcse from "./Components/HalamanKota/HalamanKotaIgcse/HalamanKotaIgcse";
+import HalamankabupatenIgcse from "./Components/HalamanKabupaten/HalamanKabupatenIgcse/HalamanKabupatenIgcse";
+import BimbelIup from "./Program/BimbelIup/BimbelIup";
+import HalamankotaIup from "./Components/HalamanKota/HalamanKotaIup/HalamanKotaIup";
+import HalamankabupatenIup from "./Components/HalamanKabupaten/HalamanKabupatenIup/HalamanKabupatenIup";
+import BimbelOsn from "./Program/BimbelOsn/BimbelOsn";
+import HalamankotaOsn from "./Components/HalamanKota/HalamanKotaOsn/HalamanKotaOsn";
+import HalamankabupatenBumn from "./Components/HalamanKabupaten/HalamanKabupatenBumn/HalamanKabupatenBumn";
+import HalamankabupatenOsn from "./Components/HalamanKabupaten/HalamanKabupatenOsn/HalamanKabupatenOsn";
+import BimbelToefl from "./Program/BimbelToefl/BimbelToefl";
+import HalamankotaToefl from "./Components/HalamanKota/HalamanKotaToefl/HalamanKotaToefl";
+import HalamankabupatenToefl from "./Components/HalamanKabupaten/HalamanKabupatenToefl/HalamanKabupatenToefl";
 
 function App() {
   return (
@@ -39,72 +53,106 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Homepage />}></Route>
         {/* Go to City By ID */}
-        <Route path="/les-privat-di-kota/:id" element={<Halamankota />}></Route>
+        <Route exact path="/les-privat-di-kota/:id" element={<Halamankota />}></Route>
         {/* Go to Kabupaten By ID */}
-        <Route path="/les-privat-di-kabupaten/:id" element={<Halamankabupaten />}></Route>
+        <Route exact path="/les-privat-di/:id" element={<Halamankabupaten />}></Route>
         {/* Go to program By ID */}
-        <Route path="/les-privat/:id-terbaik" element={<Halamanprogram />}></Route>
+        <Route exact path="/les-privat/program/:id" element={<Halamanprogram />}></Route>
         {/* Go to program per Kota By ID */}
-        <Route path="/program/:id/kota/:id" element={<HalamanProgramperkota />}></Route>
+        <Route exact path="/les-privat/program/:programid/kota/:id" element={<HalamanProgramperkota />}></Route>
         {/* Go to Mapel By ID */}
-        <Route path="/mata-pelajaran/:id" element={<Halamanmapel />}></Route>
+        <Route exact path="/les-privat/mata-pelajaran/:id" element={<Halamanmapel />}></Route>
         {/* Go to Mapel per kota By ID */}
-        <Route path="/mapel/:id/kota/:id" element={<HalamanMapelperkota />}></Route>
+        <Route exact path="/les-privat/mata-pelajaran/:mapelId/kota/:id" element={<HalamanMapelperkota />}></Route>
         {/* Go to Errorpage */}
-        <Route path="*" element={<Errorpage />}></Route>
+        <Route exact path="*" element={<Homepage />}></Route>
         {/* Go to Search Kelas */}
-        <Route path="/pilihan-program" element={<Searchkelas />}></Route>
+        <Route exact path="/pilihan-kelas" element={<Searchkelas />}></Route>
         {/* Go to About Us */}
-        <Route path="/tentang-kami" element={<Aboutus />}></Route>
+        <Route exact path="/tentang-kami" element={<Aboutus />}></Route>
 
         {/* PROGRAM BIMBEL */}
         {/* TNI-POLRI */}
-        <Route path="/bimbel-tni-polri-dan-sekolah-kedinasan" element={<BimbelTni />}></Route>
+        <Route exact path="/bimbel-tni-polri-dan-sekolah-kedinasan" element={<BimbelTni />}></Route>
         {/* Go to City TNI By ID */}
-        <Route path="/bimbel-tni-polri-di/:id" element={<Halamankotatni />}></Route>
+        <Route exact path="/bimbel-tni-polri-dan-sekolah-kedinasan-di/:id" element={<Halamankotatni />}></Route>
         {/* Go to program TNI By ID */}
-        <Route path="/bimbel/:id-terbaik" element={<Halamanprogramtni />}></Route>
+        <Route exact path="/bimbel/:id-terbaik" element={<Halamanprogramtni />}></Route>
         {/* Go to program per Kota TNI By ID */}
-        <Route path="/bimbel-di-kota/:id" element={<HalamanProgramperkotaTni />}></Route>
+        <Route exact path="/bimbel-di-kota/:id" element={<HalamanProgramperkotaTni />}></Route>
 
         {/* SNBT */}
-        <Route path="/bimbel-snbt-terbaik" element={<BimbelSnbt />}></Route>
+        <Route exact path="/bimbel-snbt-terbaik" element={<BimbelSnbt />}></Route>
         {/* Go to City SNBT By ID */}
-        <Route path="/bimbel-snbt-terbaik-di/:id" element={<HalamankotaSnbt />}></Route>
+        <Route exact path="/bimbel-snbt-terbaik-di/:id" element={<HalamankotaSnbt />}></Route>
         {/* Go to Program SNBT By ID */}
-        <Route path="/bimbel-privat/:id" element={<Halamanprogramsnbt />}></Route>
+        <Route exact path="/bimbel-privat/:id" element={<Halamanprogramsnbt />}></Route>
         {/* Go to Kabupaten SNBT By ID */}
-        <Route path="/bimbel-privat-di-kabupaten/:id" element={<HalamankabupatenSnbt />}></Route>
+        <Route exact path="/bimbel-snbt/kabupaten/:id" element={<HalamankabupatenSnbt />}></Route>
 
         {/* SUPERCAMP */}
-        <Route path="/bimbel-supercamp-edumatrix" element={<BimbelSupercamp />}></Route>
+        <Route exact path="/bimbel-supercamp-edumatrix" element={<BimbelSupercamp />}></Route>
         {/* Go to City SUPERCAMP By ID */}
-        <Route path="/bimbel-supercamp-edumatrix-di/:id" element={<HalamankotaSupercamp />}></Route>
+        <Route exact path="/bimbel-supercamp-edumatrix-di/:id" element={<HalamankotaSupercamp />}></Route>
         {/* Go to Kabupaten SUPERCAMP By ID */}
-        <Route path="/bimbel-supercamp-di-kabupaten/:id" element={<HalamankabupatenSupercamp />}></Route>
+        <Route exact path="/bimbel-supercamp-edumatrix/kabupaten/:id" element={<HalamankabupatenSupercamp />}></Route>
 
         {/* LPDP */}
-        <Route path="/bimbel-persiapan-seleksi-lpdp" element={<BimbelLpdp />}></Route>
+        <Route exact path="/bimbel-persiapan-seleksi-lpdp" element={<BimbelLpdp />}></Route>
         {/* Go to City LPDP By ID */}
-        <Route path="/bimbel-lpdp-terbaik-di/:id" element={<HalamankotaLpdp />}></Route>
+        <Route exact path="/bimbel-persiapan-seleksi-lpdp-di/:id" element={<HalamankotaLpdp />}></Route>
         {/* Go to Kabupaten LPDP By ID */}
-        <Route path="/bimbel-lpdp-di-kabupaten/:id" element={<HalamankabupatenLpdp />}></Route>
+        <Route exact path="/bimbel-persiapan-seleksi-lpdp/kabupaten/:id" element={<HalamankabupatenLpdp />}></Route>
 
         {/* PRIVAT */}
-        <Route path="/bimbel-privat-tk-sd-smp-sma-mahasiswa" element={<BimbelPrivat />}></Route>
+        <Route exact path="/bimbel-privat-tk-sd-smp-sma-mahasiswa" element={<BimbelPrivat />}></Route>
         {/* Go to City PRIVAT By ID */}
-        <Route path="/bimbel-privat-tk-sd-smp-sma-terbaik-di/:id" element={<HalamankotaPrivat />}></Route>
+        <Route exact path="/bimbel-privat-tk-sd-smp-sma-mahasiswa-di/:id" element={<HalamankotaPrivat />}></Route>
         {/* Go to Kabupaten PRIVAT By ID */}
-        <Route path="/bimbel-privat-tk-sd-smp-sma-terbaik-di-kabupaten/:id" element={<HalamankabupatenPrivat />}></Route>
+        <Route exact path="/bimbel-privat-tk-sd-smp-sma-mahasiswa/kabupaten/:id" element={<HalamankabupatenPrivat />}></Route>
 
         {/* CPNS */}
-        <Route path="/bimbel-cpns-dan-pppk" element={<BimbelCpns />}></Route>
+        <Route exact path="/bimbel-cpns-dan-pppk" element={<BimbelCpns />}></Route>
         {/* Go to City CPNS By ID */}
-        <Route path="/bimbel-cpns-pppk-terbaik-di/:id" element={<HalamankotaCpns />}></Route>
+        <Route exact path="/bimbel-cpns-dan-pppk-di/:id" element={<HalamankotaCpns />}></Route>
         {/* Go to Kabupaten CPNS By ID */}
-        <Route path="/bimbel-cpns-pppk-terbaik-di-kabupaten/:id" element={<HalamankabupatenCpns />}></Route>
+        <Route exact path="/bimbel-cpns-dan-pppk/kabupaten/:id" element={<HalamankabupatenCpns />}></Route>
+
         {/* BUMN */}
-        <Route path="/bimbel-seleksi-bumn" element={<BimbelBumn />}></Route>
+        <Route exact path="/bimbel-seleksi-bumn" element={<BimbelBumn />}></Route>
+        {/* Go to City BUMN By ID */}
+        <Route exact path="/bimbel-seleksi-bumn-di/:id" element={<HalamankotaBumn />}></Route>
+        {/* Go to Kabupaten BUMN By ID */}
+        <Route exact path="/bimbel-seleksi-bumn/kabupaten/:id" element={<HalamankabupatenBumn />}></Route>
+
+        {/* IGCSE */}
+        <Route exact path="/bimbel-kurikulum-igcse" element={<BimbelIgcse />}></Route>
+        {/* Go to City IGCSE By ID */}
+        <Route exact path="/bimbel-igcse-dan-ibtutor-di/:id" element={<HalamankotaIgcse />}></Route>
+        {/* Go to Kabupaten BUMN By ID */}
+        <Route exact path="/bimbel-igcse-dan-ibtutor/kabupaten/:id" element={<HalamankabupatenIgcse />}></Route>
+
+        {/* IUP-KKI */}
+        <Route exact path="/bimbel-iup-kki" element={<BimbelIup />}></Route>
+        {/* Go to City IUPKKI By ID */}
+        <Route exact path="/bimbel-iup-kki-di/:id" element={<HalamankotaIup />}></Route>
+        {/* Go to Kabupaten IUPKKI By ID */}
+        <Route exact path="/bimbel-iup-kki/kabupaten/:id" element={<HalamankabupatenIup />}></Route>
+
+        {/* OSN */}
+        <Route exact path="/bimbel-osn" element={<BimbelOsn />}></Route>
+        {/* Go to City OSN By ID */}
+        <Route exact path="/bimbel-osn-di/:id" element={<HalamankotaOsn />}></Route>
+        {/* Go to Kabupaten OSN By ID */}
+        <Route exact path="/bimbel-osn/kabupaten/:id" element={<HalamankabupatenOsn />}></Route>
+
+        {/* TOEFL */}
+        <Route exact path="/bimbel-toefl-toeic-ielts-dan-english-conversation" element={<BimbelToefl />}></Route>
+        {/* Go to City TOEFL By ID */}
+        <Route exact path="/bimbel-toefl-toeic-ielts-dan-english-conversation-di/:id" element={<HalamankotaToefl />}></Route>
+        {/* Go to Kabupaten TOEFL By ID */}
+        <Route exact path="/bimbel-toefl-toeic-ielts-dan-english-conversation/kabupaten/:id" element={<HalamankabupatenToefl />}></Route>
+
       </Routes>
     </BrowserRouter>
   );

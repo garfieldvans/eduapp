@@ -20,6 +20,7 @@ import ListUtbkSnbt from "../../Tab/TabUtbkSnbt/ListUtbkSnbt";
 import ListKabupatenSnbt from "../../Tab/TabUtbkSnbt/ListKabupatenSnbt";
 import BestprogramSnbt2 from "../../BestProgram/BestProgram2/BestProgramSnbt2/BestProgramSnbt2";
 import ListKabupatenPrivat from "../../Tab/TabPrivat/ListKabupatenPrivat";
+import Faqtni from "../../Faq/FaqTni/FaqTni";
 
 const HalamankotaPrivat = () => {
   const { id } = useParams();
@@ -36,7 +37,7 @@ const HalamankotaPrivat = () => {
   useEffect(() => {
     const getKota = async () => {
       const response = await axiosJWT.get(
-        `https://api.edulink-indonesia.com/kota/${query.get("data")}`,
+        `https://api.edulink-indonesia.com/kota/${id}`,
         {
           headers: {
             Authorization: `Bearer`,
@@ -45,7 +46,7 @@ const HalamankotaPrivat = () => {
       );
       setKotaprivat(response.data);
     };
-    console.log(id);
+    (id);
     getKota(id);
   }, [id, query]);
 
@@ -96,7 +97,7 @@ const HalamankotaPrivat = () => {
         <ListKabupatenPrivat />
         <Keunggulan />
         <Testimoni />
-        <Faq />
+        <Faqtni />
         <Asalsekolah />
       </div>
       <Footer />

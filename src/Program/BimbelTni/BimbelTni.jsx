@@ -7,13 +7,16 @@ import Masterteacher from "../../Components/MasterTeacher/Masterteacher";
 import Footer from "../../Components/Footer/Footer";
 import { Helmet } from "react-helmet";
 import Keunggulan from "../../Components/Keunggulan/Keunggulan";
-import Testimoni from "../../Components/Testimoni/Testimoni";
 import GaleriKegiatan from "./GaleriKegiatan/GaleriKegiatan";
 import Listkotatni from "../../Components/Tab/Tabtni/ListKotatni";
 import Bottombar from "../../Components/BottomBar/Bottombar";
 import Floatingcta from "../../Components/FloatingCta/Floatingcta";
 import Faqtni from "../../Components/Faq/FaqTni/FaqTni";
 import ProgramUnggulanTni from "../../Components/ProgramUnggulan/ProgramUnggulanTni/ProgramUnggulanTni";
+import roadmapTni from "../../assets/roadmap tni.jpeg";
+import "./BimbelTni.css"
+import Testimonitni from "../../Components/Testimoni/TestimoniTni/TestimoniTni";
+import MasterteacherTni from "../../Components/MasterTeacher/MasterteacherTni/MasterteacherTni";
 
 const BimbelTni = () => {
   return (
@@ -35,12 +38,15 @@ const BimbelTni = () => {
         <Slidertni />
         <BestprogramTni />
         <Voucer />
-        <Masterteacher />
+        <MasterteacherTni />
+        <div className="parent-roadmap">
+          <img className="image-roadmap" src={roadmapTni} alt="roadmap tni" />
+        </div>
         <Listkotatni />
         <Keunggulan />
         <ProgramUnggulanTni />
         <GaleriKegiatan />
-        <Testimoni />
+        <Testimonitni />
         <Faqtni />
       </div>
       <Footer />

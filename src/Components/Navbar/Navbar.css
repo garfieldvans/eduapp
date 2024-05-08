@@ -50,27 +50,31 @@ body {
   color: white;
   font-weight: 500 !important;
   cursor: pointer;
+  transition: 0.5s;
+  transform: scale(1.1);
 }
+
 .menu-nav:hover {
-  text-decoration: underline;
+  background-color: #00909b;
+  border-radius: 2px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  transition: 0.5s;
+  font-size: 14px;
+  transform: scale(1.1);
 }
 .menu-nav-daftar {
-  background-color: #f33a6b;
-  border: 1px solid white;
-  border-radius: 50px;
+  background-color: #00909b;
+  border-radius: 2px;
   padding: 10px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
   transition: 0.5s;
+  font-size: 14px;
 }
 .menu-nav-daftar:hover {
-  background-color: transparent;
-  border: 1px solid white;
-  color: white;
-  border-radius: 5px;
-  padding: 10px;
-  padding-left: 50px;
-  padding-right: 50px;
+  background-color: #00818a;
   transition: 0.5s;
 }
 .menu-items {

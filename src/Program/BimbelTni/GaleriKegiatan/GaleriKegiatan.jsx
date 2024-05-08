@@ -13,7 +13,6 @@ const GaleriKegiatan = () => {
       .then((res) => res.json())
       .then((data) => {
         setGaleriKegiatan(data);
-        console.log(data);
       });
   };
 

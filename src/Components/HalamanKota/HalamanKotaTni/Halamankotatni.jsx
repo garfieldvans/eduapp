@@ -18,6 +18,7 @@ import Footer from "../../Footer/Footer";
 import Navbar from "../../Navbar/Navbar";
 import Listkotatni from "../../Tab/Tabtni/ListKotatni";
 import BestprogramTni2 from "../../BestProgram/BestProgram2/BestProgramTni2/BestProgramTni2";
+import Faqtni from "../../Faq/FaqTni/FaqTni";
 
 const Halamankotatni = () => {
   const { id } = useParams();
@@ -34,7 +35,7 @@ const Halamankotatni = () => {
   useEffect(() => {
     const getKotatni = async () => {
       const response = await axiosJWT.get(
-        `https://api.edulink-indonesia.com/kotatni/${query.get("data")}`,
+        `https://api.edulink-indonesia.com/kotatni/${id}`,
         {
           headers: {
             Authorization: `Bearer`,
@@ -43,7 +44,7 @@ const Halamankotatni = () => {
       );
       setKotatni(response.data);
     };
-    console.log(id);
+    (id);
     getKotatni(id);
   }, [id, query]);
 
@@ -53,7 +54,7 @@ const Halamankotatni = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>
-          Bimbel TNI - Polri dan Sekolah Kedinasan terbaik di {" "}
+          Bimbel TNI - Polri dan Sekolah Kedinasan Terbaik di {" "}
           {`${kotatni.kotatni}`} #1 - Edumatrix Indonesia
         </title>
         <link rel="canonical" href="" />
@@ -63,7 +64,7 @@ const Halamankotatni = () => {
         <div className="content-kota">
           <div className="teks-content">
             <h2 className="title-halaman-kota">
-              Bimbel TNI - Polri dan Sekolah Kedinasan terbaik di {kotatni.kotatni}
+              Bimbel TNI - Polri dan Sekolah Kedinasan Terbaik di {kotatni.kotatni}
             </h2>
 
             <div className="paragraf-kota">
@@ -95,7 +96,7 @@ const Halamankotatni = () => {
         <Listkotatni />
         <Keunggulan />
         <Testimoni />
-        <Faq />
+        <Faqtni />
         <Asalsekolah />
       </div>
       <Footer />

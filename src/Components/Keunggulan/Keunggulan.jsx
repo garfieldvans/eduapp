@@ -14,7 +14,6 @@ const Keunggulan = () => {
       .then((res) => res.json())
       .then((data) => {
         setKeunggulan(data);
-        console.log(data);
       });
   };
 

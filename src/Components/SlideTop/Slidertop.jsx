@@ -18,7 +18,6 @@ const Slidertop = () => {
       .then((res) => res.json())
       .then((data) => {
         setSliderHeader(data);
-        console.log(data);
       });
   };
 
@@ -27,7 +26,6 @@ const Slidertop = () => {
       .then((res) => res.json())
       .then((data) => {
         setSliderHeader_2(data);
-        console.log(data);
       });
   };
 

@@ -20,10 +20,11 @@ import ListUtbkSnbt from "../../Tab/TabUtbkSnbt/ListUtbkSnbt";
 import ListKabupatenSnbt from "../../Tab/TabUtbkSnbt/ListKabupatenSnbt";
 import BestprogramSnbt2 from "../../BestProgram/BestProgram2/BestProgramSnbt2/BestProgramSnbt2";
 import ListKabupatenLpdp from "../../Tab/TabLpdp/ListKabupatenLpdp";
+import Faqtni from "../../Faq/FaqTni/FaqTni";
 
 const HalamankotaLpdp = () => {
   const { id } = useParams();
-  const [kotasnbt, setKotasnbt] = useState([]);
+  const [kotalpdp, setKotaslpdp] = useState([]);
 
   function useQuery() {
     const { search } = useLocation();
@@ -35,15 +36,12 @@ const HalamankotaLpdp = () => {
 
   useEffect(() => {
     const getKota = async () => {
-      const response = await axiosJWT.get(
-        `https://api.edulink-indonesia.com/kota/${query.get("data")}`,
-        {
-          headers: {
-            Authorization: `Bearer`,
-          },
-        }
-      );
-      setKotasnbt(response.data);
+      const response = await axiosJWT.get(`https://api.edulink-indonesia.com/kota/${id}`, {
+        headers: {
+          Authorization: `Bearer`,
+        },
+      });
+      setKotaslpdp(response.data);
     };
     console.log(id);
     getKota(id);
@@ -55,8 +53,8 @@ const HalamankotaLpdp = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>
-          Bimbel Persiapan Seleksi Beasiswa LPDP terbaik di{" "}
-          {`${kotasnbt.kota}`} #1 - Edumatrix Indonesia
+          Bimbel Persiapan Seleksi Beasiswa LPDP Terbaik di{" "}
+          {`${kotalpdp.kota}`} #1 - Edumatrix Indonesia
         </title>
         <link rel="canonical" href="" />
       </Helmet>
@@ -65,13 +63,14 @@ const HalamankotaLpdp = () => {
         <div className="content-kota">
           <div className="teks-content">
             <h2 className="title-halaman-kota">
-              Bimbel Persiapan Seleksi Beasiswa LPDP terbaik di {kotasnbt.kota}
+              Bimbel Persiapan Seleksi Beasiswa LPDP Terbaik di{" "}
+              {kotalpdp.kota}
             </h2>
 
             <div className="paragraf-kota">
               <p>
-                Jasa Les Privat di Kota {kotasnbt.kota} untuk Seleksi Beasiswa
-                LPDP luar dan dalam Negeri
+                Jasa Les Privat di Kota {kotalpdp.kota} untuk Seleksi
+                Beasiswa LPDP luar dan dalam Negeri
               </p>
               <p className="child-paragraf-kota">
                 Dapatkan layanan Les Privat kapan pun dan dimana pun dengan
@@ -97,7 +96,7 @@ const HalamankotaLpdp = () => {
         <ListKabupatenLpdp />
         <Keunggulan />
         <Testimoni />
-        <Faq />
+        <Faqtni />
         <Asalsekolah />
       </div>
       <Footer />

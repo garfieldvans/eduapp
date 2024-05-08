@@ -18,6 +18,7 @@ import Navbar from "../../Navbar/Navbar";
 import ListkelasperkotaTni from "../../Tab/Tabtni/ListKelasperkotaTni";
 import ListUtbkSnbt from "../../Tab/TabUtbkSnbt/ListUtbkSnbt";
 import BestprogramSnbt2 from "../../BestProgram/BestProgram2/BestProgramSnbt2/BestProgramSnbt2";
+import Faqtni from "../../Faq/FaqTni/FaqTni";
 
 const Halamanprogramsnbt = () => {
   const { id } = useParams();
@@ -56,7 +57,7 @@ const Halamanprogramsnbt = () => {
       );
       setPromo(response.data);
     };
-    console.log(id);
+    (id);
     getProgram(id);
     getPromo(id);
     fetchKelasperKota();
@@ -67,7 +68,6 @@ const Halamanprogramsnbt = () => {
       .then((res) => res.json())
       .then((data) => {
         setKelasPerKota(data);
-        console.log("data kelasperkota", data);
       });
   };
 
@@ -121,7 +121,7 @@ const Halamanprogramsnbt = () => {
         <ListUtbkSnbt />
         <Keunggulan />
         <Testimoni />
-        <Faq />
+        <Faqtni />
         <Asalsekolah />
         <div className="parent-promo">
           <img

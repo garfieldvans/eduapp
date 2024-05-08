@@ -33,7 +33,7 @@ const Halamankota = () => {
   useEffect(() => {
     const getKota = async () => {
       const response = await axiosJWT.get(
-        `https://api.edulink-indonesia.com/kota/${query.get("data")}`,
+        `https://api.edulink-indonesia.com/kota/${id}`,
         {
           headers: {
             Authorization: `Bearer`,
@@ -42,14 +42,13 @@ const Halamankota = () => {
       );
       setKota(response.data);
     };
-    console.log(id);
     getKota(id);
   }, [id, query]);
 
   return (
     <React.Fragment>
       <Helmet>
-        <meta charSet="utf-8" />
+        <meta charSet="utf-8" name="robots" content="noindex"/>
         <title>
           Les Privat Terbaik di {`${kota.kota}`} #1 - Edumatrix Indonesia
         </title>

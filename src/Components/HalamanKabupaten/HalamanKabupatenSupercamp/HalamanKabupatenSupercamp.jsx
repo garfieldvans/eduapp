@@ -16,6 +16,7 @@ import Faq from "../../Faq/Faq";
 import Asalsekolah from "../../AsalSekolah/Asalsekolah";
 import Navbar from "../../Navbar/Navbar";
 import BestprogramSnbt2 from "../../BestProgram/BestProgram2/BestProgramSnbt2/BestProgramSnbt2";
+import Faqtni from "../../Faq/FaqTni/FaqTni";
 
 const HalamankabupatenSupercamp = () => {
   const { id } = useParams();
@@ -32,7 +33,7 @@ const HalamankabupatenSupercamp = () => {
   useEffect(() => {
     const getKabupaten = async () => {
       const response = await axiosJWT.get(
-        `https://api.edulink-indonesia.com/ibukotakab/${query.get("data")}`,
+        `https://api.edulink-indonesia.com/ibukotakabupaten/${id}`,
         {
           headers: {
             Authorization: `Bearer`,
@@ -41,19 +42,9 @@ const HalamankabupatenSupercamp = () => {
       );
       setKabupaten(response.data);
     };
-    console.log(id);
+    (id);
     getKabupaten(id);
-    fetchKabupaten();
   }, [id, query]);
-
-  const fetchKabupaten = () => {
-    fetch(`https://api.edulink-indonesia.com/ibukotakab/${query.get("data")}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setKabupaten(data);
-        console.log(data);
-      });
-  };
 
   return (
     <React.Fragment>
@@ -64,7 +55,7 @@ const HalamankabupatenSupercamp = () => {
           content="Bimbel Privat terbaik dengan sistem belajar mengajar yang berkualitas  #1 - Edumatrix Indonesia"
         />
         <title>
-          Bimbel Supercamp SNBT Persiapan Masuk PTN di Kabupaten {`${id}`} #1 - Edumatrix Indonesia
+          Bimbel Supercamp SNBT Persiapan Masuk PTN di Kabupaten {`${kabupaten.kota_kabupaten}`} #1 - Edumatrix Indonesia
         </title>
         <link rel="canonical" href="" />
       </Helmet>
@@ -73,11 +64,11 @@ const HalamankabupatenSupercamp = () => {
         <div className="content-kabupaten">
           <div className="teks-content">
             <h2 className="title-halaman-kabupaten">
-              Bimbel Supercamp SNBT Persiapan Masuk PTN di Kabupaten {id} - Edumatrix Indonesia
+              Bimbel Supercamp SNBT Persiapan Masuk PTN di Kabupaten {kabupaten.kota_kabupaten} - Edumatrix Indonesia
             </h2>
             <div className="paragraf-kabupaten">
               <p>
-                Jasa Les Privat di Kabupaten {id} untuk UTBK-SNBT, Kedokteran,
+                Jasa Les Privat di Kabupaten {kabupaten.kota_kabupaten} untuk UTBK-SNBT, Kedokteran,
                 UMPTN, UMPTKIN, SIMAK UI dan UTUL UGM
               </p>
               <p className="child-paragraf-kabupaten">
@@ -107,7 +98,7 @@ const HalamankabupatenSupercamp = () => {
         <Masterteacher />
         <Keunggulan />
         <Testimoni />
-        <Faq />
+        <Faqtni />
         <Asalsekolah />
       </div>
       <Footer />

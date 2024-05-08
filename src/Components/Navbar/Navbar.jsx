@@ -17,7 +17,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const goToKelas = () => {
-    navigate("/pilihan-program");
+    navigate("/pilihan-kelas");
   };
 
   const goToAbout = () => {
@@ -90,13 +90,19 @@ const Navbar = () => {
             <li>
               <a onClick={() => goToAbout()} className="menu-nav">
                 <FontAwesomeIcon className="icon-navbar" icon={faSchool} />{" "}
-                Tentang Kami
+                About Us
               </a>
             </li>
-            <li>
+            {/* <li>
               <a onClick={() => goToKelas()} className="menu-nav">
                 <FontAwesomeIcon className="icon-navbar" icon={faSchool} />{" "}
                 Program
+              </a>
+            </li> */}
+            <li>
+              <a onClick={() => goToKelas()} className="menu-nav">
+                <FontAwesomeIcon className="icon-navbar" icon={faSchool} />{" "}
+                Kelas
               </a>
             </li>
             <li>
@@ -105,7 +111,7 @@ const Navbar = () => {
                 href="https://edulink-indonesia.com/lead/edm/chat"
               >
                 <FontAwesomeIcon className="icon-navbar" icon={faSignIn} />{" "}
-                Daftar
+                DAFTAR
               </a>
             </li>
           </ul>

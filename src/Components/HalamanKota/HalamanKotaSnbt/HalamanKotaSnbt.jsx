@@ -19,6 +19,7 @@ import Navbar from "../../Navbar/Navbar";
 import ListUtbkSnbt from "../../Tab/TabUtbkSnbt/ListUtbkSnbt";
 import ListKabupatenSnbt from "../../Tab/TabUtbkSnbt/ListKabupatenSnbt";
 import BestprogramSnbt2 from "../../BestProgram/BestProgram2/BestProgramSnbt2/BestProgramSnbt2";
+import Faqtni from "../../Faq/FaqTni/FaqTni";
 
 const HalamankotaSnbt = () => {
   const { id } = useParams();
@@ -35,7 +36,7 @@ const HalamankotaSnbt = () => {
   useEffect(() => {
     const getKota = async () => {
       const response = await axiosJWT.get(
-        `https://api.edulink-indonesia.com/kota/${query.get("data")}`,
+        `https://api.edulink-indonesia.com/kota/${id}`,
         {
           headers: {
             Authorization: `Bearer`,
@@ -44,7 +45,7 @@ const HalamankotaSnbt = () => {
       );
       setKotasnbt(response.data);
     };
-    console.log(id);
+    (id);
     getKota(id);
   }, [id, query]);
 
@@ -54,7 +55,7 @@ const HalamankotaSnbt = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>
-          Bimbel SNBT Persiapan Masuk PTN terbaik di {`${kotasnbt.kota}`} #1 -
+          Bimbel SNBT Persiapan Masuk PTN Terbaik di {`${kotasnbt.kota}`} #1 -
           Edumatrix Indonesia
         </title>
         <link rel="canonical" href="" />
@@ -64,7 +65,7 @@ const HalamankotaSnbt = () => {
         <div className="content-kota">
           <div className="teks-content">
             <h2 className="title-halaman-kota">
-              Bimbel SNBT Persiapan Masuk PTN terbaik di {kotasnbt.kota}
+              Bimbel SNBT Persiapan Masuk PTN Terbaik di {kotasnbt.kota}
             </h2>
 
             <div className="paragraf-kota">
@@ -96,7 +97,7 @@ const HalamankotaSnbt = () => {
         <ListKabupatenSnbt />
         <Keunggulan />
         <Testimoni />
-        <Faq />
+        <Faqtni />
         <Asalsekolah />
       </div>
       <Footer />

@@ -20,6 +20,7 @@ import ListUtbkSnbt from "../../Tab/TabUtbkSnbt/ListUtbkSnbt";
 import ListKabupatenSnbt from "../../Tab/TabUtbkSnbt/ListKabupatenSnbt";
 import BestprogramSnbt2 from "../../BestProgram/BestProgram2/BestProgramSnbt2/BestProgramSnbt2";
 import ListKabupatenSupercamp from "../../Tab/TabSupercamp/ListKabupatenSupercamp";
+import Faqtni from "../../Faq/FaqTni/FaqTni";
 
 const HalamankotaSupercamp = () => {
   const { id } = useParams();
@@ -36,7 +37,7 @@ const HalamankotaSupercamp = () => {
   useEffect(() => {
     const getKota = async () => {
       const response = await axiosJWT.get(
-        `https://api.edulink-indonesia.com/kota/${query.get("data")}`,
+        `https://api.edulink-indonesia.com/kotasnbt/${id}`,
         {
           headers: {
             Authorization: `Bearer`,
@@ -45,7 +46,7 @@ const HalamankotaSupercamp = () => {
       );
       setKotasnbt(response.data);
     };
-    console.log(id);
+    (id);
     getKota(id);
   }, [id, query]);
 
@@ -55,7 +56,7 @@ const HalamankotaSupercamp = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>
-          Bimbel Supercamp SNBT Persiapan Masuk PTN terbaik di {`${kotasnbt.kota}`} #1 -
+          Bimbel Supercamp SNBT Persiapan Masuk PTN Terbaik di {`${kotasnbt.kotasnbt}`} #1 -
           Edumatrix Indonesia
         </title>
         <link rel="canonical" href="" />
@@ -65,12 +66,12 @@ const HalamankotaSupercamp = () => {
         <div className="content-kota">
           <div className="teks-content">
             <h2 className="title-halaman-kota">
-              Bimbel Supercamp SNBT Persiapan Masuk PTN terbaik di {kotasnbt.kota}
+              Bimbel Supercamp SNBT Persiapan Masuk PTN Terbaik di {kotasnbt.kotasnbt}
             </h2>
 
             <div className="paragraf-kota">
               <p>
-                Jasa Les Privat di Kota {kotasnbt.kota} untuk UTBK-SNBT,
+                Jasa Les Privat di Kota {kotasnbt.kotasnbt} untuk UTBK-SNBT,
                 Kedokteran, UMPTN, UMPTKIN, SIMAK UI dan UTUL UGM
               </p>
               <p className="child-paragraf-kota">
@@ -97,7 +98,7 @@ const HalamankotaSupercamp = () => {
         <ListKabupatenSupercamp />
         <Keunggulan />
         <Testimoni />
-        <Faq />
+        <Faqtni />
         <Asalsekolah />
       </div>
       <Footer />

@@ -17,7 +17,6 @@ const ListKotaLpdp = () => {
       .then((res) => res.json())
       .then((data) => {
         setKotaLpdp(data);
-        console.log(data);
       });
   };
 
@@ -26,16 +25,11 @@ const ListKotaLpdp = () => {
       <div className="parent-list-kota">
         {kotaLpdp.map((item, index) => (
           <Link
-            to={`/bimbel-lpdp-terbaik-di/${item.kota.toLowerCase()}?data=${
-              item.id
-            }`}
             className="btn-kota"
             key={index}
-            // onClick={() => {
-            //   window.location.href = `/les-privat-di/kota/${item.kota.toLowerCase()}?data=${
-            //     item.id
-            //   }`;
-            // }}
+            onClick={() => {
+              window.location.href = `/bimbel-persiapan-seleksi-lpdp-di/${item.slug}`;
+            }}
           >
             {item.kota}
           </Link>

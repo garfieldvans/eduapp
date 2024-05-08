@@ -16,8 +16,8 @@ import rumahAdat from "../../assets/rumah_adat.png";
 
 const HalamanMapelperkota = () => {
   const [kota, setKota] = useState([]);
-  const [program, setProgram] = useState([]);
-  const { id } = useParams();
+  const [mapel, setMapel] = useState([]);
+  const { id, mapelId } = useParams();
 
   function useQuery() {
     const { search } = useLocation();
@@ -31,7 +31,7 @@ const HalamanMapelperkota = () => {
   useEffect(() => {
     const getKota = async () => {
       const response = await axiosJWT.get(
-        `https://api.edulink-indonesia.com/kota/${query.get("data")}`,
+        `https://api.edulink-indonesia.com/kota/${id}`,
         {
           headers: {
             Authorization: `Bearer`,
@@ -41,34 +41,28 @@ const HalamanMapelperkota = () => {
       setKota(response.data);
     };
 
-    const getProgram = async () => {
+    const getMapel = async () => {
       const response = await axiosJWT.get(
-        `https://api.edulink-indonesia.com/matapelajaran/${query.get("data")}`,
+        `https://api.edulink-indonesia.com/matapelajaran/${mapelId}`,
         {
           headers: {
             Authorization: `Bearer`,
           },
         }
       );
-      setProgram(response.data);
+      setMapel(response.data);
     };
-
-    console.log(id);
     getKota(id);
-    getProgram(id);
-    // fetchKabupaten(id);
-    // fetchKota();
-    // fetchKelas();
-    // fetchMapel();
-    // fetchKelasperKota();
+    getMapel(mapelId);
   }, [id, query]);
+
 
   return (
     <React.Fragment>
       <Helmet>
-        <meta charSet="utf-8" />
+        <meta charSet="utf-8" name="robots" content="noindex"/>
         <title>
-          Les Privat {`${program.name}`} #1 Terbaik di {id} - Edumatrix
+          Les Privat {`${mapel.name}`} #1 Terbaik di {`${kota.kota}`} - Edumatrix
           Indonesia
         </title>
         <link
@@ -81,7 +75,7 @@ const HalamanMapelperkota = () => {
         <div className="content-program">
           <div className="teks-content">
             <h2 className="title-halaman-program">
-              Les Privat {program.name} Terbaik di {id}
+              Les Privat {mapel.name} Terbaik di {kota.kota}
             </h2>
             <div className="paragraf-program">
               <p>

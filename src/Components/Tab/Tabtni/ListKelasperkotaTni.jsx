@@ -34,7 +34,6 @@ const ListkelasperkotaTni = () => {
       .then((res) => res.json())
       .then((data) => {
         setKelasPerKotaTni(data);
-        console.log("data kelasperkota", data);
       });
   };
 
@@ -43,7 +42,6 @@ const ListkelasperkotaTni = () => {
       .then((res) => res.json())
       .then((data) => {
         setKelas(data);
-        console.log(data);
       });
   };
 
@@ -52,7 +50,6 @@ const ListkelasperkotaTni = () => {
       .then((res) => res.json())
       .then((data) => {
         setKotatni(data);
-        console.log(data);
       });
   };
 
@@ -63,16 +60,16 @@ const ListkelasperkotaTni = () => {
           <div className="parent-list-kelas">
             {kelas.map((item, index) => (
               <Link
-                to={`/bimbel/${item.slug.toLowerCase()}-terbaik?data=${
-                  item.id
-                }`}
+                // to={`/bimbel/${item.slug.toLowerCase()}-terbaik?data=${
+                //   item.id
+                // }`}
                 className="btn-kelas"
                 key={index}
-                // onClick={() => {
-                //   window.location.href = `/les-privat/${item.slug.toLowerCase()}-terbaik?data=${
-                //     item.id
-                //   }`;
-                // }}
+                onClick={() => {
+                  window.location.href = `/bimbel/${item.slug.toLowerCase()}-terbaik?data=${
+                    item.id
+                  }`;
+                }}
               >
                 {item.kelastni}
               </Link>
@@ -112,12 +109,12 @@ const ListkelasperkotaTni = () => {
           <div className="parent-list-kota">
             {kelasperkotaTni.map((item, index) => (
               <Link
-                to={`/bimbel-di-kota/${item.namaKota}?data=${item.kelasId}`}
+                // to={`/bimbel-di-kota/${item.namaKota}?data=${item.kelasId}`}
                 className="btn-kota"
                 key={index}
-                // onClick={() => {
-                //   window.location.href = `/kelas-perkota/${item.namaKota}?data=${item.kelasId}`;
-                // }}
+                onClick={() => {
+                  window.location.href = `/bimbel-di-kota/${item.namaKota}?data=${item.kelasId}`;
+                }}
               >
                 {item.namaKota}
               </Link>

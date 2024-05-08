@@ -25,11 +25,10 @@ const ListKabupatenSnbt = () => {
   }, []);
 
   const fetchKabupaten = () => {
-    fetch(`https://api.edulink-indonesia.com/ibukotakab/${query.get("data")}`)
+    fetch(`https://api.edulink-indonesia.com/ibukotakab/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setKabupaten(data);
-        console.log(data);
       });
   };
 
@@ -38,7 +37,6 @@ const ListKabupatenSnbt = () => {
       .then((res) => res.json())
       .then((data) => {
         setKelas(data);
-        console.log(data);
       });
   };
 
@@ -47,12 +45,12 @@ const ListKabupatenSnbt = () => {
       <div className="parent-list-kota">
         {kabupaten.map((item, index) => (
           <Link
-            to={`/bimbel-privat-di-kabupaten/${item.kota_kabupaten}?data=${item.id}`}
+            // to={`/bimbel-privat-di-kabupaten/${item.kota_kabupaten}?data=${item.id}`}
             className="btn-kota"
             key={index}
-            // onClick={() => {
-            //   window.location.href = `/les-privat-di-kabupaten/${item.kota_kabupaten}?data=${item.id}`;
-            // }}
+            onClick={() => {
+              window.location.href = `/bimbel-snbt/kabupaten/${item.slug}`;
+            }}
           >
             {item.kota_kabupaten}
           </Link>

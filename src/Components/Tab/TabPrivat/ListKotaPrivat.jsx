@@ -10,7 +10,6 @@ import city from "../../../assets/city.png";
 
 const ListKotaPrivat = () => {
   const [kotaPrivat, setKotatni] = useState([]);
-  const [kelasPrivat, setKelasprivat] = useState([]);
 
   useEffect(() => {
     fetchKota();
@@ -21,7 +20,6 @@ const ListKotaPrivat = () => {
       .then((res) => res.json())
       .then((data) => {
         setKotatni(data);
-        console.log(data);
       });
   };
 
@@ -30,16 +28,11 @@ const ListKotaPrivat = () => {
       <div className="parent-list-kota">
         {kotaPrivat.map((item, index) => (
           <Link
-            to={`/bimbel-privat-tk-sd-smp-sma-terbaik-di/${item.kota.toLowerCase()}?data=${
-              item.id
-            }`}
             className="btn-kota"
             key={index}
-            // onClick={() => {
-            //   window.location.href = `/les-privat-di/kota/${item.kota.toLowerCase()}?data=${
-            //     item.id
-            //   }`;
-            // }}
+            onClick={() => {
+              window.location.href = `/bimbel-privat-tk-sd-smp-sma-mahasiswa-di/${item.slug}`;
+            }}
           >
             {item.kota}
           </Link>

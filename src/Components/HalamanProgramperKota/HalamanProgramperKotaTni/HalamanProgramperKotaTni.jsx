@@ -15,6 +15,7 @@ import Testimoni from "../../Testimoni/Testimoni";
 import Faq from "../../Faq/Faq";
 import Asalsekolah from "../../AsalSekolah/Asalsekolah";
 import Navbar from "../../Navbar/Navbar";
+import Faqtni from "../../Faq/FaqTni/FaqTni";
 
 const HalamanProgramperkotaTni = () => {
   const [kota, setKota] = useState([]);
@@ -55,14 +56,9 @@ const HalamanProgramperkotaTni = () => {
       setProgram(response.data);
     };
 
-    console.log(id);
+    (id);
     getKota(id);
     getProgram(id);
-    // fetchKabupaten(id);
-    // fetchKota();
-    // fetchKelas();
-    // fetchMapel();
-    // fetchKelasperKota();
   }, [id, query]);
   return (
     <React.Fragment>
@@ -114,7 +110,7 @@ const HalamanProgramperkotaTni = () => {
         <Masterteacher />
         <Keunggulan />
         <Testimoni />
-        <Faq />
+        <Faqtni />
         <Asalsekolah />
       </div>
       <Footer />

@@ -14,7 +14,7 @@ const BestprogramSnbt = () => {
       .then((res) => res.json())
       .then((data) => {
         setProgram(data);
-        console.log(data);
+        (data);
       });
   };
   return (

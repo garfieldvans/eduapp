@@ -17,16 +17,14 @@ const SliderSupercamp = () => {
       .then((res) => res.json())
       .then((data) => {
         setSliderHeader(data);
-        console.log(data);
       });
   };
 
   const fetchsliderHeader_2 = () => {
-    fetch("https://api.edulink-indonesia.com/sliderheadersupercamp2")
+    fetch("https://api.edulink-indonesia.com/sliderheadersupercamp")
       .then((res) => res.json())
       .then((data) => {
         setSliderHeader_2(data);
-        console.log(data);
       });
   };
 

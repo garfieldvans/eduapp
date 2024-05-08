@@ -16,7 +16,7 @@ const Faqtni = () => {
         .then((res) => res.json())
         .then((data) => {
           setFaqData(data);
-          console.log(data);
+          (data);
         });
     };
     fetchFaqtni();
