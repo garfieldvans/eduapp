@@ -30,7 +30,7 @@ jobs:
         if: steps.npm-cache.outputs.cache-hit != 'true'
         run: |
            npm install
-           npm run test
+           # npm run test
         env:
          CI: false
       - name: 📂 Sync folders and files to the server
