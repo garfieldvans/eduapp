@@ -1,43 +1,17 @@
-name: 🚀 Deploy on push main
-
-on: 
-  push:
-    branches:    
-      - main 
-
+on: push
+name: 🚀 Deploy website on push
 jobs:
   web-deploy:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
-    
-    strategy:
-      matrix:
-        node-version: [16.x]
-    
     steps:
     - name: 🚚 Get latest code
-      uses: actions/checkout@v2
-
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@master
-      with:
-        node-version: ${{ matrix.node-version }}
+      uses: actions/checkout@v4
     
-    # - name: Copy .env.prod.edumatrix-app-directory-fe to .env
-    #   run: cp .env.prod.edumatrix-app-directory-fe .env
-
-    - name: 🔨 Build Project 
-      run: |
-        npm install
-        npm run build
-    
-    - name: List output files
-      run: find build/ -print
-
     - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.3.3
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: ${{ secrets.SERVER }}
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: build/
+        server: ftp.leskedokteran.com
+        username: ${{ secrets.ftp_username }}
+        password: ${{ secrets.ftp_password }}
+        server: /production.leskedokteran.com/
