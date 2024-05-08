@@ -29,8 +29,9 @@ jobs:
       - name: 🔨 Install Dependencies
         if: steps.npm-cache.outputs.cache-hit != 'true'
         run: |
-           npm install
-           git reset --hard
+          npm install
+          npm run build
+          git reset --hard
         env:
          NODE_ENV: false
       - name: 📂 Sync folders and files to the server
