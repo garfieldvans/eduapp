@@ -11,7 +11,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: ftp.leskedokteran.com
+        server: ftp.edulink-indonesia.com
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
-        server-dir: /app.edumatrix-indonesia.com/
+        server-dir: /apps.edulink-indonesia.com/
