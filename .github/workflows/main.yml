@@ -14,4 +14,3 @@ jobs:
         server: ftp.leskedokteran.com
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
-        server: /production.leskedokteran.com/
