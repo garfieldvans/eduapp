@@ -30,8 +30,9 @@ jobs:
         if: steps.npm-cache.outputs.cache-hit != 'true'
         run: |
            npm install
+           git reset --hard
         env:
-         CI: false
+         NODE_ENV: false
       - name: 📂 Sync folders and files to the server
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
