@@ -23,8 +23,6 @@ jobs:
       run: |
         npm install
     
-    - name: List output files
-      run: find build/ -print
 
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
