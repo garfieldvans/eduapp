@@ -1,144 +1,145 @@
-<!-- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 		<!--	created with www.mysitemapgenerator.com	-->
 		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-	<loc>https://app.edumatrix-indonesia.com/</loc>
+	<loc>https://edu-apps.vercel.app/</loc>
 	<lastmod>2024-05-03T03:50:03+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
-	<loc>https://app.edumatrix-indonesia.com/mata-pelajaran/</loc>
+	<loc>https://edu-apps.vercel.app/les-privat/program/snbt/kota/ambon
+</loc>
 	<lastmod>2024-05-03T03:50:03+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://app.edumatrix-indonesia.com/les-privat-di-kota/</loc>
+	<loc>https://edu-apps.vercel.app/les-privat-di-kota/</loc>
 	<lastmod>2024-05-03T03:50:03+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://app.edumatrix-indonesia.com/les-privat/</loc>
+	<loc>https://edu-apps.vercel.app/les-privat/</loc>
 	<lastmod>2024-05-03T03:50:03+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://app.edumatrix-indonesia.com/les-privat-di-kabupaten/</loc>
+	<loc>https://edu-apps.vercel.app/les-privat-di-kabupaten/</loc>
 	<lastmod>2024-05-03T03:50:03+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://app.edumatrix-indonesia.com/kelas-perkota/</loc>
+	<loc>https://edu-apps.vercel.app/kelas-perkota/</loc>
 	<lastmod>2024-05-03T03:50:03+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://app.edumatrix-indonesia.com/mapel-perkota/</loc>
+	<loc>https://edu-apps.vercel.app/mapel-perkota/</loc>
 	<lastmod>2024-05-03T03:50:03+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://app.edumatrix-indonesia.com/pilihan-program</loc>
+	<loc>https://edu-apps.vercel.app/pilihan-program</loc>
 	<lastmod>2024-05-03T03:50:03+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://app.edumatrix-indonesia.com/tentang-kami</loc>
+	<loc>https://edu-apps.vercel.app/tentang-kami</loc>
 	<lastmod>2024-05-03T03:50:03+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://app.edumatrix-indonesia.com/bimbel/</loc>
+	<loc>https://edu-apps.vercel.app/bimbel/</loc>
 	<lastmod>2024-05-03T03:50:03+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://app.edumatrix-indonesia.com/bimbel-tni-polri-di/</loc>
+	<loc>https://edu-apps.vercel.app/bimbel-tni-polri-di/</loc>
 	<lastmod>2024-05-03T03:50:03+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://app.edumatrix-indonesia.com/bimbel-di-kota/</loc>
+	<loc>https://edu-apps.vercel.app/bimbel-di-kota/</loc>
 	<lastmod>2024-05-03T03:50:03+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://app.edumatrix-indonesia.com/bimbel-snbt-terbaik-di/</loc>
+	<loc>https://edu-apps.vercel.app/bimbel-snbt-terbaik-di/</loc>
 	<lastmod>2024-05-03T03:50:03+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://app.edumatrix-indonesia.com/bimbel-privat-di-kabupaten/</loc>
+	<loc>https://edu-apps.vercel.app/bimbel-privat-di-kabupaten/</loc>
 	<lastmod>2024-05-03T03:50:03+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://app.edumatrix-indonesia.com/bimbel-supercamp-edumatrix-di/</loc>
+	<loc>https://edu-apps.vercel.app/bimbel-supercamp-edumatrix-di/</loc>
 	<lastmod>2024-05-03T03:50:03+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://app.edumatrix-indonesia.com/bimbel-supercamp-di-kabupaten/</loc>
+	<loc>https://edu-apps.vercel.app/bimbel-supercamp-di-kabupaten/</loc>
 	<lastmod>2024-05-03T03:50:03+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://app.edumatrix-indonesia.com/bimbel-lpdp-terbaik-di/</loc>
+	<loc>https://edu-apps.vercel.app/bimbel-lpdp-terbaik-di/</loc>
 	<lastmod>2024-05-03T03:50:03+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://app.edumatrix-indonesia.com/bimbel-lpdp-di-kabupaten/</loc>
+	<loc>https://edu-apps.vercel.app/bimbel-lpdp-di-kabupaten/</loc>
 	<lastmod>2024-05-03T03:50:03+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://app.edumatrix-indonesia.com/bimbel-privat-tk-sd-smp-sma-terbaik-di/</loc>
+	<loc>https://edu-apps.vercel.app/bimbel-privat-tk-sd-smp-sma-terbaik-di/</loc>
 	<lastmod>2024-05-03T03:50:03+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://app.edumatrix-indonesia.com/bimbel-privat-tk-sd-smp-sma-terbaik-di-kabupaten/</loc>
+	<loc>https://edu-apps.vercel.app/bimbel-privat-tk-sd-smp-sma-terbaik-di-kabupaten/</loc>
 	<lastmod>2024-05-03T03:50:03+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://app.edumatrix-indonesia.com/bimbel-cpns-pppk-terbaik-di/</loc>
+	<loc>https://edu-apps.vercel.app/bimbel-cpns-pppk-terbaik-di/</loc>
 	<lastmod>2024-05-03T03:50:03+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://app.edumatrix-indonesia.com/bimbel-cpns-pppk-terbaik-di-kabupaten/</loc>
+	<loc>https://edu-apps.vercel.app/bimbel-cpns-pppk-terbaik-di-kabupaten/</loc>
 	<lastmod>2024-05-03T03:50:03+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://app.edumatrix-indonesia.com/bimbel-tni-polri-dan-sekolah-kedinasan</loc>
+	<loc>https://edu-apps.vercel.app/bimbel-tni-polri-dan-sekolah-kedinasan</loc>
 	<lastmod>2024-05-03T03:50:03+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://app.edumatrix-indonesia.com/bimbel-snbt-terbaik</loc>
+	<loc>https://edu-apps.vercel.app/bimbel-snbt-terbaik</loc>
 	<lastmod>2024-05-03T03:50:03+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://app.edumatrix-indonesia.com/bimbel-supercamp-edumatrix</loc>
+	<loc>https://edu-apps.vercel.app/bimbel-supercamp-edumatrix</loc>
 	<lastmod>2024-05-03T03:50:03+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://app.edumatrix-indonesia.com/bimbel-persiapan-seleksi-lpdp</loc>
+	<loc>https://edu-apps.vercel.app/bimbel-persiapan-seleksi-lpdp</loc>
 	<lastmod>2024-05-03T03:50:03+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://app.edumatrix-indonesia.com/bimbel-privat-tk-sd-smp-sma-mahasiswa</loc>
+	<loc>https://edu-apps.vercel.app/bimbel-privat-tk-sd-smp-sma-mahasiswa</loc>
 	<lastmod>2024-05-03T03:50:03+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://app.edumatrix-indonesia.com/bimbel-cpns-dan-pppk</loc>
+	<loc>https://edu-apps.vercel.app/bimbel-cpns-dan-pppk</loc>
 	<lastmod>2024-05-03T03:50:03+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
-</urlset> -->
+</urlset>

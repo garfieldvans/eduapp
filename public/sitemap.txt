@@ -88,6 +88,27 @@ https://edu-apps.vercel.app/les-privat/program/poltekim/kota/tanjung-selor
 https://edu-apps.vercel.app/les-privat/program/poltekim/kota/pekanbaru
 
 https://edu-apps.vercel.app/les-privat/program/sd
+https://edu-apps.vercel.app/les-privat/program/sd/kota/ambon
+https://edu-apps.vercel.app/les-privat/program/sd/kota/bengkulu
+https://edu-apps.vercel.app/les-privat/program/sd/kota/jambi
+https://edu-apps.vercel.app/les-privat/program/sd/kota/lampung
+https://edu-apps.vercel.app/les-privat/program/sd/kota/manokwari
+https://edu-apps.vercel.app/les-privat/program/sd/kota/nabire
+https://edu-apps.vercel.app/les-privat/program/sd/kota/palu
+https://edu-apps.vercel.app/les-privat/program/sd/kota/semarang
+https://edu-apps.vercel.app/les-privat/program/sd/kota/surabaya
+https://edu-apps.vercel.app/les-privat/program/sd/kota/yogyakarta
+https://edu-apps.vercel.app/les-privat/program/sd/kota/banda-aceh
+https://edu-apps.vercel.app/les-privat/program/sd/kota/denpasar
+https://edu-apps.vercel.app/les-privat/program/sd/kota/jayapura
+https://edu-apps.vercel.app/les-privat/program/sd/kota/makassar
+https://edu-apps.vercel.app/les-privat/program/sd/kota/mataram
+https://edu-apps.vercel.app/les-privat/program/sd/kota/padang
+https://edu-apps.vercel.app/les-privat/program/sd/kota/pangkalpinang
+https://edu-apps.vercel.app/les-privat/program/sd/kota/serang
+https://edu-apps.vercel.app/les-privat/program/sd/kota/tanjung-selor
+https://edu-apps.vercel.app/les-privat/program/sd/kota/pekanbaru
+
 
 
 https://edu-apps.vercel.app/les-privat/program/sma
