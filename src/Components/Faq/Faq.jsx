@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-expressions */
+
 import React, { useEffect, useState } from "react";
 import "./Faq.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

@@ -4,7 +4,7 @@ import Navbar from "../Navbar/Navbar";
 import bgError from "../../assets/404_pic.png";
 import Footer from "../Footer/Footer";
 import { useNavigate } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const Errorpage = () => {
   const navigate = useNavigate();

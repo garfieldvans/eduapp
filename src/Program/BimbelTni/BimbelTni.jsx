@@ -5,7 +5,7 @@ import BestprogramTni from "../../Components/BestProgram/BestProgramTni/BestProg
 import Voucer from "../../Components/Voucer/Voucer";
 import Masterteacher from "../../Components/MasterTeacher/Masterteacher";
 import Footer from "../../Components/Footer/Footer";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import Keunggulan from "../../Components/Keunggulan/Keunggulan";
 import GaleriKegiatan from "./GaleriKegiatan/GaleriKegiatan";
 import Listkotatni from "../../Components/Tab/Tabtni/ListKotatni";

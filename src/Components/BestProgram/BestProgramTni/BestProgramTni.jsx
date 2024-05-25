@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-expressions */
+
 import React, { useEffect, useState } from "react";
 import modelTanyaProgram from "../../../assets/tanya_program.png";
 import hotProgram from "../../../assets/8 maret 2024.png";

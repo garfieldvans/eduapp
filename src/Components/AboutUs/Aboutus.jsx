@@ -6,7 +6,7 @@ import Navbar from "../Navbar/Navbar";
 import modelAbout from "../../assets/aboutus/model_about_us.png";
 import imgIsiAbout from "../../assets/aboutus/colase_learning_methode.png";
 import Footer from "../Footer/Footer";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import tanyaProgram from "../../assets/tanya_program.png";
 import ourMission from "../../assets/aboutus/our_mission.png";
 import ourPhilosophy from "../../assets/aboutus/our_philosophy.png";

@@ -13,7 +13,7 @@ import Keunggulan from "../Keunggulan/Keunggulan";
 import Faq from "../Faq/Faq";
 import Testimoni from "../Testimoni/Testimoni";
 import Asalsekolah from "../AsalSekolah/Asalsekolah";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import Floatingcta from "../FloatingCta/Floatingcta";
 import Bottombar from "../BottomBar/Bottombar";
 
@@ -34,6 +34,7 @@ const Halamankabupaten = () => {
       const response = await axiosJWT.get(
         `https://api.edulink-indonesia.com/ibukotakabupaten/${id}`,
         {
+          mode: "cors",
           headers: {
             Authorization: `Bearer`,
           },

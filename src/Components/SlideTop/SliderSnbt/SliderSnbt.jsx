@@ -12,16 +12,16 @@ const SliderSnbt = () => {
     fetchsliderHeader_2();
   }, []);
 
-  const fetchsliderHeader = () => {
-    fetch("https://api.edulink-indonesia.com/sliderheadersnbt")
+  const fetchsliderHeader = async() => {
+    await fetch("https://api.edulink-indonesia.com/sliderheadersnbt")
       .then((res) => res.json())
       .then((data) => {
         setSliderHeader(data);
       });
   };
 
-  const fetchsliderHeader_2 = () => {
-    fetch("https://api.edulink-indonesia.com/sliderheadersnbt2")
+  const fetchsliderHeader_2 = async() => {
+    await fetch("https://api.edulink-indonesia.com/sliderheadersnbt2")
       .then((res) => res.json())
       .then((data) => {
         setSliderHeader_2(data);

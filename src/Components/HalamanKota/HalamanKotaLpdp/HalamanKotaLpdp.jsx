@@ -3,7 +3,7 @@ import { useLocation, useParams } from "react-router-dom";
 import axios from "axios";
 import rumahAdat from "../../../assets/rumah_adat.png";
 import tanyaProgram from "../../../assets/tanya_program.png";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import Bestprogram2 from "../../BestProgram/BestProgram2/Bestprogram2";
 import Voucer from "../../Voucer/Voucer";
 import Masterteacher from "../../MasterTeacher/Masterteacher";
@@ -37,6 +37,7 @@ const HalamankotaLpdp = () => {
   useEffect(() => {
     const getKota = async () => {
       const response = await axiosJWT.get(`https://api.edulink-indonesia.com/kota/${id}`, {
+        mode: "cors",
         headers: {
           Authorization: `Bearer`,
         },

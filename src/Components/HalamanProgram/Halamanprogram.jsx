@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-expressions */
+
 import React, { useEffect, useMemo, useState } from "react";
 import "./Halamanprogram.css";
 import { useLocation, useParams } from "react-router-dom";
@@ -13,7 +15,7 @@ import Keunggulan from "../Keunggulan/Keunggulan";
 import Faq from "../Faq/Faq";
 import Testimoni from "../Testimoni/Testimoni";
 import Asalsekolah from "../AsalSekolah/Asalsekolah";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import Floatingcta from "../FloatingCta/Floatingcta";
 import Bottombar from "../BottomBar/Bottombar";
 import rumahAdat from "../../assets/rumah_adat.png";
@@ -75,6 +77,7 @@ const Halamanprogram = () => {
     <React.Fragment>
       <Helmet>
         <meta charSet="utf-8" name="robots" content="noindex" />
+        <meta name="description" content={`Les Privat ${program.name} #1 Terbaik `} />
         <title>
           Les Privat {`${program.name}`} #1 Terbaik - Edumatrix Indonesia
         </title>

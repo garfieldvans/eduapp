@@ -8,8 +8,8 @@ const GaleriKegiatan = () => {
     fetchKeunggulan();
   }, []);
 
-  const fetchKeunggulan = () => {
-    fetch("https://api.edulink-indonesia.com/galerikegiatantni")
+  const fetchKeunggulan = async () => {
+    await fetch("https://api.edulink-indonesia.com/galerikegiatantni")
       .then((res) => res.json())
       .then((data) => {
         setGaleriKegiatan(data);

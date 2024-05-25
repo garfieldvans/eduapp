@@ -1,8 +1,10 @@
+/* eslint-disable no-unused-expressions */
+
 import React, { useEffect, useMemo, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import axios from "axios";
 import modelTanyaProgram from "../../../assets/tanya_program.png";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import rumahAdat from "../../../assets/rumah_adat.png";
 import Footer from "../../Footer/Footer";
 import Bottombar from "../../BottomBar/Bottombar";
@@ -73,8 +75,9 @@ const Halamanprogramsnbt = () => {
 
   return (
     <React.Fragment>
-      <Helmet>
-        <meta charSet="utf-8" />
+      <Helmet prioritizeSeoTags>
+        <meta charSet="utf-8"/>
+        <meta name="description" content={`Bimbel ${program.kelassnbt} #1 Terbaik - Edumatrix Indonesia`} />
         <title>
           Bimbel {`${program.kelassnbt}`} #1 Terbaik - Edumatrix Indonesia
         </title>

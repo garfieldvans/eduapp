@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-expressions */
+
 import React, { useEffect, useMemo, useState } from "react";
 import Bestprogram2 from "../BestProgram/BestProgram2/Bestprogram2";
 import { useLocation, useParams } from "react-router-dom";
@@ -9,7 +11,7 @@ import modelTanyaProgram from "../../assets/tanya_program.png";
 import Footer from "../Footer/Footer";
 import Keunggulan from "../Keunggulan/Keunggulan";
 import Faq from "../Faq/Faq";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import Floatingcta from "../FloatingCta/Floatingcta";
 import Bottombar from "../BottomBar/Bottombar";
 import rumahAdat from "../../assets/rumah_adat.png";

@@ -19,8 +19,8 @@ const Listkota = () => {
     fetchMapel();
   }, []);
 
-  const fetchKota = () => {
-    fetch("https://api.edulink-indonesia.com/kota")
+  const fetchKota = async () => {
+    await fetch("https://api.edulink-indonesia.com/kota")
       .then((res) => res.json())
       .then((data) => {
         setKota(data);

@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import PreLoader from './Components/Preloader/PreLoader';
 import { hydrate, render } from 'react-dom';
+import { HelmetProvider } from 'react-helmet-async';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // if (root.hasChildNodes()) {
@@ -16,6 +17,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // ServiceWorker.unregister()
 root.render(
   <React.StrictMode>
+    <HelmetProvider>
+
     <App />
+    </HelmetProvider>
   </React.StrictMode>
 );

@@ -11,7 +11,7 @@ import Faq from "../Components/Faq/Faq";
 import Testimoni from "../Components/Testimoni/Testimoni";
 import Keunggulan from "../Components/Keunggulan/Keunggulan";
 import Asalsekolah from "../Components/AsalSekolah/Asalsekolah";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import PreLoader from "../Components/Preloader/PreLoader";
 import Floatingcta from "../Components/FloatingCta/Floatingcta";
 import Bottombar from "../Components/BottomBar/Bottombar";

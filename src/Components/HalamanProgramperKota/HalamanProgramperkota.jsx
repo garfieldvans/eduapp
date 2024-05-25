@@ -10,7 +10,7 @@ import Footer from "../Footer/Footer";
 import Keunggulan from "../Keunggulan/Keunggulan";
 import Asalsekolah from "../AsalSekolah/Asalsekolah";
 import Testimoni from "../Testimoni/Testimoni";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import Floatingcta from "../FloatingCta/Floatingcta";
 import Bottombar from "../BottomBar/Bottombar";
 import rumahAdat from "../../assets/rumah_adat.png";
@@ -56,26 +56,31 @@ const HalamanProgramperkota = () => {
     };
     getKota(id);
     getProgram(id);
-  }, [id, query]);
+  }, [axiosJWT, id, programid, query]);
   return (
     <React.Fragment>
       <Helmet>
-        <meta charSet="utf-8" name="robots" content="noindex"/>
-        <title>
-          Les Privat {`${program.name}`} #1 Terbaik di {`${kota.kota}`} - Edumatrix
-          Indonesia
-        </title>
-        <link
-          rel="canonical"
-          href=""
+        <meta charSet="utf-8" name="robots" content="noindex" />
+        <meta
+          name="description"
+          content="Dapatkan layanan Les Privat kapan pun dan dimana pun dengan
+                lebih dari 5.000 Master Teacher Edumatrix yang siap memberikan
+                pelayanan terbaik."
         />
+        <meta name="author" content="Author" />
+        <title>
+          Les Privat {`${program.name}`} #1 Terbaik di {`${kota.kota}`} -
+          Edumatrix Indonesia
+        </title>
+        <link rel="canonical" href={`/les-privat/program/${program.name}/kota/${kota.kota}`} />
       </Helmet>
       <Navbar />
       <div className="container-halaman-program">
         <div className="content-program">
           <div className="teks-content">
             <h2 className="title-halaman-program">
-              Les Privat {program.name} Terbaik di {kota.kota} - Edumatrix Indonesia
+              Les Privat {program.name} Terbaik di {kota.kota} - Edumatrix
+              Indonesia
             </h2>
             <div className="paragraf-program">
               <p>

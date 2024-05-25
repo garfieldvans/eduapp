@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-expressions */
+
 import React, { useEffect, useMemo, useState } from "react";
 import Tabs from "./Tabs";
 import Tab from "./Tab";

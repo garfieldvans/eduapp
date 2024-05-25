@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-expressions */
+
 import axios from "axios";
 import React, { useEffect, useMemo, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
@@ -11,7 +13,7 @@ import Footer from "../Footer/Footer";
 import Keunggulan from "../Keunggulan/Keunggulan";
 import Faq from "../Faq/Faq";
 import Testimoni from "../Testimoni/Testimoni";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import Floatingcta from "../FloatingCta/Floatingcta";
 import Bottombar from "../BottomBar/Bottombar";
 import rumahAdat from "../../assets/rumah_adat.png";

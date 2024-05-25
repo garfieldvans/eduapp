@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-expressions */
+
 import React, { useEffect, useMemo, useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import "./Halamankota.css";
@@ -14,7 +16,7 @@ import Keunggulan from "../Keunggulan/Keunggulan";
 import Faq from "../Faq/Faq";
 import Testimoni from "../Testimoni/Testimoni";
 import Asalsekolah from "../AsalSekolah/Asalsekolah";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import Floatingcta from "../FloatingCta/Floatingcta";
 import Bottombar from "../BottomBar/Bottombar";
 

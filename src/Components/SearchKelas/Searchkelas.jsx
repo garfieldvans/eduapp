@@ -9,7 +9,7 @@ import iconCpns from "../../assets/CPNS_ICON.png";
 import iconOsn from "../../assets/OSN.png";
 import iconPrivat from "../../assets/PRIVAT.png";
 import Footer from "../Footer/Footer";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import Floatingcta from "../FloatingCta/Floatingcta";
 import Bottombar from "../BottomBar/Bottombar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-expressions */
+
 import React, { useEffect, useState } from "react";
 import "./Keunggulan.css";
 import keunggulanIcon from "../../assets/keunggulan.png";
@@ -9,8 +11,8 @@ const Keunggulan = () => {
     fetchKeunggulan();
   }, []);
 
-  const fetchKeunggulan = () => {
-    fetch("https://api.edulink-indonesia.com/keunggulan")
+  const fetchKeunggulan = async() => {
+    await fetch("https://api.edulink-indonesia.com/keunggulan")
       .then((res) => res.json())
       .then((data) => {
         setKeunggulan(data);

@@ -1,9 +1,11 @@
+/* eslint-disable no-unused-expressions */
+
 import React, { useEffect, useMemo, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import axios from "axios";
 import modelTanyaProgram from "../../../assets/tanya_program.png";
 import rumahAdat from "../../../assets/rumah_adat.png";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import Floatingcta from "../../FloatingCta/Floatingcta";
 import Bottombar from "../../BottomBar/Bottombar";
 import Footer from "../../Footer/Footer";
@@ -35,6 +37,7 @@ const HalamankabupatenPrivat = () => {
       const response = await axiosJWT.get(
         `https://api.edulink-indonesia.com/ibukotakabupaten/${id}`,
         {
+          mode: "cors",
           headers: {
             Authorization: `Bearer`,
           },
