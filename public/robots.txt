@@ -3,4 +3,4 @@ User-agent: *
 Disallow: /search
 allow: /
 
-Sitemap: https://app.edumatrix-indonesia.com/sitemap.xml
+Sitemap: https://app.edumatrix-indonesia.com/sitemap.txt
