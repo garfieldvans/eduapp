@@ -2,7 +2,10 @@ https://edu-apps.vercel.app/
 https://edu-apps.vercel.app/les-privat/program/abk
 https://edu-apps.vercel.app/les-privat/program/abk/kota/ambon
 https://edu-apps.vercel.app/les-privat/program/abk/kota/bengkulu
-https://edu-apps.vercel.app/les-privat/program/abk/kota/jambi
+https://edu-apps.vercel.app/les-privat/program/abk/kota/bengkulu
+
+https://app.edumatrix-indonesia.com/les-privat/program/abk/kota/jambi
+
 https://edu-apps.vercel.app/les-privat/program/abk/kota/lampung
 https://edu-apps.vercel.app/les-privat/program/abk/kota/manokwari
 https://edu-apps.vercel.app/les-privat/program/abk/kota/nabire
