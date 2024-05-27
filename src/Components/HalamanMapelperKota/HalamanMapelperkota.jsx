@@ -62,7 +62,7 @@ const HalamanMapelperkota = () => {
   return (
     <React.Fragment>
       <Helmet>
-        <meta charSet="utf-8" name="robots" content="noindex"/>
+        <meta charSet="utf-8" name="robots" />
         <title>
           Les Privat {`${mapel.name}`} #1 Terbaik di {`${kota.kota}`} - Edumatrix
           Indonesia

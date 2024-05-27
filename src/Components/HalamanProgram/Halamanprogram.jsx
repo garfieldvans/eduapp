@@ -76,7 +76,7 @@ const Halamanprogram = () => {
   return (
     <React.Fragment>
       <Helmet>
-        <meta charSet="utf-8" name="robots" content="noindex" />
+        <meta charSet="utf-8" name="robots"  />
         <meta name="description" content={`Les Privat ${program.name} #1 Terbaik `} />
         <title>
           Les Privat {`${program.name}`} #1 Terbaik - Edumatrix Indonesia

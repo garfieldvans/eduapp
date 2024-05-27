@@ -60,7 +60,7 @@ const HalamanProgramperkota = () => {
   return (
     <React.Fragment>
       <Helmet>
-        <meta charSet="utf-8" name="robots" content="noindex" />
+        <meta charSet="utf-8" name="robots"  />
         <meta
           name="description"
           content="Dapatkan layanan Les Privat kapan pun dan dimana pun dengan

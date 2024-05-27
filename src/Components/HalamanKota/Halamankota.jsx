@@ -50,7 +50,7 @@ const Halamankota = () => {
   return (
     <React.Fragment>
       <Helmet>
-        <meta charSet="utf-8" name="robots" content="noindex"/>
+        <meta charSet="utf-8" name="robots" />
         <title>
           Les Privat Terbaik di {`${kota.kota}`} #1 - Edumatrix Indonesia
         </title>

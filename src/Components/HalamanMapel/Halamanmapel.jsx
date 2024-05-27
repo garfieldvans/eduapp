@@ -49,7 +49,7 @@ const Halamanmapel = () => {
   return (
     <React.Fragment>
       <Helmet>
-        <meta charSet="utf-8" name="robots" content="noindex"/>
+        <meta charSet="utf-8" name="robots" />
         <title>
           Les Privat {`${mapel.name}`} Terbaik #1 - Edumatrix Indonesia
         </title>
